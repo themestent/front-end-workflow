@@ -1,0 +1,62 @@
+{
+  "name": "front-end-workflow",
+  "version": "0.1.0",
+  "homepage": "http://themestent.github.io/front-end-workflow/",
+  "main": [
+    "css/app.css",
+    "css/themestent.css"
+  ],
+  "ignore": [
+      ".jshintrc",
+      "**/*.txt",
+      ".sass-cache",
+      "codekit-config.json"
+    ],
+  "dependencies": {
+    "jquery": "*",
+    "bootstrap-sass": "*",
+    "requirejs": "*",
+    "typeplate": "*",
+    "bourbon":"*",
+    "html5shiv":"*",
+    "respond":"*",
+    "FlowTypeJS":"*",
+    "FitVids":"*",
+    "echo":"https://github.com/toddmotto/echo.git"
+  },
+
+  "exportsOverride": {
+    "bootstrap-sass": {
+      "js": "js/*.js",
+      "scss": "lib/*.scss",
+      "img": ["img/*.png","img/*.jpg"]
+    },
+    "bourbon": {
+      "scss": "app/assets/stylesheets/"
+    },
+    "typeplate":{
+      "scss":"scss/*.scss"
+    },
+    "FlowTypeJS": {
+      "js/plugins": "flowtype.js"
+    },
+    "FitVids": {
+      "js/plugins": "jquery.fitvids.js"
+    },
+    "requirejs": {
+      "js": "require.js"
+    },
+    "jquery":{
+      "js":"*.js"
+    },
+    "html5shiv":{
+      "js":"dist/html5shiv.js"
+    },
+    "respond":{
+      "js":"respond.min.js"
+    },
+    "echo":{
+      "js/plugins":"dist/echo.min.js"
+    }
+  }
+}
