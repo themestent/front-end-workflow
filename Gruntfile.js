@@ -139,7 +139,7 @@ module.exports = function(grunt) {
         "out": "doc/",
         "index":"README.md",
         "index-page-title":"Front-End Workflow in Practice",
-        "github": false,
+        "github": true,
         "repository-url": "https://github.com/themestent/front-end-workflow"
         }
     },
