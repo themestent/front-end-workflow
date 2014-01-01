@@ -13,7 +13,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/themestent-framework-beta/README.md",
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/README.md",
         "projectPath": "README.md",
         "targetPath": "index",
         "pageTitle": "Front-End Workflow in Practice",
@@ -81,7 +81,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/Volumes/Working Projects/themestent-framework-beta/Gruntfile.js",
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/Gruntfile.js",
         "projectPath": "Gruntfile.js",
         "targetPath": "Gruntfile",
         "pageTitle": "Gruntfile",
@@ -351,7 +351,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "SCSS"
                 },
-                "sourcePath": "/Volumes/Working Projects/themestent-framework-beta/app/scss/themestent.scss",
+                "sourcePath": "/Volumes/Working Projects/front-end-workflow/app/scss/themestent.scss",
                 "projectPath": "app/scss/themestent.scss",
                 "targetPath": "app/scss/themestent",
                 "pageTitle": "app/scss/themestent",
@@ -371,7 +371,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/themestent-framework-beta/bower.json.md",
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/bower.json.md",
         "projectPath": "bower.json.md",
         "targetPath": "bower.json",
         "pageTitle": "bower.json",
@@ -400,7 +400,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "Ruby"
         },
-        "sourcePath": "/Volumes/Working Projects/themestent-framework-beta/config.rb",
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/config.rb",
         "projectPath": "config.rb",
         "targetPath": "config",
         "pageTitle": "config",
@@ -426,7 +426,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/themestent-framework-beta/package.json.md",
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/package.json.md",
         "projectPath": "package.json.md",
         "targetPath": "package.json",
         "pageTitle": "package.json",
