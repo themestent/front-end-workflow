@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/themestent/front-end-workflow.png?branch=master)](https://travis-ci.org/themestent/front-end-workflow) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)  [![GitHub version](https://badge.fury.io/gh/themestent%2Ffront-end-workflow.png)](http://badge.fury.io/gh/themestent%2Ffront-end-workflow) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/themestent/front-end-workflow/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Total views](https://sourcegraph.com/api/repos/github.com/themestent/front-end-workflow/counters/views.png)](https://sourcegraph.com/github.com/themestent/front-end-workflow) [![status](https://sourcegraph.com/api/repos/github.com/themestent/front-end-workflow/badges/status.png)](https://sourcegraph.com/github.com/themestent/front-end-workflow)
+[![Build Status](https://travis-ci.org/themestent/front-end-workflow.png?branch=master)](https://travis-ci.org/themestent/front-end-workflow) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)  [![GitHub version](https://badge.fury.io/gh/themestent%2Ffront-end-workflow.png)](http://badge.fury.io/gh/themestent%2Ffront-end-workflow) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/themestent/front-end-workflow/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Total views](https://sourcegraph.com/api/repos/github.com/themestent/front-end-workflow/counters/views.png)](https://sourcegraph.com/github.com/themestent/front-end-workflow) [![status](https://sourcegraph.com/api/repos/github.com/themestent/front-end-workflow/badges/status.png)](https://sourcegraph.com/github.com/themestent/front-end-workflow) [![Dependency Status](https://gemnasium.com/themestent/front-end-workflow.png)](https://gemnasium.com/themestent/front-end-workflow)
 
 # Front-End Workflow
 **Front-End Workflow** is a boilerplate for front-end developers that automates front-end development workflows. Front-End Workflow is not a framework, nor it does any automated coding for you. It rather helps you to take care of all the repeating tasks every front-end developers faces while developing their projects. Thus it gives you the freedom to concentrate more on better coding keeping other hassles a side!
@@ -54,16 +54,16 @@ Resources used in this project gives Front-End developers a common platform to k
     "grunt-rev": "*",
     "grunt-karma": "*",
     "grunt-open": "*",
-    "matchdep": "*"    
-	```  
+    "matchdep": "*"
+	```
 	You may like to do some searching to get your task CLI for your project too! Find it on [**Grunt.js Plugin list**](http://gruntjs.com/plugins)
-	
+
 ## More on Front-End Workflow
 You can get detailed analytical data on built status, usage rate, dependency levels and much more on **[Sourcegraph](https://sourcegraph.com/github.com/themestent/front-end-workflow)**
 
 
 ----
-	
+
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Front-End Workflow</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://about.me/evanshajed" property="cc:attributionName" rel="cc:attributionURL">Shajed Evan</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://themestent.github.io/front-end-workflow/" rel="dct:source">http://themestent.github.io/front-end-workflow/</a>.
 <script type="text/javascript">
 var script = document.createElement("script");
