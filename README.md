@@ -65,6 +65,7 @@ You can get detailed analytical data on built status, usage rate, dependency lev
 ----
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Front-End Workflow</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://about.me/evanshajed" property="cc:attributionName" rel="cc:attributionURL">Shajed Evan</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://themestent.github.io/front-end-workflow/" rel="dct:source">http://themestent.github.io/front-end-workflow/</a>.
+***
 <script type="text/javascript">
 var script = document.createElement("script");
 script.innerHTML = "var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-43486757-2']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();";
