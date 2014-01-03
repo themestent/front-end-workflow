@@ -3,7 +3,7 @@ In this file All the necessary project resources has been defined as dependencie
 
 *Name of the Package Manager* **[Front-End-Workflow](http://themestent.github.io/front-end-workflow/)**
 
-```	
+```
 {
    "name": "front-end-workflow",
    "version": "0.1.0",
@@ -12,7 +12,7 @@ In this file All the necessary project resources has been defined as dependencie
 ```
 
 Ignore wanted files and folders:
-	
+
 ```
 	"ignore": [
       ".jshintrc",
@@ -21,7 +21,7 @@ Ignore wanted files and folders:
       "codekit-config.json"
     ],
 ```
-List all the project dependencies 
+List all the project dependencies
 
 ```
     "dependencies": {
@@ -75,5 +75,9 @@ Downloaded packages will be copied in **app** directory *'byType'*. With `"expor
     }
   }
  }
-``` 
-
+```
+<script type="text/javascript">
+var script = document.createElement("script");
+script.innerHTML = "var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-43486757-2']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();";
+document.head.appendChild(script);
+  </script>
