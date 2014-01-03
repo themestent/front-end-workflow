@@ -131,6 +131,18 @@ module.exports = function(grunt) {
         ]
       }
     },
+    // #### Groc for documentation
+    // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
+    groc: {
+      default: ["README.md","bower.json.md","Gruntfile.js","package.json.md","config.rb","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss"],
+      options: {
+        "out": "doc/",
+        "index":"README.md",
+        "index-page-title":"Front-End Workflow in Practice",
+        "github": false,
+        "repository-url": "https://github.com/themestent/front-end-workflow"
+        }
+    },
     // #### Grunt Watch File
     watch: {
       // **Watch Sass** file changes. On any file change it will run `compass` task.
@@ -166,6 +178,8 @@ module.exports = function(grunt) {
   grunt.registerTask('download',['bower:install']);
   // `grunt lint` command will run CssLint
   grunt.registerTask('lint',['csslint']);
+  // `grunt doc` command will generate documentation site in **doc** directory.
+  grunt.registerTask('doc','Generating documentation...',['groc']);
   // `grunt` command will start initial build and start watching the project for changes and react
-  grunt.registerTask('default',['concurrent:target']);
+  grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['concurrent:target']);
 }
