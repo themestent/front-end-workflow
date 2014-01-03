@@ -16,8 +16,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "sourcePath": "/Volumes/Working Projects/front-end-workflow/README.md",
         "projectPath": "README.md",
         "targetPath": "index",
-        "pageTitle": "Front-End Workflow in Practice",
-        "title": "Front-End Workflow in Practice"
+        "pageTitle": "Front-End Workflow - Automating development processes",
+        "title": "Front-End Workflow - Automating development processes"
       },
       "depth": 1,
       "outline": [
@@ -69,6 +69,32 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           ]
         }
       ]
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".md"],
+          "commentsOnly": true,
+          "name": "Markdown"
+        },
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/CssLint.md",
+        "projectPath": "CssLint.md",
+        "targetPath": "CssLint",
+        "pageTitle": "CssLint",
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "CSSLint",
+            "slug": "csslint",
+            "isFileHeader": true
+          },
+          "depth": 1
+        },
+        "title": "CSSLint"
+      },
+      "depth": 1,
+      "outline": []
     }, {
       "type": "file",
       "data": {
