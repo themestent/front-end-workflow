@@ -1,0 +1,8 @@
+{
+  "out": "doc/",
+  "index":"README.md",
+  "index-page-title":"Front-End Workflow in Practice",
+  "glob":["README.md","bower.json.md","Gruntfile.js","package.json.md","config.rb","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss",".groc.json.md"],
+  "github": false,
+  "repository-url": "https://github.com/themestent/front-end-workflow"
+}

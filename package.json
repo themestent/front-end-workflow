@@ -2,13 +2,14 @@
   "name": "front-end-workflow",
   "version": "0.1.0",
   "description": "Front-End Workflow Automator",
-  "keywords":["front-end,workflow,generator"],
+  "keywords":["front-end","workflow","generator"],
   "homepage":"https://github.com/themestent/front-end-workflow",
   "author": {
     "name":"Shajed Evan",
     "url":"https://github.com/evanshajed",
     "email":"evanshajed@gmail.com"
   },
+  "scripts":{"Here comes the Matrix effect!! As you comand to get all the devDependencies for front-end-workflow"},
   "repository":{
     "type":"git",
     "url":"https://github.com/themestent/front-end-workflow.git"
@@ -19,22 +20,7 @@
       "url":"http://creativecommons.org/licenses/by/4.0/"
     }
   ],
-  "analyze":false,
-  "engines": {
-    "node": ">= 0.8"
-  },
-  "preferGlobal":true,
   "dependencies": {
-    "coffee-script": ">= 1.1.3",
-    "colors":        ">= 0.5.1",
-    "fs-tools":      ">= 0.1.0",
-    "glob":          ">= 3.0.1",
-    "jade":          "0.x",
-    "optimist":      ">= 0.3.4",
-    "showdown":      ">= 0.2.0",
-    "spate":         ">= 0.1.0",
-    "uglify-js":     ">= 1.1.1",
-    "underscore":    ">= 1.2.2"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -54,13 +40,14 @@
     "grunt-htmlhint":"*",
     "grunt-concurrent":"*",
     "grunt-newer":"*",
+    "jade":"0.35.0",
+    "groc":"0.4.0",
     "grunt-contrib-copy": "*",
-    "grunt-groc":"*",
     "grunt-contrib-livereload": "*",
     "grunt-regarde": "*",
     "grunt-rev": "*",
     "grunt-karma": "*",
     "grunt-open": "*",
     "matchdep": "*"
-  },
+  }
 }
