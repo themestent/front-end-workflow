@@ -11,8 +11,8 @@ output_style = :nested
 environment = :stand_alone
 
 relative_assets = true
-# No line comments
+# Remove __Line Comments__
 line_comments = false
 color_output = false
-# Preferred syntax `scss`
+# Defining __Preferred Syntax__ `scss`
 preferred_syntax = :scss

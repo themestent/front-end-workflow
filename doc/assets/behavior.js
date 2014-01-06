@@ -16,8 +16,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "sourcePath": "/Volumes/Working Projects/front-end-workflow/README.md",
         "projectPath": "README.md",
         "targetPath": "index",
-        "pageTitle": "Front-End Workflow - Automating development processes",
-        "title": "Front-End Workflow - Automating development processes"
+        "pageTitle": "Front-End Workflow - automated process",
+        "title": "Front-End Workflow - automated process"
       },
       "depth": 1,
       "outline": [
@@ -61,6 +61,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 2,
+                "title": "How to use?",
+                "slug": "how-to-use"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
                 "title": "More on Front-End Workflow",
                 "slug": "more-on-front-end-workflow"
               },
@@ -92,6 +100,32 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "depth": 1
         },
         "title": "CSSLint"
+      },
+      "depth": 1,
+      "outline": []
+    }, {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".md"],
+          "commentsOnly": true,
+          "name": "Markdown"
+        },
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/EditorConfig.md",
+        "projectPath": "EditorConfig.md",
+        "targetPath": "EditorConfig",
+        "pageTitle": "EditorConfig",
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "EditorConfig",
+            "slug": "editorconfig",
+            "isFileHeader": true
+          },
+          "depth": 1
+        },
+        "title": "EditorConfig"
       },
       "depth": 1,
       "outline": []
@@ -448,25 +482,16 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "type": "file",
       "data": {
         "language": {
-          "nameMatchers": [".md"],
-          "commentsOnly": true,
-          "name": "Markdown"
+          "nameMatchers": [".json"],
+          "pygmentsLexer": "json",
+          "codeOnly": true,
+          "name": "JSON"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/package.json.md",
-        "projectPath": "package.json.md",
-        "targetPath": "package.json",
-        "pageTitle": "package.json",
-        "firstHeader": {
-          "type": "heading",
-          "data": {
-            "level": 1,
-            "title": "Package Configuration",
-            "slug": "package-configuration",
-            "isFileHeader": true
-          },
-          "depth": 1
-        },
-        "title": "Package Configuration"
+        "sourcePath": "/Volumes/Working Projects/front-end-workflow/package.json",
+        "projectPath": "package.json",
+        "targetPath": "package",
+        "pageTitle": "package",
+        "title": "package"
       },
       "depth": 1,
       "outline": []

@@ -8,7 +8,7 @@ Front-End developers deal with so many different tasks to deliver a perfect UI f
 
 To achieve that most of us download same types of resources every time, do the redundant copy & pasting don't know how many times! We also do the browser testing, performance optimization, we need to compress images, check our css with CssLint, concatenate different JavaScript files and the list just goes on!
 
-## Features ##
+## Features
 **Front-End Workflow** package comes up with features that helps you to be more productive yet efficient! Below you will find the dependencies included in this package.
 
 ### Resources
@@ -28,41 +28,30 @@ Resources used in this project gives Front-End developers a common platform to k
 
 	You can add your dependency packages required for your project in `bower.json`file. To control downloaded resources copied into it's right directory according their	 file type `"exportsOverride": {}` has been used. Get some more ideas about different options at **[grunt-bower-task](https://github.com/yatskevich/grunt-bower-task)**.
 
-2. [**Grunt - JavaScript Task Runner**](http://gruntjs.com/) is used to configure all the repeating tasks like magnification, concatenation, linking, compress, live reload, combine, merge and list goes on. But for this package I have used few most common tasks runner. I will increase the list progressively. Lets Have a look at lists defined in `package.json` file:
+2. [**Grunt - JavaScript Task Runner**](http://gruntjs.com/) is used to configure all the repeating tasks like magnification, concatenation, linking, compress, live reload, combine, merge and list goes on. But for this package I have used few most common tasks runner. I will increase the list progressively. Lets Have a look at lists defined in [**package.json**](package.json.html) file.
 
-	```
-	"grunt": "~0.4.0",
-    "grunt-bower-task":"*",
-    "grunt-contrib-sass":"*",
-    "grunt-cssc":"*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-compass": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-csslint": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-csscomb": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-htmlhint":"*",
-    "grunt-concurrent":"*",
-    "grunt-newer":"*",
-    "grunt-contrib-copy": "*",
-    "grunt-groc":"*",
-    "grunt-contrib-livereload": "*",
-    "grunt-regarde": "*",
-    "grunt-rev": "*",
-    "grunt-karma": "*",
-    "grunt-open": "*",
-    "matchdep": "*"
-	```
 	You may like to do some searching to get your task CLI for your project too! Find it on [**Grunt.js Plugin list**](http://gruntjs.com/plugins)
+
+3. [**Generate Documentation**](https://github.com/jdcataldo/grunt-groc): Generate a project documentation automatically and publish it into your [**GitHub Pages**](http://pages.github.com) using [**Groc**](http://nevir.github.com/groc/). In our workflow we are loading a simple task plugin [**grunt-groc**](https://github.com/jdcataldo/grunt-groc).
+4. **And More**: **Front-End Workflow** is still getting it's shape for a complete version. There are more features which will be added over time and the list may grow bigger. For a simple setup and to make this project easily adoptable for other developers few other common features are included. Like:
+	* CssComb
+	* Cssmin
+	* Uglify
+	* CssLint
+	* **ImageMin** (Minify Images using [**grunt-contrib-imagemin**](https://npmjs.org/package/grunt-contrib-imagemin))
+	* LiveReload and Watch for changes
+
+## How to use?
+ 
 
 ## More on Front-End Workflow
 You can get detailed analytical data on built status, usage rate, dependency levels and much more on **[Sourcegraph](https://sourcegraph.com/github.com/themestent/front-end-workflow)**
 
+---
 
-----
+Last Edited on: 6 January 2014.
+
+---
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Front-End Workflow</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://about.me/evanshajed" property="cc:attributionName" rel="cc:attributionURL">Shajed Evan</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://themestent.github.io/front-end-workflow/" rel="dct:source">http://themestent.github.io/front-end-workflow/</a>.
 ***

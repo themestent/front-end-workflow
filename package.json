@@ -46,6 +46,7 @@
     "grunt-contrib-concat": "*",
     "grunt-contrib-csslint": "*",
     "grunt-contrib-clean": "*",
+    "grunt-contrib-imagemin":"*",
     "grunt-csscomb": "*",
     "commander":"2.0.0",
     "grunt-contrib-cssmin": "*",

@@ -134,11 +134,11 @@ module.exports = function(grunt) {
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
     groc: {
-      default: ["README.md","bower.json.md","Gruntfile.js","package.json.md","config.rb","CssLint.md","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss"],
+      default: ["README.md","bower.json.md","EditorConfig.md","Gruntfile.js","package.json","config.rb","CssLint.md","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss"],
       options: {
         "out": "doc/",
         "index":"README.md",
-        "index-page-title":"Front-End Workflow - Automating development processes",
+        "index-page-title":"Front-End Workflow - automated process",
         "github": true,
         "repository-url": "https://github.com/themestent/front-end-workflow"
         }

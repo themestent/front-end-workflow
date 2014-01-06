@@ -1,29 +1,16 @@
 # Package Configuration
-Including most commonly used grunt-cli packages as `"devDependencies"`. Just incase if you are not familiar with **[Grunt](http://gruntjs.com)** or unknown to it's mind-blowing features then **[Get Started with Grunt](http://gruntjs.com/getting-started)** first!
+Including most commonly used grunt-cli packages for Front-End Development. Just incase if you are not familiar with **[Grunt](http://gruntjs.com)** or unknown to it's mind-blowing features then **[Get Started with Grunt](http://gruntjs.com/getting-started)** first!
+
+In this project we are using Jade and Groc as main `dependencies` and a big list of other Grunt tasks as `devDependencies` to to automate different processes we will be using.
 
 ```
 {
-  "name": "front-end-workflow",
-  "description": "Front-End Workflow Automator",
-  "version": "0.1.0",
-  "homepage":"https://github.com/themestent/front-end-workflow",
-  "author": {
-    "name":"Shajed Evan",
-    "url":"https://github.com/evanshajed"
+  "dependencies": {
+    "jade":"<1.x.x",
+    "groc":"~0.6.0"
   },
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/themestent/front-end-workflow.git"
-  },
-  "licenses":[
-    {
-      "type":"CC",
-      "url":"http://creativecommons.org/licenses/by/4.0/"
-    }
-  ],
-  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.0",
+    "grunt": "~0.4.2",
     "grunt-bower-task":"*",
     "grunt-contrib-sass":"*",
     "grunt-cssc":"*",
@@ -33,7 +20,9 @@ Including most commonly used grunt-cli packages as `"devDependencies"`. Just inc
     "grunt-contrib-concat": "*",
     "grunt-contrib-csslint": "*",
     "grunt-contrib-clean": "*",
+    "grunt-contrib-imagemin":"*",
     "grunt-csscomb": "*",
+    "commander":"2.0.0",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-uglify": "*",
     "grunt-htmlhint":"*",
@@ -50,6 +39,12 @@ Including most commonly used grunt-cli packages as `"devDependencies"`. Just inc
   }
 }
 ```
+
+Have a look at the [**package.json**](package.html) file.
+
+---
+6 January 2014
+
 <script type="text/javascript">
 var script = document.createElement("script");
 script.innerHTML = "var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-43486757-2']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();";
