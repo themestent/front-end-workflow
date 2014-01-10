@@ -22,7 +22,8 @@
     "respond":"*",
     "FlowTypeJS":"*",
     "FitVids":"*",
-    "echo":"https://github.com/toddmotto/echo.git"
+    "echo":"https://github.com/toddmotto/echo.git",
+    "neat":"https://github.com/thoughtbot/neat.git"
   },
 
   "exportsOverride": {
@@ -57,6 +58,9 @@
     },
     "echo":{
       "js/plugins":"dist/echo.min.js"
+    },
+    "neat":{
+      "scss":"app/assets/stylesheets/"
     }
   }
 }
