@@ -11,6 +11,12 @@
 ##########################
 **/node_modules
 
+# Keep the dependency resource folders empty #
+app/scss/**/*
+!app/scss/themestent.scss
+!app/scss/app.scss
+**/doc
+js/**
 
 # Compiled source #
 ###################
