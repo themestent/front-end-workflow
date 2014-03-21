@@ -48,7 +48,7 @@
     "grunt-contrib-clean": "*",
     "grunt-contrib-imagemin":"*",
     "grunt-csscomb": "*",
-    "commander":"2.1.0",
+    "commander":"2.0.0",
     "grunt-htmlhint":"*",
     "grunt-concurrent":"*",
     "grunt-newer":"*",
