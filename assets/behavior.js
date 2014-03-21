@@ -9,11 +9,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "type": "file",
       "data": {
         "language": {
-          "nameMatchers": [".md"],
+          "nameMatchers": [".md", ".markdown", ".mkd", ".mkdn", ".mdown"],
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/README.md",
+        "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/README.md",
         "projectPath": "README.md",
         "targetPath": "index",
         "pageTitle": "Front-End Workflow - automated process",
@@ -81,11 +81,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "type": "file",
       "data": {
         "language": {
-          "nameMatchers": [".md"],
+          "nameMatchers": [".md", ".markdown", ".mkd", ".mkdn", ".mdown"],
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/CssLint.md",
+        "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/CssLint.md",
         "projectPath": "CssLint.md",
         "targetPath": "CssLint",
         "pageTitle": "CssLint",
@@ -107,11 +107,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "type": "file",
       "data": {
         "language": {
-          "nameMatchers": [".md"],
+          "nameMatchers": [".md", ".markdown", ".mkd", ".mkdn", ".mdown"],
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/EditorConfig.md",
+        "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/EditorConfig.md",
         "projectPath": "EditorConfig.md",
         "targetPath": "EditorConfig",
         "pageTitle": "EditorConfig",
@@ -141,7 +141,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "JavaScript"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/Gruntfile.js",
+        "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/Gruntfile.js",
         "projectPath": "Gruntfile.js",
         "targetPath": "Gruntfile",
         "pageTitle": "Gruntfile",
@@ -406,12 +406,13 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                 "language": {
                   "nameMatchers": [".scss"],
                   "pygmentsLexer": "scss",
+                  "multiLineComment": ["/*", "*", "*/"],
                   "singleLineComment": ["//"],
                   "ignorePrefix": "}",
                   "foldPrefix": "^",
                   "name": "SCSS"
                 },
-                "sourcePath": "/Volumes/Working Projects/front-end-workflow/app/scss/themestent.scss",
+                "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/themestent.scss",
                 "projectPath": "app/scss/themestent.scss",
                 "targetPath": "app/scss/themestent",
                 "pageTitle": "app/scss/themestent",
@@ -427,11 +428,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "type": "file",
       "data": {
         "language": {
-          "nameMatchers": [".md"],
+          "nameMatchers": [".md", ".markdown", ".mkd", ".mkdn", ".mdown"],
           "commentsOnly": true,
           "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/bower.json.md",
+        "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/bower.json.md",
         "projectPath": "bower.json.md",
         "targetPath": "bower.json",
         "pageTitle": "bower.json",
@@ -460,7 +461,7 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "foldPrefix": "^",
           "name": "Ruby"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/config.rb",
+        "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/config.rb",
         "projectPath": "config.rb",
         "targetPath": "config",
         "pageTitle": "config",
@@ -482,16 +483,25 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "type": "file",
       "data": {
         "language": {
-          "nameMatchers": [".json"],
-          "pygmentsLexer": "json",
-          "codeOnly": true,
-          "name": "JSON"
+          "nameMatchers": [".md", ".markdown", ".mkd", ".mkdn", ".mdown"],
+          "commentsOnly": true,
+          "name": "Markdown"
         },
-        "sourcePath": "/Volumes/Working Projects/front-end-workflow/package.json",
-        "projectPath": "package.json",
-        "targetPath": "package",
-        "pageTitle": "package",
-        "title": "package"
+        "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/package.json.md",
+        "projectPath": "package.json.md",
+        "targetPath": "package.json",
+        "pageTitle": "package.json",
+        "firstHeader": {
+          "type": "heading",
+          "data": {
+            "level": 1,
+            "title": "Package Configuration",
+            "slug": "package-configuration",
+            "isFileHeader": true
+          },
+          "depth": 1
+        },
+        "title": "Package Configuration"
       },
       "depth": 1,
       "outline": []

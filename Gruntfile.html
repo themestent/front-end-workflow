@@ -75,8 +75,16 @@
           <span class="s1">&#39;app/js/bootstrap-sass/tab.js&#39;</span><span class="p">,</span>
           <span class="s1">&#39;app/js/bootstrap-sass/affix.js&#39;</span>
         <span class="p">],</span>
-        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/js/themestent.js&#39;</span>
-      <span class="p">}</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/js/bootstrap.js&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;app/js/plugins/echo/echo.min.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/plugins/FitVids/jquery.fitvids.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/plugins/FlowTypeJS/flowtype.js&#39;</span>
+        <span class="p">],</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/js/plugins.js&#39;</span>
+      <span class="p">},</span>
     <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="clean-task">Clean Task</h4>
 
 <p>Before generating any new files, remove any previously-created files. Task name <code>clean</code></p></div></div><div class="code"><div class="wrapper">    <span class="nx">clean</span><span class="o">:</span> <span class="p">{</span>
@@ -113,7 +121,7 @@
     <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="groc-for-documentation">Groc for documentation</h4>
 
 <p><code>groc</code> task is using <a href="https://github.com/jdcataldo/grunt-groc.git"><strong>grunt-groc</strong></a> to generate a usable documentation site right from your codes. It is a real time saver!</p></div></div><div class="code"><div class="wrapper">    <span class="nx">groc</span><span class="o">:</span> <span class="p">{</span>
-      <span class="k">default</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span><span class="s2">&quot;bower.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;EditorConfig.md&quot;</span><span class="p">,</span><span class="s2">&quot;Gruntfile.js&quot;</span><span class="p">,</span><span class="s2">&quot;package.json&quot;</span><span class="p">,</span><span class="s2">&quot;config.rb&quot;</span><span class="p">,</span><span class="s2">&quot;CssLint.md&quot;</span><span class="p">,</span><span class="s2">&quot;app/js/bootstrap-sass/themestent.js&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/themestent.scss&quot;</span><span class="p">],</span>
+      <span class="k">default</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span><span class="s2">&quot;bower.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;EditorConfig.md&quot;</span><span class="p">,</span><span class="s2">&quot;Gruntfile.js&quot;</span><span class="p">,</span><span class="s2">&quot;package.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;config.rb&quot;</span><span class="p">,</span><span class="s2">&quot;CssLint.md&quot;</span><span class="p">,</span><span class="s2">&quot;app/js/bootstrap-sass/themestent.js&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/themestent.scss&quot;</span><span class="p">],</span>
       <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;out&quot;</span><span class="o">:</span> <span class="s2">&quot;doc/&quot;</span><span class="p">,</span>
         <span class="s2">&quot;index&quot;</span><span class="o">:</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span>
@@ -125,8 +133,8 @@
         <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/scss/**/*.scss&#39;</span><span class="p">],</span>
         <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass:dev&#39;</span><span class="p">]</span>
       <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Watch .js</strong> to see if our JavaScript files change, or new packages are installed and then <code>concat</code></p></div></div><div class="code"><div class="wrapper">      <span class="nx">js</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/js/bootstrap-sass/themestent.js&#39;</span><span class="p">,</span> <span class="s1">&#39;app/js/bootstrap-sass/app.js&#39;</span><span class="p">,</span><span class="s1">&#39;app/js/bootstrap-sass/*&#39;</span><span class="p">],</span>
-        <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;concat:bootstrap&#39;</span><span class="p">]</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/js/app.js&#39;</span><span class="p">,</span> <span class="s1">&#39;app/js/&#39;</span><span class="p">,</span><span class="s1">&#39;app/js/bootstrap-sass/*&#39;</span><span class="p">,</span><span class="s1">&#39;app/js/plugins/**/*.js&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;concat:bootstrap&#39;</span><span class="p">,</span><span class="s1">&#39;concat:plugins&#39;</span><span class="p">]</span>
       <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Reload</strong> the browser on any change</p></div></div><div class="code"><div class="wrapper">      <span class="nx">livereload</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/css/*.css&#39;</span><span class="p">,</span><span class="s1">&#39;app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&#39;</span><span class="p">,</span> <span class="s1">&#39;app/js/bootstrap-sass/{themestent.js, app.js}&#39;</span><span class="p">],</span>
         <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
