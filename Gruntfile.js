@@ -90,38 +90,46 @@ module.exports = function(grunt) {
           'app/js/bootstrap-sass/tab.js',
           'app/js/bootstrap-sass/affix.js'
         ],
-        dest: 'app/js/themestent.js'
-      }
+        dest: 'app/js/bootstrap.js'
+      },
+      plugins: {
+        src: [
+          'app/js/plugins/echo/echo.min.js',
+          'app/js/plugins/FitVids/jquery.fitvids.js',
+          'app/js/plugins/FlowTypeJS/flowtype.js'
+        ],
+        dest: 'app/js/plugins.js'
+      },
     },
     // #### Clean Task
     // Before generating any new files, remove any previously-created files. Task name `clean`
     clean: {
       tests: {
-      	src:["css/csscomb/*.css","css/production-css/*.css"]
+        src:["css/csscomb/*.css","css/production-css/*.css"]
       }
     },
     // #### Minify Images
     // `imagemin` task is using [**grunt-contrib-imagemin**](https://github.com/gruntjs/grunt-contrib-imagemin) to minify project images.
     imagemin: {
       dynamic: {                         // Another target
-	      files: [{
-	        expand: true,                  // Enable dynamic expansion
-	        cwd: 'img/',                   // Src matches are relative to this path
-	        src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-	        dest: 'img/'                  // Destination path prefix
-	      }]
-	    }
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'img/',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: 'img/'                  // Destination path prefix
+        }]
+      }
     },
     // #### Minify Css
     // `cssmin` task is using [**grunt-contrib-cssmin**](https://github.com/gruntjs/grunt-contrib-cssmin) to minify css files.
     cssmin: {
-    	minify: {
-    	    expand: true,
-    	    cwd: 'app/css/',
-    	    src: ['*.css', '!*.min.css'],
-    	    dest: 'app/css/css-min',
-    	    ext: '.css'
-    	  }
+      minify: {
+          expand: true,
+          cwd: 'app/css/',
+          src: ['*.css', '!*.min.css'],
+          dest: 'app/css/css-min',
+          ext: '.css'
+        }
     },
     // Copy Production CSS Files
     copy: {
@@ -152,8 +160,8 @@ module.exports = function(grunt) {
       },
       // **Watch .js** to see if our JavaScript files change, or new packages are installed and then `concat`
       js: {
-        files: ['app/js/bootstrap-sass/themestent.js', 'app/js/bootstrap-sass/app.js','app/js/bootstrap-sass/*'],
-        tasks:['concat:bootstrap']
+        files: ['app/js/app.js', 'app/js/','app/js/bootstrap-sass/*','app/js/plugins/**/*.js'],
+        tasks:['concat:bootstrap','concat:plugins']
       },
       // **Reload** the browser on any change
       livereload: {

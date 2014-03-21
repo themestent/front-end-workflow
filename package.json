@@ -1,6 +1,6 @@
 {
   "name": "front-end-workflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Front-End Workflow Automator",
   "keywords":["front-end","workflow","generator"],
   "homepage":"https://github.com/themestent/front-end-workflow",
@@ -48,9 +48,7 @@
     "grunt-contrib-clean": "*",
     "grunt-contrib-imagemin":"*",
     "grunt-csscomb": "*",
-    "commander":"2.0.0",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-uglify": "*",
+    "commander":"2.1.0",
     "grunt-htmlhint":"*",
     "grunt-concurrent":"*",
     "grunt-newer":"*",
