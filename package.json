@@ -46,13 +46,9 @@
     "grunt-contrib-csslint": "*",
     "grunt-contrib-clean": "*",
     "grunt-csscomb": "*",
-<<<<<<< HEAD
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-uglify": "*",
-=======
-    "commander":"2.0.0",
->>>>>>> da6d813f7777d0ab6b8fcd2c69fdfa9c09fc56ae
     "grunt-htmlhint":"*",
     "grunt-concurrent":"*",
     "grunt-newer":"*",
