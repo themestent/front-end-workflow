@@ -1,6 +1,6 @@
 {
   "name": "front-end-workflow",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Front-End Workflow Automator",
   "keywords":["front-end","workflow","generator"],
   "homepage":"https://github.com/themestent/front-end-workflow",
@@ -36,8 +36,7 @@
     "groc":"~0.6.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-bower-task":"*",
+    "grunt": "~0.4.0",
     "grunt-contrib-sass":"*",
     "grunt-cssc":"*",
     "grunt-contrib-copy": "*",
@@ -46,19 +45,28 @@
     "grunt-contrib-concat": "*",
     "grunt-contrib-csslint": "*",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-imagemin":"*",
     "grunt-csscomb": "*",
-    "commander":"2.1.0",
+<<<<<<< HEAD
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+=======
+    "commander":"2.0.0",
+>>>>>>> da6d813f7777d0ab6b8fcd2c69fdfa9c09fc56ae
     "grunt-htmlhint":"*",
     "grunt-concurrent":"*",
     "grunt-newer":"*",
+    "grunt-browser-sync":"*",
     "grunt-contrib-copy": "*",
-    "grunt-groc":"*",
     "grunt-contrib-livereload": "*",
+    "grunt-groc": "*",
     "grunt-regarde": "*",
     "grunt-rev": "*",
     "grunt-karma": "*",
     "grunt-open": "*",
     "matchdep": "*"
+  },
+  "engines":{
+    "node": ">=0.8.0"
   }
 }

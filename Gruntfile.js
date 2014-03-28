@@ -160,7 +160,7 @@ module.exports = function(grunt) {
       },
       // **Watch .js** to see if our JavaScript files change, or new packages are installed and then `concat`
       js: {
-        files: ['app/js/app.js', 'app/js/','app/js/bootstrap-sass/*','app/js/plugins/**/*.js'],
+        files: ['app/js/app.js', 'app/js/plugins.js'],
         tasks:['concat:bootstrap','concat:plugins']
       },
       // **Reload** the browser on any change
@@ -172,14 +172,14 @@ module.exports = function(grunt) {
       }
     },
     // **Concurrent Output** to improve the build time.
-    concurrent: {
-      target: {
-          tasks: ['newer:concat:bootstrap','newer:compass:dev','newer:cssc','watch'],
-          options: {
-              logConcurrentOutput: true
-          }
-      }
-    },
+    // concurrent: {
+    //   target: {
+    //       tasks: ['newer:concat:bootstrap','newer:compass:dev','newer:cssc','watch'],
+    //       options: {
+    //           logConcurrentOutput: true
+    //       }
+    //   }
+    // },
   });
   // ### Register Tasks
   // `grunt download` command to download all the required development resources
@@ -189,5 +189,5 @@ module.exports = function(grunt) {
   // `grunt doc` command will generate documentation site in **doc** directory.
   grunt.registerTask('doc','Generating documentation...',['groc']);
   // `grunt` command will start initial build and start watching the project for changes and react
-  grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['concurrent:target']);
+  grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['cssc','watch']);
 }
