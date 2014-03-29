@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/*!
-* Front-End Workflow
-*
-* Copyright 2014 Themestent, Bangladesh
-*
-* Front-End by Shajed Evan - @evanshajed
-*/
 /***
 
    colors.css v0.2.0
@@ -140,19 +133,3 @@ a:hover {
 
 a:active {
   color: #ff851b; }
-
-html, body {
-  height: 100%; }
-
-.wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -90px; }
-
-.push, footer {
-  height: 90px; }
-
-p {
-  color: #aaaaaa; }

@@ -5,20 +5,17 @@
 *
 * Front-End by Shajed Evan - @evanshajed
 */
-html,body{
-  height:100%;
-}
 
-.wrap{
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -90px;
-}
-.push,footer{
-  height: 90px;
-  // @media (max-width: 480px){
-  //   height:80px;
-  // }
-}
+// # Main Scss file holding all the custom styles of the applications components.
+
+@import "compass/css3";
+@import "compass/typography";
+
+// Import Bourbon
+@import "bourbon/bourbon";
+
+// Including Colors Scss
+@import "colors/colors.scss";
+
+// Including General Styles
+@import "app-general-styles";

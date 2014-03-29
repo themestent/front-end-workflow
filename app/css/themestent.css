@@ -6,11 +6,6 @@
 *
 * Designed and built with passion by @themestent
 */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,
 aside,
@@ -4392,43 +4387,15 @@ td.visible-print {
   th.hidden-print,
   td.hidden-print {
     display: none !important; } }
-/*
- *
-.||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
-
-    .                                      '||            .
-  .||.  .... ... ... ...    ....  ... ...   ||   ....   .||.    ....
-   ||    '|.  |   ||'  || .|...||  ||'  ||  ||  '' .||   ||   .|...||
-   ||     '|.|    ||    | ||       ||    |  ||  .|' ||   ||   ||
-   '|.'    '|     ||...'   '|...'  ||...'  .||. '|..'|'  '|.'  '|...'
-        .. |      ||               ||
-         ''      ''''             ''''                      VARIABLES
-
- .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
- *
- */
-/*!
- *
-.||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
-
-	.                                      '||            .
-  .||.  .... ... ... ...    ....  ... ...   ||   ....   .||.    ....
-   ||    '|.  |   ||'  || .|...||  ||'  ||  ||  '' .||   ||   .|...||
-   ||     '|.|    ||    | ||       ||    |  ||  .|' ||   ||   ||
-   '|.'    '|     ||...'   '|...'  ||...'  .||. '|..'|'  '|.'  '|...'
-		.. |      ||               ||
-		 ''      ''''             ''''      A Typographic Starter Kit
-
-  URL ........... http://typeplate.com
-  VERSION ....... 1.1.2
-  Github ........ https://github.com/typeplate/typeplate.github.io
-  AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-  LICENSE ....... Creative Commmons Attribution 3.0
-  LICENSE URL ... http://creativecommons.org/licenses/by/3.0
-
- .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
- *
- */
+/*! 
+TYPEPLATE
+URL ........... http://typeplate.com
+VERSION ....... 1.1.3
+Github ........ https://github.com/typeplate/bower
+AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
+LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
+*/
 @font-face {
   font-family: "Ampersand";
   src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
@@ -4476,46 +4443,55 @@ h1, h2, h3, h4, h5, h6 {
 .tera {
   font-size: 117px;
   font-size: 6.5rem;
+  margin-bottom: 0.25385px;
   margin-bottom: 0.25385rem; }
 
 .giga {
   font-size: 90px;
   font-size: 5rem;
+  margin-bottom: 0.33px;
   margin-bottom: 0.33rem; }
 
 .mega {
   font-size: 72px;
   font-size: 4rem;
+  margin-bottom: 0.4125px;
   margin-bottom: 0.4125rem; }
 
 .alpha, h1 {
   font-size: 60px;
   font-size: 3.33333rem;
+  margin-bottom: 0.495px;
   margin-bottom: 0.495rem; }
 
 .beta, h2 {
   font-size: 48px;
   font-size: 2.66667rem;
+  margin-bottom: 0.61875px;
   margin-bottom: 0.61875rem; }
 
 .gamma, h3 {
   font-size: 36px;
   font-size: 2rem;
+  margin-bottom: 0.825px;
   margin-bottom: 0.825rem; }
 
 .delta, h4 {
   font-size: 24px;
   font-size: 1.33333rem;
+  margin-bottom: 1.2375px;
   margin-bottom: 1.2375rem; }
 
 .epsilon, h5 {
   font-size: 21px;
   font-size: 1.16667rem;
+  margin-bottom: 1.41429px;
   margin-bottom: 1.41429rem; }
 
 .zeta, h6 {
   font-size: 18px;
   font-size: 1rem;
+  margin-bottom: 1.65px;
   margin-bottom: 1.65rem; }
 
 p {

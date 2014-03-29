@@ -34,6 +34,7 @@ List all the project dependencies
 	    "respond":"*",
 	    "FlowTypeJS":"*",
 	    "FitVids":"*",
+      "colors":"*",
 	    "echo":"https://github.com/toddmotto/echo.git"
 	  },
 ```
@@ -51,6 +52,9 @@ Downloaded packages will be copied in **app** directory *'byType'*. With `"expor
     },
     "typeplate":{
       "scss":"scss/*.scss"
+    },
+    "colors":{
+      "scss":"sass/*.scss"
     },
     "FlowTypeJS": {
       "js/plugins": "flowtype.js"

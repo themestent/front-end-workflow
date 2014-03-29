@@ -10,13 +10,6 @@
     "url":"https://github.com/evanshajed",
     "email":"evanshajed@gmail.com"
   },
-  "contributors":[
-    {
-      "name":"Rezaul Karim",
-      "url":"https://github.com/titosust",
-      "email":"titosust@gmail.com"
-     }
-  ],
   "scripts":{
     "predeploy":"echo Feel the awsome matrix view! You are including your projects dependencies",
     "postdeploy":"echo Finally our long listed dependencies found it's end point. We are good to go now!"
@@ -41,20 +34,22 @@
     "grunt-cssc":"*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-compass": "*",
-    "grunt-contrib-watch": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-csslint": "*",
     "grunt-contrib-clean": "*",
     "grunt-csscomb": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "~0.6.0",
     "grunt-htmlhint":"*",
-    "grunt-concurrent":"*",
+    "grunt-contrib-watch": "*",
     "grunt-newer":"*",
     "grunt-browser-sync":"*",
     "grunt-contrib-copy": "*",
+    "grunt-bower-task":"*",
     "grunt-contrib-livereload": "*",
+    "grunt-contrib-jst": "~0.5.0",
+    "grunt-contrib-uglify": "~0.3.0",
+    "jpegtran-bin": "~0.2.0",
+    "grunt-contrib-imagemin": "~0.5.0",
     "grunt-groc": "*",
     "grunt-regarde": "*",
     "grunt-rev": "*",

@@ -23,6 +23,7 @@
     "FlowTypeJS":"*",
     "FitVids":"*",
     "echo":"https://github.com/toddmotto/echo.git",
+    "colors":"https://github.com/mrmrs/colors.git",
     "neat":"https://github.com/thoughtbot/neat.git"
   },
 
@@ -37,6 +38,9 @@
     },
     "typeplate":{
       "scss":"scss/*.scss"
+    },
+    "colors":{
+      "scss":"sass/*.scss"
     },
     "FlowTypeJS": {
       "js/plugins": "flowtype.js"

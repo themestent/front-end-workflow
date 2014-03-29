@@ -171,15 +171,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    // **Concurrent Output** to improve the build time.
-    // concurrent: {
-    //   target: {
-    //       tasks: ['newer:concat:bootstrap','newer:compass:dev','newer:cssc','watch'],
-    //       options: {
-    //           logConcurrentOutput: true
-    //       }
-    //   }
-    // },
   });
   // ### Register Tasks
   // `grunt download` command to download all the required development resources
