@@ -1,6 +1,6 @@
 {
   "name": "front-end-workflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Front-End Workflow Automator",
   "keywords":["front-end","workflow","generator"],
   "homepage":"https://github.com/themestent/front-end-workflow",
