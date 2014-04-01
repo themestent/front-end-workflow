@@ -412,6 +412,74 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "SCSS"
                 },
+                "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/_app-general-styles.scss",
+                "projectPath": "app/scss/_app-general-styles.scss",
+                "targetPath": "app/scss/_app-general-styles",
+                "pageTitle": "app/scss/_app-general-styles",
+                "title": "_app-general-styles"
+              },
+              "depth": 3,
+              "outline": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "Applying Sticky footer styles",
+                    "slug": "applying-sticky-footer-styles"
+                  },
+                  "depth": 2
+                }, {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "General Styles for the application template pages",
+                    "slug": "general-styles-for-the-application-template-pages"
+                  },
+                  "depth": 2
+                }
+              ]
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".scss"],
+                  "pygmentsLexer": "scss",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "SCSS"
+                },
+                "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/app.scss",
+                "projectPath": "app/scss/app.scss",
+                "targetPath": "app/scss/app",
+                "pageTitle": "app/scss/app",
+                "title": "app"
+              },
+              "depth": 3,
+              "outline": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 1,
+                    "title": "Main Scss file holding all the custom styles of the applications components.",
+                    "slug": "main-scss-file-holding-all-the-custom-styles-of-the-applications-components"
+                  },
+                  "depth": 1
+                }
+              ]
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".scss"],
+                  "pygmentsLexer": "scss",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "SCSS"
+                },
                 "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/themestent.scss",
                 "projectPath": "app/scss/themestent.scss",
                 "targetPath": "app/scss/themestent",
@@ -419,7 +487,17 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                 "title": "themestent"
               },
               "depth": 3,
-              "outline": []
+              "outline": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 1,
+                    "title": "Importing Base Framework Scss files",
+                    "slug": "importing-base-framework-scss-files"
+                  },
+                  "depth": 1
+                }
+              ]
             }
           ]
         }
