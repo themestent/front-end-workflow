@@ -45,7 +45,8 @@ module.exports = function(grunt) {
             safe:true
         },
         files: {
-            'app/css/themestent.css': 'app/css/app.css'
+            'app/css/themestent.css': 'app/css/themestent.css',
+            'app/css/app.css': 'app/css/app.css',
         }
       }
     },
@@ -108,15 +109,40 @@ module.exports = function(grunt) {
         src:["css/csscomb/*.css","css/production-css/*.css"]
       }
     },
+    //  #### Responsive Images
+    // `responsive_images` task will configure two *image* sizes and a *retina image* for larger display. For more details about this `grunt plugin` visit: [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images "Autometically create different resolutions for different devices with PictureFill and srcset")
+    responsive_images: {
+        dev: {
+          options: {},
+          sizes: [{
+            width: 320,
+            height: 240
+          },{
+            name: 'large',
+            width: 640
+          },{
+            name: "large",
+            width: 1024,
+            suffix: "_x2",
+            quality: 0.6
+          }],
+          files: [{
+            expand: true,
+            src: ['app/img/**/*.{jpg,gif,png}'],
+            cwd: 'app/img/src/',
+            dest: 'app/img/dist/'
+          }]
+        }
+      },
     // #### Minify Images
     // `imagemin` task is using [**grunt-contrib-imagemin**](https://github.com/gruntjs/grunt-contrib-imagemin) to minify project images.
     imagemin: {
       dynamic: {                         // Another target
         files: [{
           expand: true,                  // Enable dynamic expansion
-          cwd: 'img/',                   // Src matches are relative to this path
+          cwd: 'app/img/',                   // Src matches are relative to this path
           src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'img/'                  // Destination path prefix
+          dest: 'app/img/'                  // Destination path prefix
         }]
       }
     },
@@ -135,14 +161,22 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-        {expand: true, cwd: 'css/minify/', src: ['**'], dest: 'css/production-css/'}
+        {expand: true, cwd: 'app/css/css-min/', src: ['**'], dest: 'css/production-css/'}
         ]
+      },
+      img: {
+        files: [{
+          expand: true,
+          src: ['**/*', '!app/img/**/*.*'],
+          cwd: 'app/img/src/',
+          dest: 'app/img/dist/'
+        }]
       }
     },
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
     groc: {
-      default: ["README.md","bower.json.md","EditorConfig.md","Gruntfile.js","package.json.md","config.rb","CssLint.md","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss"],
+      default: ["README.md","bower.json.md","EditorConfig.md","Gruntfile.js","package.json.md","config.rb","CssLint.md","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss","app/scss/app.scss","app/scss/_app-general-styles.scss"],
       options: {
         "out": "doc/",
         "index":"README.md",
@@ -163,6 +197,11 @@ module.exports = function(grunt) {
         files: ['app/js/app.js', 'app/js/plugins.js'],
         tasks:['concat:bootstrap','concat:plugins']
       },
+      // **Watch app/img/src** changes for responsive image converter
+      img{
+      files:['app/img/src/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'],
+      tasks:['concat:responsive_images:dev','concat:copy:img']
+      },
       // **Reload** the browser on any change
       livereload: {
         files: ['*.html','app/*.html','app/css/*.css','app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}', 'app/js/bootstrap-sass/{themestent.js, app.js}'],
@@ -171,14 +210,29 @@ module.exports = function(grunt) {
         }
       }
     },
+    // **Concurrent Output** to improve the build time.
+    concurrent: {
+      target: {
+          tasks: ['newer:concat:bootstrap','newer:concat:plugins','newer:compass:dev','newer:cssc','watch'],
+          options: {
+              logConcurrentOutput: true
+          }
+      }
+    },
   });
   // ### Register Tasks
   // `grunt download` command to download all the required development resources
   grunt.registerTask('download',['bower:install']);
   // `grunt lint` command will run CssLint
   grunt.registerTask('lint',['csslint']);
+  // `grunt minify` command will minify css files with css combine
+  grunt.registerTask('minify',['clean','csscomb','cssmin']);
+  // `grunt procss` command will create production ready css
+  grunt.registerTask('procss',['clean','copy']);
+  // `grunt proimg` minifies all the images inside img folder
+  grunt.registerTask('proimg','Minification of images','newer:imagemin:dynamic');
   // `grunt doc` command will generate documentation site in **doc** directory.
   grunt.registerTask('doc','Generating documentation...',['groc']);
   // `grunt` command will start initial build and start watching the project for changes and react
-  grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['cssc','watch']);
+  grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['concurrent:target']);
 }
