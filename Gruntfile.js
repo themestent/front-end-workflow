@@ -198,7 +198,7 @@ module.exports = function(grunt) {
         tasks:['concat:bootstrap','concat:plugins']
       },
       // **Watch app/img/src** changes for responsive image converter
-      img{
+      img:{
       files:['app/img/src/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'],
       tasks:['concat:responsive_images:dev','concat:copy:img']
       },
