@@ -1,6 +1,6 @@
 {
   "name": "front-end-workflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://themestent.github.io/front-end-workflow/",
   "main": [
     "css/app.css",
@@ -24,7 +24,8 @@
     "FitVids":"*",
     "echo":"https://github.com/toddmotto/echo.git",
     "colors":"https://github.com/mrmrs/colors.git",
-    "neat":"https://github.com/thoughtbot/neat.git"
+    "neat":"https://github.com/thoughtbot/neat.git",
+    "mixitup":"https://github.com/patrickkunka/mixitup.git"
   },
 
   "exportsOverride": {
@@ -65,6 +66,9 @@
     },
     "neat":{
       "scss":"app/assets/stylesheets/"
+    },
+    "mixitup":{
+      "js/plugins":"build/jquery.mixitup.min.js "
     }
   }
 }

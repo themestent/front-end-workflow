@@ -6,7 +6,7 @@ In this file All the necessary project resources has been defined as dependencie
 ```
 {
    "name": "front-end-workflow",
-   "version": "0.1.0",
+   "version": "0.1.1",
 	"homepage": "http://framework.themestent.com",
 	"main":[ "css/app.css","css/themestent.css"],
 ```
@@ -35,10 +35,12 @@ List all the project dependencies
 	    "FlowTypeJS":"*",
 	    "FitVids":"*",
       "colors":"*",
-	    "echo":"https://github.com/toddmotto/echo.git"
+	    "echo":"https://github.com/toddmotto/echo.git",
+      "neat":"https://github.com/thoughtbot/neat.git",
+      "mixitup":"https://github.com/patrickkunka/mixitup.git"
 	  },
 ```
-Downloaded packages will be copied in **app** directory *'byType'*. With `"exportsOverride"` we are controlling the files of each packages towards it's defined destination. `"exportsOverride"` is quite a relief for developers as it gives us the ability to control and download only required files or folders rather than pulling down whole components. Get more detailed idea about **[exportsOverride](https://github.com/yatskevich/grunt-bower-task#advanced-usage)**.
+Downloaded packages will be copied inside **app** directory *'byType'*. With `"exportsOverride"` we are controlling the files of each packages towards it's defined destination. `"exportsOverride"` is quite a relief for developers as it gives us the ability to control and download only required files or folders rather than pulling down whole components. Get more detailed idea about **[exportsOverride](https://github.com/yatskevich/grunt-bower-task#advanced-usage)**.
 
 ```
 "exportsOverride": {
@@ -76,6 +78,12 @@ Downloaded packages will be copied in **app** directory *'byType'*. With `"expor
     },
     "echo":{
       "js/plugins":"dist/echo.min.js"
+    },
+    "neat":{
+      "scss":"app/assets/stylesheets/"
+    },
+    "mixitup":{
+      "js/plugins":"build/jquery.mixitup.min.js "
     }
   }
  }
