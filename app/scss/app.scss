@@ -14,12 +14,14 @@
 // Import Bourbon
 @import "bourbon/bourbon";
 
-// Including Typelate Scss
+// For better & device friendly *typography* including *Typeplate* `scss` files
 @import "typeplate/typeplate.scss";
 @import "typeplate/vars-typeplate.scss";
 
 // Including Colors Scss
-@import "colors/colors.scss";
+@import "colors/variables";
+@import "colors/skins";
+@import "colors/links";
 
 // Including General Styles
-@import "app-general-styles";
+@import "general-styles";

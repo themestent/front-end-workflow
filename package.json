@@ -25,11 +25,12 @@
     }
   ],
   "dependencies": {
-    "jade":"<1.x.x",
-    "groc":"~0.6.0"
+    "jade":"*",
+    "groc":"*"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
+    "graphicsmagick": "*",
     "imagemagick": "*",
     "grunt-contrib-sass":"*",
     "grunt-cssc":"*",

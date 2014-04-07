@@ -97,7 +97,8 @@ module.exports = function(grunt) {
         src: [
           'app/js/plugins/echo/echo.min.js',
           'app/js/plugins/FitVids/jquery.fitvids.js',
-          'app/js/plugins/FlowTypeJS/flowtype.js'
+          'app/js/plugins/FlowTypeJS/flowtype.js',
+          'app/js/plugins/mixitup/jquery.mixitup.min.js'
         ],
         dest: 'app/js/plugins.js'
       },
@@ -113,24 +114,21 @@ module.exports = function(grunt) {
     // `responsive_images` task will configure two *image* sizes and a *retina image* for larger display. For more details about this `grunt plugin` visit: [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images "Autometically create different resolutions for different devices with PictureFill and srcset")
     responsive_images: {
         dev: {
-          options: {},
-          sizes: [{
-            width: 320,
-            height: 240
-          },{
-            name: 'large',
-            width: 640
-          },{
-            name: "large",
-            width: 1024,
-            suffix: "_x2",
-            quality: 0.6
-          }],
+          options: {
+            // engine:'im',
+            // sizes: [{
+            //   width: 320,
+            // },{
+            //   width: 640,
+            // },{
+            //   width: 800,
+            // }]
+          },
           files: [{
-            expand: true,
-            src: ['app/img/**/*.{jpg,gif,png}'],
-            cwd: 'app/img/src/',
-            dest: 'app/img/dist/'
+            expand: true,                  // Enable dynamic expansion
+            src: '{,*/}*.{png,jpeg,gif}',   // Actual patterns to match
+            cwd: 'app/img/',                   // Src matches are relative to this path
+            dest: 'app/img/'                  // Destination path prefix
           }]
         }
       },
@@ -176,12 +174,12 @@ module.exports = function(grunt) {
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
     groc: {
-      default: ["README.md","bower.json.md","EditorConfig.md","Gruntfile.js","package.json.md","config.rb","CssLint.md","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss","app/scss/app.scss","app/scss/_app-general-styles.scss"],
+      default: ["README.md","bower.json.md","EditorConfig.md","Gruntfile.js","package.json.md","config.rb","CssLint.md","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss","app/scss/app.scss","app/scss/_general-styles.scss"],
       options: {
         "out": "doc/",
         "index":"README.md",
         "index-page-title":"Front-End Workflow - automated process",
-        "github": true,
+        // "github": true,
         "repository-url": "https://github.com/themestent/front-end-workflow"
         }
     },
@@ -199,12 +197,12 @@ module.exports = function(grunt) {
       },
       // **Watch app/img/src** changes for responsive image converter
       img:{
-      files:['app/img/src/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'],
-      tasks:['concat:responsive_images:dev','concat:copy:img']
+      files:['app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'],
+      tasks:['concat:copy:img']
       },
       // **Reload** the browser on any change
       livereload: {
-        files: ['*.html','app/*.html','app/css/*.css','app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}', 'app/js/bootstrap-sass/{themestent.js, app.js}'],
+        files: ['*.html','app/*.html','app/css/*.css','app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}', 'app/js/{themestent.js, app.js, plugins.js}'],
         options: {
           livereload: true
         }
@@ -231,6 +229,8 @@ module.exports = function(grunt) {
   grunt.registerTask('procss',['clean','copy']);
   // `grunt proimg` minifies all the images inside img folder
   grunt.registerTask('proimg','Minification of images','newer:imagemin:dynamic');
+  // `grunt proimg` minifies all the images inside img folder
+  grunt.registerTask('responsive','Generate responsive images','responsive_images');
   // `grunt doc` command will generate documentation site in **doc** directory.
   grunt.registerTask('doc','Generating documentation...',['groc']);
   // `grunt` command will start initial build and start watching the project for changes and react
