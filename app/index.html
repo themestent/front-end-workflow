@@ -155,17 +155,21 @@
               <p>This is a sample text inside <abbr title="paragraph tag">p</abbr> tag with <i>abbr</i>.</p>
             </div>
           </div>
+          <!-- Images Example -->
           <div class="row">
             <div class="col-md-12">
               <h1 class="gamma section-title">Images</h1>
               <div class="row">
                 <div class="col-md-4">
+                <h2 class="delta">Using <code>img-rounded</code> class on This image</h2>
                   <img src="img/sample-thumb.jpeg" alt="..." class="img-rounded img-responsive">
                 </div>
                 <div class="col-md-4">
+                <h2 class="delta">Using <code>img-circle</code> class on This image</h2>
                   <img src="img/sample-thumb.jpeg" alt="..." class="img-circle img-responsive">
                 </div>
                 <div class="col-md-4">
+                  <h2 class="delta">Using <a href="http://www.mobify.com/mobifyjs/v2/docs/" title="Mobify Doc">Mobify.js</a> on This image</h2>
                   <picture>
                       <source src="img/sample-thumb.jpeg" class="img-responsive">
                       <source src="img/sample-thumb-300.jpeg" media="(min-width: 450px)" class="img-responsive">
@@ -177,15 +181,247 @@
               </div>
             </div>
           </div>
-        </div>
+          <!-- Grid Componets -->
+          <div class="grid-components">
+              <!-- Grid -->
+              <div class="page-header">
+                <h1>Bootstrap grid examples</h1>
+                <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+              </div>
+
+              <h3>Three equal columns</h3>
+              <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+              <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+              </div>
+
+              <h3>Three unequal columns</h3>
+              <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+              <div class="row">
+                <div class="col-md-3">.col-md-3</div>
+                <div class="col-md-6">.col-md-6</div>
+                <div class="col-md-3">.col-md-3</div>
+              </div>
+
+              <h3>Two columns</h3>
+              <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+              <div class="row">
+                <div class="col-md-8">.col-md-8</div>
+                <div class="col-md-4">.col-md-4</div>
+              </div>
+
+              <h3>Full width, single column</h3>
+              <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+              <hr>
+
+              <h3>Two columns with two nested columns</h3>
+              <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+              <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+              <div class="row">
+                <div class="col-md-8">
+                  .col-md-8
+                  <div class="row">
+                    <div class="col-md-6">.col-md-6</div>
+                    <div class="col-md-6">.col-md-6</div>
+                  </div>
+                </div>
+                <div class="col-md-4">.col-md-4</div>
+              </div>
+
+              <hr>
+
+              <h3>Mixed: mobile and desktop</h3>
+              <p>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
+              <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+              <div class="row">
+                <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">.col-xs-6</div>
+                <div class="col-xs-6">.col-xs-6</div>
+              </div>
+
+              <hr>
+
+              <h3>Mixed: mobile, tablet, and desktop</h3>
+              <p></p>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+                <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+                <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+              </div>
+
+              <hr>
+
+              <h3>Column clearing</h3>
+              <p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
+              <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                  .col-xs-6 .col-sm-3
+                  <br>
+                  Resize your viewport or check it out on your phone for an example.
+                </div>
+                <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs"></div>
+
+                <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+                <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+              </div>
+
+              <hr>
+
+              <h3>Offset, push, and pull resets</h3>
+              <p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
+              <div class="row">
+                <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+                <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+                <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+              </div>
+          </div>
+
+          <!-- Blog Example -->
+          <div class="blog-container">
+
+            <div class="blog-header">
+              <h1 class="blog-title">The Bootstrap Blog</h1>
+              <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+            </div>
+
+            <div class="row">
+
+              <div class="col-sm-8 blog-main">
+
+                <div class="blog-post">
+                  <h2 class="blog-post-title">Sample blog post</h2>
+                  <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+
+                  <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+                  <hr>
+                  <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                  <blockquote>
+                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  </blockquote>
+                  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                  <h2>Heading</h2>
+                  <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  <h3>Sub-heading</h3>
+                  <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                  <pre><code>Example code block</code></pre>
+                  <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                  <h3>Sub-heading</h3>
+                  <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                  <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                  <ol>
+                    <li>Vestibulum id ligula porta felis euismod semper.</li>
+                    <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                    <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                  </ol>
+                  <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+                </div><!-- /.blog-post -->
+
+                <div class="blog-post">
+                  <h2 class="blog-post-title">Another blog post</h2>
+                  <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+
+                  <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                  <blockquote>
+                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  </blockquote>
+                  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                  <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                </div><!-- /.blog-post -->
+
+                <div class="blog-post">
+                  <h2 class="blog-post-title">New feature</h2>
+                  <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
+
+                  <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                  <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                  <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                </div><!-- /.blog-post -->
+
+                <ul class="pager">
+                  <li><a href="#">Previous</a></li>
+                  <li><a href="#">Next</a></li>
+                </ul>
+
+              </div><!-- /.blog-main -->
+
+              <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <div class="sidebar-module sidebar-module-inset">
+                  <h4>About</h4>
+                  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                </div>
+                <div class="sidebar-module">
+                  <h4>Archives</h4>
+                  <ol class="list-unstyled">
+                    <li><a href="#">March 2014</a></li>
+                    <li><a href="#">February 2014</a></li>
+                    <li><a href="#">January 2014</a></li>
+                    <li><a href="#">December 2013</a></li>
+                    <li><a href="#">November 2013</a></li>
+                    <li><a href="#">October 2013</a></li>
+                    <li><a href="#">September 2013</a></li>
+                    <li><a href="#">August 2013</a></li>
+                    <li><a href="#">July 2013</a></li>
+                    <li><a href="#">June 2013</a></li>
+                    <li><a href="#">May 2013</a></li>
+                    <li><a href="#">April 2013</a></li>
+                  </ol>
+                </div>
+                <div class="sidebar-module">
+                  <h4>Elsewhere</h4>
+                  <ol class="list-unstyled">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                  </ol>
+                </div>
+              </div><!-- /.blog-sidebar -->
+
+            </div><!-- /.row -->
+
+          </div><!-- /.blog-container -->
       </article>
       <div class="push"></div>
     </div>
     <!-- Main Footer -->
-    <footer class="footer-page" role="contentinfo">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="row">
-          <div class="col-xs-7">
+          <div class="col-xs-8">
+            <h3 class="title-footer">Sticky Footer!</h3>
+            <p>You are looking at it right now! This is a live example of sticky footer on Bootstrap</p>
+          </div>
+          <div class="col-xs-4">
             <h3 class="title-footer">How was it?</h3>
             <p>How was your browsing journey so far?</p>
           </div>

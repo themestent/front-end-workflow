@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/themestent/front-end-workflow.png?branch=master)](https://travis-ci.org/themestent/front-end-workflow) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)  [![GitHub version](https://badge.fury.io/gh/themestent%2Ffront-end-workflow.png)](http://badge.fury.io/gh/themestent%2Ffront-end-workflow) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/themestent/front-end-workflow/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Total views](https://sourcegraph.com/api/repos/github.com/themestent/front-end-workflow/counters/views.png)](https://sourcegraph.com/github.com/themestent/front-end-workflow) [![status](https://sourcegraph.com/api/repos/github.com/themestent/front-end-workflow/badges/status.png)](https://sourcegraph.com/github.com/themestent/front-end-workflow) [![Dependency Status](https://gemnasium.com/themestent/front-end-workflow.png)](https://gemnasium.com/themestent/front-end-workflow)
+[![Build Status](https://travis-ci.org/themestent/front-end-workflow.png?branch=master)](https://travis-ci.org/themestent/front-end-workflow) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)  [![GitHub version](https://badge.fury.io/gh/themestent%2Ffront-end-workflow.png)](http://badge.fury.io/gh/themestent%2Ffront-end-workflow) [![Dependency Status](https://gemnasium.com/themestent/front-end-workflow.png)](https://gemnasium.com/themestent/front-end-workflow)
 
 # Front-End Workflow
 **Front-End Workflow** is a boilerplate for front-end developers that automates front-end development workflows. Front-End Workflow is not a framework, nor it does any automated coding for you. It rather helps you to take care of all the repeating tasks every front-end developers faces while developing their projects. Thus it gives you the freedom to concentrate more on better coding keeping other hassles a side!
@@ -39,17 +39,29 @@ Resources used in this project gives Front-End developers a common platform to k
 	* Uglify
 	* CssLint
 	* **ImageMin** (Minify Images using [**grunt-contrib-imagemin**](https://npmjs.org/package/grunt-contrib-imagemin))
-	* LiveReload and Watch for changes
+	* LiveReload and Watch for changes and reload browser automatically.
 
 ## How to use?
- 
+Make sure you have [**Node.js**](http://nodejs.org/download/) installed.
 
-## More on Front-End Workflow
-You can get detailed analytical data on built status, usage rate, dependency levels and much more on **[Sourcegraph](https://sourcegraph.com/github.com/themestent/front-end-workflow)**
+Open your terminal and clone [**Front-End-Workflow**](https://github.com/themestent/front-end-workflow.git) repository.
+`git clone https://github.com/themestent/front-end-workflow.git`
+You can also use GUI tools for [**Mac**](https://mac.github.com) or [**Windows**](https://windows.github.com). You will need to use terminal anyway! Better get used to it!!
+
+When you are done with the cloning get into the directory:
+`cd front-end-workflow`
+Now type `ls` just to have an overview on what you will be working with?
+
+You will see two directories called `app` and `doc`. We will work on this directory for our front-end development process. `doc` has been automatically generated which you will be doing so very soon! But First let's try the following line on our terminal:
+`npm install`
+
+This command will start downloading all the dependend librabries and packages defined into package.json file into a newly created `node_modules` directory. Downloaded packages are only available and works for the current project only.
+
+When `npm install` finished downloading all it's packages you can run following line `npm ls` to see all the available packages downloaded inside `node_modules`
 
 ---
 
-Last Edited on: 6 January 2014.
+Last Edited on: 7 April 2014.
 
 ---
 

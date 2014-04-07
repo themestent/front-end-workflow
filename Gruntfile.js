@@ -110,28 +110,6 @@ module.exports = function(grunt) {
         src:["css/csscomb/*.css","css/production-css/*.css"]
       }
     },
-    //  #### Responsive Images
-    // `responsive_images` task will configure two *image* sizes and a *retina image* for larger display. For more details about this `grunt plugin` visit: [grunt-responsive-images](https://github.com/andismith/grunt-responsive-images "Autometically create different resolutions for different devices with PictureFill and srcset")
-    responsive_images: {
-        dev: {
-          options: {
-            // engine:'im',
-            // sizes: [{
-            //   width: 320,
-            // },{
-            //   width: 640,
-            // },{
-            //   width: 800,
-            // }]
-          },
-          files: [{
-            expand: true,                  // Enable dynamic expansion
-            src: '{,*/}*.{png,jpeg,gif}',   // Actual patterns to match
-            cwd: 'app/img/',                   // Src matches are relative to this path
-            dest: 'app/img/'                  // Destination path prefix
-          }]
-        }
-      },
     // #### Minify Images
     // `imagemin` task is using [**grunt-contrib-imagemin**](https://github.com/gruntjs/grunt-contrib-imagemin) to minify project images.
     imagemin: {
@@ -179,7 +157,7 @@ module.exports = function(grunt) {
         "out": "doc/",
         "index":"README.md",
         "index-page-title":"Front-End Workflow - automated process",
-        // "github": true,
+        "github": false,
         "repository-url": "https://github.com/themestent/front-end-workflow"
         }
     },
@@ -229,10 +207,11 @@ module.exports = function(grunt) {
   grunt.registerTask('procss',['clean','copy']);
   // `grunt proimg` minifies all the images inside img folder
   grunt.registerTask('proimg','Minification of images','newer:imagemin:dynamic');
-  // `grunt proimg` minifies all the images inside img folder
-  grunt.registerTask('responsive','Generate responsive images','responsive_images');
   // `grunt doc` command will generate documentation site in **doc** directory.
   grunt.registerTask('doc','Generating documentation...',['groc']);
   // `grunt` command will start initial build and start watching the project for changes and react
   grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['concurrent:target']);
 }
+// ---
+// #credits
+// ---
