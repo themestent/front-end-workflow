@@ -82,7 +82,8 @@
         <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
           <span class="s1">&#39;app/js/plugins/echo/echo.min.js&#39;</span><span class="p">,</span>
           <span class="s1">&#39;app/js/plugins/FitVids/jquery.fitvids.js&#39;</span><span class="p">,</span>
-          <span class="s1">&#39;app/js/plugins/FlowTypeJS/flowtype.js&#39;</span>
+          <span class="s1">&#39;app/js/plugins/FitText/jquery.fittext.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/plugins/mixitup/jquery.mixitup.min.js&#39;</span>
         <span class="p">],</span>
         <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/js/plugins.js&#39;</span>
       <span class="p">},</span>
@@ -92,30 +93,7 @@
       <span class="nx">tests</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">src</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;css/csscomb/*.css&quot;</span><span class="p">,</span><span class="s2">&quot;css/production-css/*.css&quot;</span><span class="p">]</span>
       <span class="p">}</span>
-    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>#### Responsive Images
-<code>responsive_images</code> task will configure two <em>image</em> sizes and a <em>retina image</em> for larger display. For more details about this <code>grunt plugin</code> visit: <a href="https://github.com/andismith/grunt-responsive-images" title="Autometically create different resolutions for different devices with PictureFill and srcset">grunt-responsive-images</a></p></div></div><div class="code"><div class="wrapper">    <span class="nx">responsive_images</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">dev</span><span class="o">:</span> <span class="p">{</span>
-          <span class="nx">options</span><span class="o">:</span> <span class="p">{},</span>
-          <span class="nx">sizes</span><span class="o">:</span> <span class="p">[{</span>
-            <span class="nx">width</span><span class="o">:</span> <span class="mi">320</span><span class="p">,</span>
-            <span class="nx">height</span><span class="o">:</span> <span class="mi">240</span>
-          <span class="p">},{</span>
-            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span>
-            <span class="nx">width</span><span class="o">:</span> <span class="mi">640</span>
-          <span class="p">},{</span>
-            <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;large&quot;</span><span class="p">,</span>
-            <span class="nx">width</span><span class="o">:</span> <span class="mi">1024</span><span class="p">,</span>
-            <span class="nx">suffix</span><span class="o">:</span> <span class="s2">&quot;_x2&quot;</span><span class="p">,</span>
-            <span class="nx">quality</span><span class="o">:</span> <span class="mf">0.6</span>
-          <span class="p">}],</span>
-          <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
-            <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/img/**/*.{jpg,gif,png}&#39;</span><span class="p">],</span>
-            <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;app/img/src/&#39;</span><span class="p">,</span>
-            <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/img/dist/&#39;</span>
-          <span class="p">}]</span>
-        <span class="p">}</span>
-      <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="minify-images">Minify Images</h4>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="minify-images">Minify Images</h4>
 
 <p><code>imagemin</code> task is using <a href="https://github.com/gruntjs/grunt-contrib-imagemin"><strong>grunt-contrib-imagemin</strong></a> to minify project images.</p></div></div><div class="code"><div class="wrapper">    <span class="nx">imagemin</span><span class="o">:</span> <span class="p">{</span>
       <span class="nx">dynamic</span><span class="o">:</span> <span class="p">{</span>                         <span class="c1">// Another target</span>
@@ -153,7 +131,7 @@
     <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="groc-for-documentation">Groc for documentation</h4>
 
 <p><code>groc</code> task is using <a href="https://github.com/jdcataldo/grunt-groc.git"><strong>grunt-groc</strong></a> to generate a usable documentation site right from your codes. It is a real time saver!</p></div></div><div class="code"><div class="wrapper">    <span class="nx">groc</span><span class="o">:</span> <span class="p">{</span>
-      <span class="k">default</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span><span class="s2">&quot;bower.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;EditorConfig.md&quot;</span><span class="p">,</span><span class="s2">&quot;Gruntfile.js&quot;</span><span class="p">,</span><span class="s2">&quot;package.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;config.rb&quot;</span><span class="p">,</span><span class="s2">&quot;CssLint.md&quot;</span><span class="p">,</span><span class="s2">&quot;app/js/bootstrap-sass/themestent.js&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/themestent.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/app.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_app-general-styles.scss&quot;</span><span class="p">],</span>
+      <span class="k">default</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span><span class="s2">&quot;bower.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;EditorConfig.md&quot;</span><span class="p">,</span><span class="s2">&quot;Gruntfile.js&quot;</span><span class="p">,</span><span class="s2">&quot;package.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;config.rb&quot;</span><span class="p">,</span><span class="s2">&quot;CssLint.md&quot;</span><span class="p">,</span><span class="s2">&quot;app/js/themestent.js&quot;</span><span class="p">,</span><span class="s2">&quot;app/js/app.js&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/themestent.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/app.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_general-styles.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_grid-components.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_footer.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_blog-components.scss&quot;</span><span class="p">],</span>
       <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;out&quot;</span><span class="o">:</span> <span class="s2">&quot;doc/&quot;</span><span class="p">,</span>
         <span class="s2">&quot;index&quot;</span><span class="o">:</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span>
@@ -165,20 +143,20 @@
         <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/scss/**/*.scss&#39;</span><span class="p">],</span>
         <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass:dev&#39;</span><span class="p">]</span>
       <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Watch .js</strong> to see if our JavaScript files change, or new packages are installed and then <code>concat</code></p></div></div><div class="code"><div class="wrapper">      <span class="nx">js</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/js/app.js&#39;</span><span class="p">,</span> <span class="s1">&#39;app/js/plugins.js&#39;</span><span class="p">],</span>
-        <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;concat:bootstrap&#39;</span><span class="p">,</span><span class="s1">&#39;concat:plugins&#39;</span><span class="p">]</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/js/app.js&#39;</span><span class="p">,</span> <span class="s1">&#39;app/js/plugins.js&#39;</span><span class="p">,</span><span class="s1">&#39;app/js/**/*.js&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;newer:concat:bootstrap&#39;</span><span class="p">,</span><span class="s1">&#39;newer:concat:plugins&#39;</span><span class="p">]</span>
       <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Watch app/img/src</strong> changes for responsive image converter</p></div></div><div class="code"><div class="wrapper">      <span class="nx">img</span><span class="o">:</span><span class="p">{</span>
-      <span class="nx">files</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;app/img/src/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&#39;</span><span class="p">],</span>
-      <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;concat:responsive_images:dev&#39;</span><span class="p">,</span><span class="s1">&#39;concat:copy:img&#39;</span><span class="p">]</span>
+      <span class="nx">files</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&#39;</span><span class="p">],</span>
+      <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;concat:copy:img&#39;</span><span class="p">]</span>
       <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Reload</strong> the browser on any change</p></div></div><div class="code"><div class="wrapper">      <span class="nx">livereload</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/css/*.css&#39;</span><span class="p">,</span><span class="s1">&#39;app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&#39;</span><span class="p">,</span> <span class="s1">&#39;app/js/bootstrap-sass/{themestent.js, app.js}&#39;</span><span class="p">],</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/js/*.js&#39;</span><span class="p">],</span>
         <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
           <span class="nx">livereload</span><span class="o">:</span> <span class="kc">true</span>
         <span class="p">}</span>
       <span class="p">}</span>
     <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Concurrent Output</strong> to improve the build time.</p></div></div><div class="code"><div class="wrapper">    <span class="nx">concurrent</span><span class="o">:</span> <span class="p">{</span>
       <span class="nx">target</span><span class="o">:</span> <span class="p">{</span>
-          <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;newer:concat:bootstrap&#39;</span><span class="p">,</span><span class="s1">&#39;newer:concat:plugins&#39;</span><span class="p">,</span><span class="s1">&#39;newer:compass:dev&#39;</span><span class="p">,</span><span class="s1">&#39;newer:cssc&#39;</span><span class="p">,</span><span class="s1">&#39;watch&#39;</span><span class="p">],</span>
+          <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;newer:compass:dev&#39;</span><span class="p">,</span><span class="s1">&#39;newer:cssc&#39;</span><span class="p">,</span><span class="s1">&#39;watch&#39;</span><span class="p">],</span>
           <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
               <span class="nx">logConcurrentOutput</span><span class="o">:</span> <span class="kc">true</span>
           <span class="p">}</span>
