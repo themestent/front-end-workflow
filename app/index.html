@@ -40,7 +40,7 @@
     <script>!function(a,b,c,d,e){function g(a,c,d,e){var f=b.getElementsByTagName("script")[0];a.src=e,a.id=c,a.setAttribute("class",d),f.parentNode.insertBefore(a,f)}a.Mobify={points:[+new Date]};var f=/((; )|#|&|^)mobify=(\d)/.exec(location.hash+"; "+b.cookie);if(f&&f[3]){if(!+f[3])return}else if(!c())return;b.write('<plaintext style="display:none">'),setTimeout(function(){var c=a.Mobify=a.Mobify||{};c.capturing=!0;var f=b.createElement("script"),h="mobify",i=function(){var c=new Date;c.setTime(c.getTime()+3e5),b.cookie="mobify=0; expires="+c.toGMTString()+"; path=/",a.location=a.location.href};f.onload=function(){if(e)if("string"==typeof e){var c=b.createElement("script");c.onerror=i,g(c,"main-executable",h,mainUrl)}else a.Mobify.mainExecutable=e.toString(),e()},f.onerror=i,g(f,"mobify-js",h,d)})}(window,document,function(){a=/webkit|(firefox)[\/\s](\d+)|(opera)[\s\S]*version[\/\s](\d+)|(trident)[\/\s](\d+)/i.exec(navigator.userAgent);return!a||a[1]&&4>+a[2]||a[3]&&11>+a[4]||a[5]&&6>+a[6]?!1:!0},
 
     // path to mobify.js
-    "//cdn.mobify.com/mobifyjs/build/mobify-2.0.10.min.js",
+    "js/mobify.min.js",
 
     // calls to APIs go here (or path to a main.js)
     function() {
@@ -157,28 +157,38 @@
           </div>
           <!-- Images Example -->
           <div class="row">
-            <div class="col-md-12">
+            <header class="col-md-12">
               <h1 class="gamma section-title">Images</h1>
-              <div class="row">
-                <div class="col-md-4">
-                <h2 class="delta">Using <code>img-rounded</code> class on This image</h2>
-                  <img src="img/sample-thumb.jpeg" alt="..." class="img-rounded img-responsive">
-                </div>
-                <div class="col-md-4">
-                <h2 class="delta">Using <code>img-circle</code> class on This image</h2>
-                  <img src="img/sample-thumb.jpeg" alt="..." class="img-circle img-responsive">
-                </div>
-                <div class="col-md-4">
-                  <h2 class="delta">Using <a href="http://www.mobify.com/mobifyjs/v2/docs/" title="Mobify Doc">Mobify.js</a> on This image</h2>
-                  <picture>
-                      <source src="img/sample-thumb.jpeg" class="img-responsive">
-                      <source src="img/sample-thumb-300.jpeg" media="(min-width: 450px)" class="img-responsive">
-                      <source src="img/sample-thumb-600.jpeg" media="(min-width: 600px)" class="img-responsive">
-                      <source src="img/sample-thumb.jpeg" media="(min-width: 1000px)" class="img-responsive">
-                      <img src="img/sample-thumb.jpeg" class="img-responsive">
-                  </picture>
-                </div>
-              </div>
+            </header>
+            <div class="col-md-4">
+              <h2 class="delta">Using <code>img-rounded</code> class on This image</h2>
+              <img src="img/sample-thumb.jpeg" alt="..." class="img-rounded img-responsive">
+            </div>
+            <div class="col-md-4">
+              <h2 class="delta">Using <code>img-circle</code> class on This image</h2>
+              <img src="img/sample-thumb.jpeg" alt="..." class="img-circle img-responsive">
+            </div>
+            <div class="col-md-4">
+              <h2 class="delta">Using <code>img-thumbnail</code> class on This image</h2>
+                <img src="img/sample-thumb.jpeg" alt="..." class="img-thumbnail img-responsive">
+            </div>
+            <header class="col-md-12">
+              <h1 class="gamma section-title">Using <a href="http://www.mobify.com/mobifyjs/v2/docs/" title="Mobify.js Doc">Mobify.js</a> for adaptive responsive images</h1>
+            </header>
+            <!-- Picture Polyfill -->
+            <div class="col-md-6">
+              <h2 class="delta">Using <a href="http://cdn.mobify.com/mobifyjs/examples/capturing-picturepolyfill/index.html" title="Mobify.js Picture Polyfill Example">Picture Polyfill</a> on This image</h2>
+              <picture>
+                  <source src="img/sample-thumb.jpeg" class="img-responsive">
+                  <source src="img/sample-thumb-300.jpeg" media="(min-width: 450px)" class="img-responsive">
+                  <source src="img/sample-thumb-600.jpeg" media="(min-width: 600px)" class="img-responsive">
+                  <source src="img/sample-thumb.jpeg" media="(min-width: 1000px)" class="img-responsive">
+                  <img src="img/sample-thumb.jpeg" class="img-responsive">
+              </picture>
+            </div>
+            <div class="col-md-6">
+              <h2 class="delta">Using <a href="http://cdn.mobify.com/mobifyjs/examples/capturing-picturepolyfill/index.html" title="Mobify.js Picture Polyfill Example">Picture Resizer</a> on This image</h2>
+              <img class="img-responsive" src="img/sample-thumb.jpeg">
             </div>
           </div>
           <!-- Grid Componets -->
@@ -410,6 +420,36 @@
             </div><!-- /.row -->
 
           </div><!-- /.blog-container -->
+
+          <div class="row flowtype-components">
+            <!-- FitText Example -->
+            <div class="col-md-12">
+              <h2 class="mega mega-type">Title with FitText.js</h2>
+              <p><a href="http://fittextjs.com" title="Fittext - a plugin for inflating web type"><strong>FitText.js</strong></a> applied on above title to look a like on every devices.</p>
+            </div>
+            <!-- Lazy Loading Example -->
+            <div class="col-md-6">
+              <h2 class="delta mega-type">Lazy Loading Example</h2>
+              <img class="img-responsive" src="img/ajax.gif" alt="" data-echo="img/mobile-dev-snap.jpg">
+            </div>
+            <!-- Lazy Loading And PictureFill example -->
+            <div class="col-md-6">
+            <h2 class="delta mega-type">
+              Lazy load with picture fill
+            </h2>
+
+              <picture>
+                  <source src="img/mobile-dev-snap-large.jpg" class="img-responsive">
+                  <source src="img/mobile-dev-snap-mobile.jpg" media="(min-width: 450px)" class="img-responsive">
+                  <source src="img/mobile-dev-snap-tab.jpg" media="(min-width: 600px)" class="img-responsive">
+                  <source src="img/mobile-dev-snap-mobile-notebook.jpg" media="(min-width: 1000px)" class="img-responsive">
+                  <source src="img/mobile-dev-snap-mobile-large.jpg" media="(min-width: 1200px)" class="img-responsive">
+                  <img class="img-responsive" src="img/ajax.gif" alt="" data-echo="img/mobile-dev-snap-notebook.jpg">
+              </picture>
+            </div>
+          </div>
+        </div>
+
       </article>
       <div class="push"></div>
     </div>
@@ -428,8 +468,9 @@
         </div>
       </div>
     </footer>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery/jquery.min.js"><\/script>')</script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery/jquery-2.1.0.min.js"><\/script>')</script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- Calling Plugins js file used in this project -->
     <script src="js/bootstrap.js"></script>
     <script src="js/plugins.js"></script>

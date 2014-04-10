@@ -4,44 +4,45 @@ Including most commonly used grunt-cli packages for Front-End Development. Just 
 In this project we are using Jade and Groc as main `dependencies` and a big list of other Grunt tasks as `devDependencies` to to automate different processes we will be using.
 
 ```
-{
-  "dependencies": {
-    "jade":"<1.x.x",
-    "groc":"~0.6.0"
+"dependencies": {
+    "jade":"*",
+    "groc":"*"
   },
   "devDependencies": {
+    "bower":"~1.3.2",
     "grunt": "~0.4.1",
-        "graphicsmagick": "*",
-        "imagemagick": "*",
-        "grunt-contrib-sass":"*",
-        "grunt-cssc":"*",
-        "grunt-contrib-copy": "*",
-        "grunt-contrib-compass": "*",
-        "grunt-contrib-concat": "*",
-        "grunt-contrib-csslint": "*",
-        "grunt-contrib-clean": "*",
-        "grunt-csscomb": "*",
-        "grunt-contrib-cssmin": "~0.6.0",
-        "grunt-htmlhint":"*",
-        "grunt-contrib-watch": "*",
-        "grunt-concurrent":"*",
-        "grunt-newer":"*",
-        "grunt-browser-sync":"*",
-        "grunt-contrib-copy": "*",
-        "grunt-bower-task":"*",
-        "grunt-contrib-livereload": "*",
-        "grunt-contrib-jst": "~0.5.0",
-        "grunt-contrib-uglify": "~0.3.0",
-        "jpegtran-bin": "*",
-        "grunt-contrib-imagemin": "*",
-        "grunt-groc": "*",
-        "grunt-regarde": "*",
-        "grunt-rev": "*",
-        "grunt-karma": "*",
-        "grunt-open": "*",
-        "matchdep": "*"
+    "imagemagick": "*",
+    "grunt-contrib-sass":"*",
+    "grunt-cssc":"*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-csscomb": "*",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-htmlhint":"*",
+    "grunt-contrib-watch": "*",
+    "grunt-concurrent":"*",
+    "grunt-newer":"*",
+    "grunt-browser-sync":"*",
+    "grunt-contrib-copy": "*",
+    "grunt-bower-task":"*",
+    "grunt-contrib-livereload": "*",
+    "grunt-contrib-jst": "~0.5.0",
+    "grunt-contrib-uglify": "~0.3.0",
+    "jpegtran-bin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-groc": "*",
+    "grunt-regarde": "*",
+    "grunt-rev": "*",
+    "grunt-karma": "*",
+    "grunt-open": "*",
+    "matchdep": "*"
+  },
+  "engines":{
+    "node":">=0.10.0"
   }
-}
 ```
 
 Have a look at the [**package.json**](package.html) file.

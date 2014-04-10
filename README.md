@@ -22,9 +22,10 @@ Resources used in this project gives Front-End developers a common platform to k
 	* **[Bourbon](http://bourbon.io/ "A simple and lightweight mixin library for Sass.")**: A simple and lightweight mixin library for Sass.
 	* **[html5shiv](https://github.com/aFarkas/html5shiv "The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explore")**: The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explore
 	* **[Respond.js](https://github.com/scottjehl/Respond "Polyfill for media queries")**: A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
-	* **[FlowTypeJs](http://simplefocus.com/flowtype/ "font-size and line-height based on element width")**: Web typography at its finest: font-size and line-height based on element width.
+	* **[FitText](http://simplefocus.com/flowtype/ "A jQuery plugin for inflating web type")**: A jQuery plugin for inflating web type.
 	* **[FitVids](http://fitvidsjs.com/ "jQuery plugin for fluid width video embeds.")**: A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
 	* **[Echo](https://github.com/toddmotto/echo "Lazy-loading images with data-* attributes")**: Echo is a standalone JavaScript lazy-loading image tool. Echo is fast, less than 1KB and uses HTML5 data-* attributes.
+  * Add adding ....
 
 	You can add your dependency packages required for your project in `bower.json`file. To control downloaded resources copied into it's right directory according their	 file type `"exportsOverride": {}` has been used. Get some more ideas about different options at **[grunt-bower-task](https://github.com/yatskevich/grunt-bower-task)**.
 
@@ -45,7 +46,9 @@ Resources used in this project gives Front-End developers a common platform to k
 Make sure you have [**Node.js**](http://nodejs.org/download/) installed.
 
 Open your terminal and clone [**Front-End-Workflow**](https://github.com/themestent/front-end-workflow.git) repository.
+
 `git clone https://github.com/themestent/front-end-workflow.git`
+
 You can also use GUI tools for [**Mac**](https://mac.github.com) or [**Windows**](https://windows.github.com). You will need to use terminal anyway! Better get used to it!!
 
 When you are done with the cloning get into the directory:
@@ -55,13 +58,36 @@ Now type `ls` just to have an overview on what you will be working with?
 You will see two directories called `app` and `doc`. We will work on this directory for our front-end development process. `doc` has been automatically generated which you will be doing so very soon! But First let's try the following line on our terminal:
 `npm install`
 
-This command will start downloading all the dependend librabries and packages defined into package.json file into a newly created `node_modules` directory. Downloaded packages are only available and works for the current project only.
+This command will start downloading all the depended libraries and packages defined into `package.json` file into a newly created *`node_modules`* directory. Downloaded packages are only available and works for the current project only.
 
-When `npm install` finished downloading all it's packages you can run following line `npm ls` to see all the available packages downloaded inside `node_modules`
+When `npm install` finished downloading all it's packages you can run following line `npm ls` to see all the available packages downloaded inside `node_modules`. That tree view looks amazing right? It holds all types of dependencies we have mentioned on `package.json` file. Each of those packages has it's own role and certain tasks to process.
+
+### Download Front-End Resources
+
+Ok now we have all required node modules installed locally for this project and we are ready to download some resources, files that we actually will require for Front-End Development project. In this workflow I will be using [**Twitter Bootstrap scss**](http://getbootstrap.com/css/#sass) files, [**Bourbon**](http://bourbon.io "Sass Mixins Library") - Sass Mixins Library, Some *JavaScript plugins* like ***FitText***, ***FitVids***, ***Echo*** etc. I want those to download and place those automatically into right directory according file type.
+
+We can do this by typing following line on terminal:
+
+`grunt download`
+
+If you don't get any unwanted alien like error you will see line like these:
+<pre><code>Running "bower:install" (bower) task
+>> Installed bower packages
+>> Copied packages to /Users/evanshajed/Working Projects/front-end-workflow/app
+>> Cleaned bower dir /Users/evanshajed/Working Projects/front-end-workflow/components
+
+Done, without errors.
+</code></pre>
+
+Get inside `app` directory and you will see all the files are downloaded and placed to their right destination according to their file type. Then finally you will need to start grunt task to watch and build whenever any changes occurs in files or directories mentioned in **Gruntfile.js**. To start this task type this line:
+
+`grunt`
+
+You will then see several process starts running and waiting for changes. Start your usual development process inside `app` directory. Just to get used to this workflow start with **`index.html`** file. Include some image inside **`img`** or make some changes inside **`scss`** files. **Grunt** will generate, concatenate `.js` files, build `scss` to `css` files and reload the browser for you.
 
 ---
 
-Last Edited on: 7 April 2014.
+Last Edited on: 10 April 2014.
 
 ---
 

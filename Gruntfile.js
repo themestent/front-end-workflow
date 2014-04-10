@@ -97,7 +97,7 @@ module.exports = function(grunt) {
         src: [
           'app/js/plugins/echo/echo.min.js',
           'app/js/plugins/FitVids/jquery.fitvids.js',
-          'app/js/plugins/FlowTypeJS/flowtype.js',
+          'app/js/plugins/FitText/jquery.fittext.js',
           'app/js/plugins/mixitup/jquery.mixitup.min.js'
         ],
         dest: 'app/js/plugins.js'
@@ -152,7 +152,7 @@ module.exports = function(grunt) {
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
     groc: {
-      default: ["README.md","bower.json.md","EditorConfig.md","Gruntfile.js","package.json.md","config.rb","CssLint.md","app/js/bootstrap-sass/themestent.js","app/scss/themestent.scss","app/scss/app.scss","app/scss/_general-styles.scss"],
+      default: ["README.md","bower.json.md","EditorConfig.md","Gruntfile.js","package.json.md","config.rb","CssLint.md","app/js/themestent.js","app/js/app.js","app/scss/themestent.scss","app/scss/app.scss","app/scss/_general-styles.scss","app/scss/_grid-components.scss","app/scss/_footer.scss","app/scss/_blog-components.scss"],
       options: {
         "out": "doc/",
         "index":"README.md",
@@ -170,8 +170,8 @@ module.exports = function(grunt) {
       },
       // **Watch .js** to see if our JavaScript files change, or new packages are installed and then `concat`
       js: {
-        files: ['app/js/app.js', 'app/js/plugins.js'],
-        tasks:['concat:bootstrap','concat:plugins']
+        files: ['app/js/app.js', 'app/js/plugins.js','app/js/**/*.js'],
+        tasks:['newer:concat:bootstrap','newer:concat:plugins']
       },
       // **Watch app/img/src** changes for responsive image converter
       img:{
@@ -180,7 +180,7 @@ module.exports = function(grunt) {
       },
       // **Reload** the browser on any change
       livereload: {
-        files: ['*.html','app/*.html','app/css/*.css','app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}', 'app/js/{themestent.js, app.js, plugins.js}'],
+        files: ['*.html','app/*.html','app/js/*.js'],
         options: {
           livereload: true
         }
@@ -189,7 +189,7 @@ module.exports = function(grunt) {
     // **Concurrent Output** to improve the build time.
     concurrent: {
       target: {
-          tasks: ['newer:concat:bootstrap','newer:concat:plugins','newer:compass:dev','newer:cssc','watch'],
+          tasks: ['newer:compass:dev','newer:cssc','watch'],
           options: {
               logConcurrentOutput: true
           }
@@ -212,6 +212,3 @@ module.exports = function(grunt) {
   // `grunt` command will start initial build and start watching the project for changes and react
   grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['concurrent:target']);
 }
-// ---
-// #credits
-// ---

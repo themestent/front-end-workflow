@@ -1,6 +1,6 @@
 {
   "name": "front-end-workflow",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Front-End Workflow Automator",
   "keywords":["front-end","workflow","generator"],
   "homepage":"https://github.com/themestent/front-end-workflow",
@@ -11,8 +11,8 @@
     "email":"evanshajed@gmail.com"
   },
   "scripts":{
-    "predeploy":"echo Feel the awsome matrix view! You are including your projects dependencies",
-    "postdeploy":"echo Finally our long listed dependencies found it's end point. We are good to go now!"
+    "prepublish":"echo Feel the awsome matrix view! You are including your projects dependencies",
+    "postpublish":"echo Finally our long listed dependencies found it's end point. We are good to go now!"
     },
   "repository":{
     "type":"git",
@@ -29,8 +29,8 @@
     "groc":"*"
   },
   "devDependencies": {
+    "bower":"~1.3.2",
     "grunt": "~0.4.1",
-    "graphicsmagick": "*",
     "imagemagick": "*",
     "grunt-contrib-sass":"*",
     "grunt-cssc":"*",

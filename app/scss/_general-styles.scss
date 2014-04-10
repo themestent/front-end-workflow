@@ -1,9 +1,11 @@
+// # General Styles
+// applied on Front-End Workflow Demo Template.
 html,body{
   height:100%;
-  $body-copy-color: #444;
+  $body-copy-color: #434;
 }
 
-// Sticky footer
+// **Sticky footer**
 .wrap{
   min-height: 100%;
   height: auto !important;
@@ -13,4 +15,11 @@ html,body{
 
 .push,footer{
   height: 90px;
+}
+
+.row{
+  margin-top: em(20);
+  margin-bottom: em(20);
+}
+.mega-type{
 }

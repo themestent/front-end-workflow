@@ -64,7 +64,18 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                 "title": "How to use?",
                 "slug": "how-to-use"
               },
-              "depth": 2
+              "depth": 2,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 3,
+                    "title": "Download Front-End Resources",
+                    "slug": "download-front-end-resources"
+                  },
+                  "depth": 3
+                }
+              ]
             }
           ]
         }
@@ -257,14 +268,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "depth": 3
                 }
               ]
-            }, {
-              "type": "heading",
-              "data": {
-                "level": 2,
-                "title": "[Credits]",
-                "slug": "credits"
-              },
-              "depth": 2
             }
           ]
         },
@@ -382,14 +385,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "depth": 3
             }
           ]
-        }, {
-          "type": "heading",
-          "data": {
-            "level": 2,
-            "title": "[Credits]",
-            "slug": "credits"
-          },
-          "depth": 2
         }
       ]
     }, {
@@ -401,6 +396,46 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
       "depth": 1,
       "children": [
         {
+          "type": "folder",
+          "data": {
+            "path": "app/js",
+            "title": "js"
+          },
+          "depth": 2,
+          "children": [
+            {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".js"],
+                  "pygmentsLexer": "javascript",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "JavaScript"
+                },
+                "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/js/app.js",
+                "projectPath": "app/js/app.js",
+                "targetPath": "app/js/app",
+                "pageTitle": "app/js/app",
+                "firstHeader": {
+                  "type": "heading",
+                  "data": {
+                    "level": 1,
+                    "title": "Application js",
+                    "slug": "application-js",
+                    "isFileHeader": true
+                  },
+                  "depth": 1
+                },
+                "title": "Application js"
+              },
+              "depth": 3,
+              "outline": []
+            }
+          ]
+        }, {
           "type": "folder",
           "data": {
             "path": "app/scss",
@@ -420,11 +455,101 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "SCSS"
                 },
+                "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/_blog-components.scss",
+                "projectPath": "app/scss/_blog-components.scss",
+                "targetPath": "app/scss/_blog-components",
+                "pageTitle": "app/scss/_blog-components",
+                "title": "_blog-components"
+              },
+              "depth": 3,
+              "outline": []
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".scss"],
+                  "pygmentsLexer": "scss",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "SCSS"
+                },
+                "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/_footer.scss",
+                "projectPath": "app/scss/_footer.scss",
+                "targetPath": "app/scss/_footer",
+                "pageTitle": "app/scss/_footer",
+                "firstHeader": {
+                  "type": "heading",
+                  "data": {
+                    "level": 1,
+                    "title": "Footer Section Styles",
+                    "slug": "footer-section-styles",
+                    "isFileHeader": true
+                  },
+                  "depth": 1
+                },
+                "title": "Footer Section Styles"
+              },
+              "depth": 3,
+              "outline": []
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".scss"],
+                  "pygmentsLexer": "scss",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "SCSS"
+                },
                 "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/_general-styles.scss",
                 "projectPath": "app/scss/_general-styles.scss",
                 "targetPath": "app/scss/_general-styles",
                 "pageTitle": "app/scss/_general-styles",
-                "title": "_general-styles"
+                "firstHeader": {
+                  "type": "heading",
+                  "data": {
+                    "level": 1,
+                    "title": "General Styles",
+                    "slug": "general-styles",
+                    "isFileHeader": true
+                  },
+                  "depth": 1
+                },
+                "title": "General Styles"
+              },
+              "depth": 3,
+              "outline": []
+            }, {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".scss"],
+                  "pygmentsLexer": "scss",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "SCSS"
+                },
+                "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/app/scss/_grid-components.scss",
+                "projectPath": "app/scss/_grid-components.scss",
+                "targetPath": "app/scss/_grid-components",
+                "pageTitle": "app/scss/_grid-components",
+                "firstHeader": {
+                  "type": "heading",
+                  "data": {
+                    "level": 1,
+                    "title": "Grid Components",
+                    "slug": "grid-components",
+                    "isFileHeader": true
+                  },
+                  "depth": 1
+                },
+                "title": "Grid Components"
               },
               "depth": 3,
               "outline": []

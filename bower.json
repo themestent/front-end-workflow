@@ -20,7 +20,7 @@
     "bourbon":"*",
     "html5shiv":"*",
     "respond":"*",
-    "FlowTypeJS":"*",
+    "FitText":"https://github.com/davatron5000/FitText.js.git",
     "FitVids":"*",
     "echo":"https://github.com/toddmotto/echo.git",
     "colors":"https://github.com/mrmrs/colors.git",
@@ -43,8 +43,8 @@
     "colors":{
       "scss":"sass/*.scss"
     },
-    "FlowTypeJS": {
-      "js/plugins": "flowtype.js"
+    "FitText": {
+      "js/plugins": "jquery.fittext.js"
     },
     "FitVids": {
       "js/plugins": "jquery.fitvids.js"
