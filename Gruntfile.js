@@ -156,8 +156,8 @@ module.exports = function(grunt) {
       options: {
         "out": "doc/",
         "index":"README.md",
-        "index-page-title":"Front-End Workflow - automated process",
-        "github": true,
+        "index-page-title":"Front-End Workflow",
+        "github": false,
         "repository-url": "https://github.com/themestent/front-end-workflow"
         }
     },

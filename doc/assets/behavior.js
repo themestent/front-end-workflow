@@ -33,49 +33,19 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
             {
               "type": "heading",
               "data": {
-                "level": 2,
-                "title": "Built for rapid development.",
-                "slug": "built-for-rapid-development"
+                "level": 3,
+                "title": "Resources",
+                "slug": "resources"
               },
-              "depth": 2
+              "depth": 3
             }, {
               "type": "heading",
               "data": {
-                "level": 2,
-                "title": "Features",
-                "slug": "features"
+                "level": 3,
+                "title": "Download Front-End Resources",
+                "slug": "download-front-end-resources"
               },
-              "depth": 2,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Resources",
-                    "slug": "resources"
-                  },
-                  "depth": 3
-                }
-              ]
-            }, {
-              "type": "heading",
-              "data": {
-                "level": 2,
-                "title": "How to use?",
-                "slug": "how-to-use"
-              },
-              "depth": 2,
-              "children": [
-                {
-                  "type": "heading",
-                  "data": {
-                    "level": 3,
-                    "title": "Download Front-End Resources",
-                    "slug": "download-front-end-resources"
-                  },
-                  "depth": 3
-                }
-              ]
+              "depth": 3
             }
           ]
         }

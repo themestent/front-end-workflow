@@ -3,12 +3,21 @@
 # Front-End Workflow
 **Front-End Workflow** is a boilerplate for front-end developers that automates front-end development workflows. Front-End Workflow is not a framework, nor it does any automated coding for you. It rather helps you to take care of all the repeating tasks every front-end developers faces while developing their projects. Thus it gives you the freedom to concentrate more on better coding keeping other hassles a side!
 
-## Built for rapid development.
+<strong>Below are the content list breakdown:</strong>
+
+
+- [**What is it?**](#details)
+- [**Features**](#features)
+- [**How to?**](#howto)
+
+
+
+## [Built for rapid development](id:details).
 Front-End developers deal with so many different tasks to deliver a perfect UI front usable for it's users and obviously the browsers. On any new project we face a common problem - [**setting up a good development platform**](https://speakerdeck.com/addyosmani/automating-front-end-workflow).
 
 To achieve that most of us download same types of resources every time, do the redundant copy & pasting don't know how many times! We also do the browser testing, performance optimization, we need to compress images, check our css with CssLint, concatenate different JavaScript files and the list just goes on!
 
-## Features
+## [Features](id:features).
 **Front-End Workflow** package comes up with features that helps you to be more productive yet efficient! Below you will find the dependencies included in this package.
 
 ### Resources
@@ -42,7 +51,7 @@ Resources used in this project gives Front-End developers a common platform to k
 	* **ImageMin** (Minify Images using [**grunt-contrib-imagemin**](https://npmjs.org/package/grunt-contrib-imagemin))
 	* LiveReload and Watch for changes and reload browser automatically.
 
-## How to use?
+## [How to use](id:howto)?
 Make sure you have [**Node.js**](http://nodejs.org/download/) installed.
 
 Open your terminal and clone [**Front-End-Workflow**](https://github.com/themestent/front-end-workflow.git) repository.
