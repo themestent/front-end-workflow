@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><title>Gruntfile</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="Gruntfile"><meta name="groc-project-path" content="Gruntfile.js"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path">Gruntfile.js</div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="grunt-tasks">Grunt Tasks</h1></div></div></div><div class="segment"><div class="code"><div class="wrapper"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>This file first matches the dependencies of all required <strong>grunt-cli</strong> from <strong>package.json</strong> file.</p></div></div><div class="code"><div class="wrapper">  <span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
+    <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;matchdep&quot;</span><span class="p">).</span><span class="nx">filterDev</span><span class="p">(</span><span class="s2">&quot;grunt-*&quot;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">);</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h2 id="initialing-grunt-configuration">Initialing Grunt Configuration</h2>
+
+<p><code>grunt.initConfig()</code> Initializes all the tasks</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="defining-tasks-names-with-options">Defining tasks names with options.</h3>
+
+<p>Reading all the required task packages from <em>package.json</em></p></div></div><div class="code"><div class="wrapper">    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="bower-install-required-dev-dependencies">Bower: Install required Dev Dependencies</h4>
+
+<p><strong>Bower</strong> task installs resources defined in <code>bower.json</code> file inside <strong>app</strong> directory. It first creates a Bower's default components directory and start downloading the resources.</p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>On Complete it copies downloaded resources to defined sub-directories inside <strong>app</strong> folder according to resource type.</p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>When all the resources copied to it's destination Bower's default components directory will be removed. For more options browse <a href="https://github.com/yatskevich/grunt-bower-task"><strong>Grunt-Bower-Task</strong></a>.</p></div></div><div class="code"><div class="wrapper">    <span class="nx">bower</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">install</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">targetDir</span><span class="o">:</span> <span class="s1">&#39;./app&#39;</span><span class="p">,</span>
+            <span class="nx">layout</span><span class="o">:</span> <span class="s1">&#39;byType&#39;</span><span class="p">,</span>
+            <span class="nx">install</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">verbose</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">cleanTargetDir</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nx">cleanBowerDir</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">bowerOptions</span><span class="o">:</span> <span class="p">{</span>
+              <span class="nx">forceLatest</span><span class="o">:</span><span class="kc">true</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="css-condense-task">Css Condense task.</h4>
+
+<p><code>cssc</code> task is used to compress css files. Get more details on options can be found on <a href="https://github.com/mediapart/grunt-cssc"><strong>Grunt-Cssc</strong></a></p></div></div><div class="code"><div class="wrapper">    <span class="nx">cssc</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">sortSelectors</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">lineBreaks</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">sortDeclarations</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+            <span class="nx">consolidateViaDeclarations</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+            <span class="nx">consolidateViaSelectors</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+            <span class="nx">consolidateMediaQueries</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+            <span class="nx">sort</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+            <span class="nx">safe</span><span class="o">:</span><span class="kc">true</span>
+        <span class="p">},</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s1">&#39;app/css/themestent.css&#39;</span><span class="o">:</span> <span class="s1">&#39;app/css/themestent.css&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;app/css/app.css&#39;</span><span class="o">:</span> <span class="s1">&#39;app/css/app.css&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="compass">Compass</h4>
+
+<p><code>compass</code> task following rules defined into <strong>config.rb</strong>. Look for more options <a href="https://github.com/gruntjs/grunt-contrib-compass"><strong>Grunt-Contrib-compass</strong></a></p></div></div><div class="code"><div class="wrapper">    <span class="nx">compass</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dev</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">config</span><span class="o">:</span> <span class="s1">&#39;config.rb&#39;</span><span class="p">,</span>
+          <span class="nx">force</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="csslint">CssLint</h4>
+
+<p><strong>csslint</strong> task checks css syntax against a set of rules for better efficiency and make sure your css works as expected. <strong>.csslintrc</strong> file holds some of the options out of many which will be applied to the sources you will define. Get more detailed idea about <a href="https://github.com/gruntjs/grunt-contrib-csslint"><strong>grunt-contrib-csslint</strong></a></p></div></div><div class="code"><div class="wrapper">    <span class="nx">csslint</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">csslintrc</span><span class="o">:</span> <span class="s1">&#39;.csslintrc&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/css/themestent.css&#39;</span><span class="p">,</span> <span class="s1">&#39;app/css/app.css&#39;</span><span class="p">]</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="concatenate-multiple-files">Concatenate Multiple Files</h4>
+
+<p><code>concat</code> task is concatenating multiple sources into a single file. Read more about it on <a href="https://github.com/gruntjs/grunt-contrib-concat"><strong>grunt-contrib-concat</strong></a></p></div></div><div class="code"><div class="wrapper">    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;&lt;%= banner %&gt;&lt;%= jqueryCheck %&gt;&#39;</span><span class="p">,</span>
+        <span class="nx">stripBanners</span><span class="o">:</span> <span class="kc">false</span>
+      <span class="p">},</span>
+      <span class="nx">bootstrap</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/transition.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/alert.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/button.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/carousel.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/collapse.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/dropdown.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/modal.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/tooltip.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/popover.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/scrollspy.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/tab.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/bootstrap-sass/affix.js&#39;</span>
+        <span class="p">],</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/js/bootstrap.js&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;app/js/plugins/echo/echo.min.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/plugins/FitVids/jquery.fitvids.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/plugins/FitText/jquery.fittext.js&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;app/js/plugins/mixitup/jquery.mixitup.min.js&#39;</span>
+        <span class="p">],</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/js/plugins.js&#39;</span>
+      <span class="p">},</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="clean-task">Clean Task</h4>
+
+<p>Before generating any new files, remove any previously-created files. Task name <code>clean</code></p></div></div><div class="code"><div class="wrapper">    <span class="nx">clean</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">tests</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">src</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;css/csscomb/*.css&quot;</span><span class="p">,</span><span class="s2">&quot;css/production-css/*.css&quot;</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="minify-images">Minify Images</h4>
+
+<p><code>imagemin</code> task is using <a href="https://github.com/gruntjs/grunt-contrib-imagemin"><strong>grunt-contrib-imagemin</strong></a> to minify project images.</p></div></div><div class="code"><div class="wrapper">    <span class="nx">imagemin</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">dynamic</span><span class="o">:</span> <span class="p">{</span>                         <span class="c1">// Another target</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>                  <span class="c1">// Enable dynamic expansion</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;app/img/&#39;</span><span class="p">,</span>                   <span class="c1">// Src matches are relative to this path</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;**/*.{png,jpg,gif}&#39;</span><span class="p">],</span>   <span class="c1">// Actual patterns to match</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/img/&#39;</span>                  <span class="c1">// Destination path prefix</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="minify-css">Minify Css</h4>
+
+<p><code>cssmin</code> task is using <a href="https://github.com/gruntjs/grunt-contrib-cssmin"><strong>grunt-contrib-cssmin</strong></a> to minify css files.</p></div></div><div class="code"><div class="wrapper">    <span class="nx">cssmin</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">minify</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;app/css/&#39;</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;*.css&#39;</span><span class="p">,</span> <span class="s1">&#39;!*.min.css&#39;</span><span class="p">],</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/css/css-min&#39;</span><span class="p">,</span>
+          <span class="nx">ext</span><span class="o">:</span> <span class="s1">&#39;.css&#39;</span>
+        <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Copy Production CSS Files</p></div></div><div class="code"><div class="wrapper">    <span class="nx">copy</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">main</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;app/css/css-min/&#39;</span><span class="p">,</span> <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;**&#39;</span><span class="p">],</span> <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;css/production-css/&#39;</span><span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">img</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[{</span>
+          <span class="nx">expand</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+          <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;**/*&#39;</span><span class="p">,</span> <span class="s1">&#39;!app/img/**/*.*&#39;</span><span class="p">],</span>
+          <span class="nx">cwd</span><span class="o">:</span> <span class="s1">&#39;app/img/src/&#39;</span><span class="p">,</span>
+          <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;app/img/dist/&#39;</span>
+        <span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="groc-for-documentation">Groc for documentation</h4>
+
+<p><code>groc</code> task is using <a href="https://github.com/jdcataldo/grunt-groc.git"><strong>grunt-groc</strong></a> to generate a usable documentation site right from your codes. It is a real time saver!</p></div></div><div class="code"><div class="wrapper">    <span class="nx">groc</span><span class="o">:</span> <span class="p">{</span>
+      <span class="k">default</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span><span class="s2">&quot;bower.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;EditorConfig.md&quot;</span><span class="p">,</span><span class="s2">&quot;Gruntfile.js&quot;</span><span class="p">,</span><span class="s2">&quot;package.json.md&quot;</span><span class="p">,</span><span class="s2">&quot;config.rb&quot;</span><span class="p">,</span><span class="s2">&quot;CssLint.md&quot;</span><span class="p">,</span><span class="s2">&quot;app/js/themestent.js&quot;</span><span class="p">,</span><span class="s2">&quot;app/js/app.js&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/themestent.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/app.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_general-styles.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_grid-components.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_footer.scss&quot;</span><span class="p">,</span><span class="s2">&quot;app/scss/_blog-components.scss&quot;</span><span class="p">],</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;out&quot;</span><span class="o">:</span> <span class="s2">&quot;doc/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;index&quot;</span><span class="o">:</span><span class="s2">&quot;README.md&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;index-page-title&quot;</span><span class="o">:</span><span class="s2">&quot;Front-End Workflow - automated process&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;github&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">&quot;repository-url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://github.com/themestent/front-end-workflow&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h4 id="grunt-watch-file">Grunt Watch File</h4></div></div></div><div class="segment"><div class="code"><div class="wrapper">    <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Watch Sass</strong> file changes. On any file change it will run <code>compass</code> task.</p></div></div><div class="code"><div class="wrapper">      <span class="nx">sass</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/scss/**/*.scss&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;compass:dev&#39;</span><span class="p">]</span>
+      <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Watch .js</strong> to see if our JavaScript files change, or new packages are installed and then <code>concat</code></p></div></div><div class="code"><div class="wrapper">      <span class="nx">js</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;app/js/app.js&#39;</span><span class="p">,</span> <span class="s1">&#39;app/js/plugins.js&#39;</span><span class="p">,</span><span class="s1">&#39;app/js/**/*.js&#39;</span><span class="p">],</span>
+        <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;newer:concat:bootstrap&#39;</span><span class="p">,</span><span class="s1">&#39;newer:concat:plugins&#39;</span><span class="p">]</span>
+      <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Watch app/img/src</strong> changes for responsive image converter</p></div></div><div class="code"><div class="wrapper">      <span class="nx">img</span><span class="o">:</span><span class="p">{</span>
+      <span class="nx">files</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}&#39;</span><span class="p">],</span>
+      <span class="nx">tasks</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;concat:copy:img&#39;</span><span class="p">]</span>
+      <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Reload</strong> the browser on any change</p></div></div><div class="code"><div class="wrapper">      <span class="nx">livereload</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/*.html&#39;</span><span class="p">,</span><span class="s1">&#39;app/js/*.js&#39;</span><span class="p">],</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">livereload</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><strong>Concurrent Output</strong> to improve the build time.</p></div></div><div class="code"><div class="wrapper">    <span class="nx">concurrent</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">target</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;newer:compass:dev&#39;</span><span class="p">,</span><span class="s1">&#39;newer:cssc&#39;</span><span class="p">,</span><span class="s1">&#39;watch&#39;</span><span class="p">],</span>
+          <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+              <span class="nx">logConcurrentOutput</span><span class="o">:</span> <span class="kc">true</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+  <span class="p">});</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h3 id="register-tasks">Register Tasks</h3>
+
+<p><code>grunt download</code> command to download all the required development resources</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;download&#39;</span><span class="p">,[</span><span class="s1">&#39;bower:install&#39;</span><span class="p">]);</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><code>grunt lint</code> command will run CssLint</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;lint&#39;</span><span class="p">,[</span><span class="s1">&#39;csslint&#39;</span><span class="p">]);</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><code>grunt minify</code> command will minify css files with css combine</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;minify&#39;</span><span class="p">,[</span><span class="s1">&#39;clean&#39;</span><span class="p">,</span><span class="s1">&#39;csscomb&#39;</span><span class="p">,</span><span class="s1">&#39;cssmin&#39;</span><span class="p">]);</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><code>grunt procss</code> command will create production ready css</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;procss&#39;</span><span class="p">,[</span><span class="s1">&#39;clean&#39;</span><span class="p">,</span><span class="s1">&#39;copy&#39;</span><span class="p">]);</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><code>grunt proimg</code> minifies all the images inside img folder</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;proimg&#39;</span><span class="p">,</span><span class="s1">&#39;Minification of images&#39;</span><span class="p">,</span><span class="s1">&#39;newer:imagemin:dynamic&#39;</span><span class="p">);</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><code>grunt doc</code> command will generate documentation site in <strong>doc</strong> directory.</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;doc&#39;</span><span class="p">,</span><span class="s1">&#39;Generating documentation...&#39;</span><span class="p">,[</span><span class="s1">&#39;groc&#39;</span><span class="p">]);</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p><code>grunt</code> command will start initial build and start watching the project for changes and react</p></div></div><div class="code"><div class="wrapper">  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span><span class="s1">&#39;Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...&#39;</span><span class="p">,[</span><span class="s1">&#39;concurrent:target&#39;</span><span class="p">]);</span>
+<span class="p">}</span></div></div></div></div></body></html>
