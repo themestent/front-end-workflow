@@ -16,8 +16,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         "sourcePath": "/Users/evanshajed/Working Projects/front-end-workflow/README.md",
         "projectPath": "README.md",
         "targetPath": "index",
-        "pageTitle": "Front-End Workflow - automated process",
-        "title": "Front-End Workflow - automated process"
+        "pageTitle": "Front-End Workflow",
+        "title": "Front-End Workflow"
       },
       "depth": 1,
       "outline": [

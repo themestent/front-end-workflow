@@ -1,5 +1,7 @@
+[![Front-End Workflow](http://themestent.cdnconnect.com/front-end-workflow.png)](http://themestent.github.io/front-end-workflow/)
+---
 [![Build Status](https://travis-ci.org/themestent/front-end-workflow.png?branch=master)](https://travis-ci.org/themestent/front-end-workflow) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)  [![GitHub version](https://badge.fury.io/gh/themestent%2Ffront-end-workflow.png)](http://badge.fury.io/gh/themestent%2Ffront-end-workflow) [![Dependency Status](https://gemnasium.com/themestent/front-end-workflow.png)](https://gemnasium.com/themestent/front-end-workflow)
-
+---
 # Front-End Workflow
 **Front-End Workflow** is a boilerplate for front-end developers that automates front-end development workflows. Front-End Workflow is not a framework, nor it does any automated coding for you. It rather helps you to take care of all the repeating tasks every front-end developers faces while developing their projects. Thus it gives you the freedom to concentrate more on better coding keeping other hassles a side!
 
