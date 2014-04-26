@@ -25,7 +25,6 @@ module.exports = function(grunt) {
             cleanTargetDir: false,
             cleanBowerDir: true,
             bowerOptions: {
-              forceLatest:true
             }
           }
         }
@@ -157,9 +156,21 @@ module.exports = function(grunt) {
         "out": "doc/",
         "index":"README.md",
         "index-page-title":"Front-End Workflow",
-        "github": true,
+        "github": false,
         "repository-url": "https://github.com/themestent/front-end-workflow"
         }
+    },
+    // #### Jekyll - Site generator
+    // `jekyll` task is using [**grunt-jekyll**](https://github.com/dannygarcia/grunt-jekyll) package to generate static site from Jekyll templates. Get some more information on [**Jekyll**](http://jekyllrb.com/).
+    jekyll:{
+      options:{
+        src:'app/templates',
+        dest:'app/dev',
+        config:'app/_config.yml'
+      },
+      dev:{
+        dest:'app/dev',
+      }
     },
     // #### Grunt Watch File
     watch: {
@@ -178,9 +189,14 @@ module.exports = function(grunt) {
       files:['app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'],
       tasks:['concat:copy:img']
       },
+      // **Watch Jekyll Templates** for changes and build `dev` files
+      jekyll:{
+        files:['app/templates/**/*.html'],
+        tasks:['jekyll:dev']
+      },
       // **Reload** the browser on any change
       livereload: {
-        files: ['*.html','app/*.html','app/js/*.js'],
+        files: ['*.html','app/*.html','app/js/*.js','app/dev/**/*.html'],
         options: {
           livereload: true
         }
@@ -189,7 +205,7 @@ module.exports = function(grunt) {
     // **Concurrent Output** to improve the build time.
     concurrent: {
       target: {
-          tasks: ['newer:compass:dev','newer:cssc','watch'],
+          tasks: ['newer:compass:dev','newer:cssc','watch','jekyll:dev'],
           options: {
               logConcurrentOutput: true
           }
