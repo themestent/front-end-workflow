@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 " lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>
+    
+      Media &middot; Front-End Workflow
+    
+  </title>
+  <meta name="author" content="Shajed Evan, Founder of ThemesTent">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/themestent.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/prettify.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <!<![endif]-->
+  <!--[if lt IE 8]>
+      <script src="js/pictonic.min.js"></script><![endif]-->
+  <script>!function(a,b,c,d,e){function g(a,c,d,e){var f=b.getElementsByTagName("script")[0];a.src=e,a.id=c,a.setAttribute("class",d),f.parentNode.insertBefore(a,f)}a.Mobify={points:[+new Date]};var f=/((; )|#|&|^)mobify=(\d)/.exec(location.hash+"; "+b.cookie);if(f&&f[3]){if(!+f[3])return}else if(!c())return;b.write('<plaintext style="display:none">'),setTimeout(function(){var c=a.Mobify=a.Mobify||{};c.capturing=!0;var f=b.createElement("script"),h="mobify",i=function(){var c=new Date;c.setTime(c.getTime()+3e5),b.cookie="mobify=0; expires="+c.toGMTString()+"; path=/",a.location=a.location.href};f.onload=function(){if(e)if("string"==typeof e){var c=b.createElement("script");c.onerror=i,g(c,"main-executable",h,mainUrl)}else a.Mobify.mainExecutable=e.toString(),e()},f.onerror=i,g(f,"mobify-js",h,d)})}(window,document,function(){a=/webkit|(firefox)[\/\s](\d+)|(opera)[\s\S]*version[\/\s](\d+)|(trident)[\/\s](\d+)/i.exec(navigator.userAgent);return!a||a[1]&&4>+a[2]||a[3]&&11>+a[4]||a[5]&&6>+a[6]?!1:!0},
+
+  // path to mobify.js
+  "js/mobify.min.js",
+
+  // calls to APIs go here (or path to a main.js)
+  function() {
+    var capturing = window.Mobify && window.Mobify.capturing || false;
+
+    if (capturing) {
+      Mobify.Capture.init(function(capture){
+        var capturedDoc = capture.capturedDoc;
+
+        var images = capturedDoc.querySelectorAll("img, picture");
+        Mobify.ResizeImages.resize(images);
+
+        // Render source DOM to document
+        capture.renderCapturedDoc();
+      });
+    }
+  });</script>
+
+  </head>
+
+  <body class="body-few-home">
+    <div id="wrap">
+      <!-- Main Header -->
+<header class="header-main" role="banner">
+  <div class="container">
+    <nav class="navbar" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" title="Media">Frontflow: Front-End Workflow for effective, rapid &amp; Front-End Development</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Lists of all the basic components included">Components <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="typography.html" title="Typography Styles on this workflow">Typography</a></li>
+                <li><a href="buttons.html" title="Different button Elements applied from various sources">Buttons</a></li>
+                <li><a href="bootstrap-grid.html" title="Bootstrap Grid System">Bootstrap Grid</a></li>
+                <li><a href="media.html" title="Media Examples">Media</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Some other Example lists">Other Examples <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="blog-posts.html" title="Example of Blog Posts page">Blog Posts</a></li>
+                <li><a href="pictonic-icons.html" title="Pictonic Font Icons">Pictonic</a></li>
+
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="story.html" title="Story behind Front-end Workflow">Story</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get In <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="contribute.html" title="Let's make it even stronger for everyone">contribute.html</a></li>
+                <li><a href="#">Help with funding!</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+</header>
+
+
+      <!-- Page Content -->
+      <!-- Typography Container -->
+<section class="container">
+  <div class="row">
+    <header class="col-md-12">
+      <h1 class="title-page">Better Typography</h1>
+      <p>Readable typography styles using <a href="http://typeplate.com" title="Typography starter kit"><b>Typeplate</b></a> to give rich reading experiences to users.</p>
+    </header>
+  </div>
+  <article role="main">
+    <!-- Images Example -->
+    <div class="row">
+      <header class="col-md-12">
+        <h1 class="gamma section-title">Images</h1>
+      </header>
+      <div class="col-md-4">
+        <h2 class="delta">Using <code>img-rounded</code> class on This image</h2>
+        <img src="img/sample-thumb.jpeg" alt="..." class="img-rounded img-responsive">
+      </div>
+      <div class="col-md-4">
+        <h2 class="delta">Using <code>img-circle</code> class on This image</h2>
+        <img src="img/sample-thumb.jpeg" alt="..." class="img-circle img-responsive">
+      </div>
+      <div class="col-md-4">
+        <h2 class="delta">Using <code>img-thumbnail</code> class on This image</h2>
+          <img src="img/sample-thumb.jpeg" alt="..." class="img-thumbnail img-responsive">
+      </div>
+      <header class="col-md-12">
+        <h1 class="gamma section-title">Using <a href="http://www.mobify.com/mobifyjs/v2/docs/" title="Mobify.js Doc">Mobify.js</a> for adaptive responsive images</h1>
+      </header>
+      <!-- Picture Polyfill -->
+      <div class="col-md-6">
+        <h2 class="delta">Using <a href="http://cdn.mobify.com/mobifyjs/examples/capturing-picturepolyfill/index.html" title="Mobify.js Picture Polyfill Example">Picture Polyfill</a> on This image</h2>
+        <picture>
+            <source src="img/sample-thumb.jpeg" class="img-responsive">
+            <source src="img/sample-thumb-300.jpeg" media="(min-width: 450px)" class="img-responsive">
+            <source src="img/sample-thumb-600.jpeg" media="(min-width: 600px)" class="img-responsive">
+            <source src="img/sample-thumb.jpeg" media="(min-width: 1000px)" class="img-responsive">
+            <img src="img/sample-thumb.jpeg" class="img-responsive">
+        </picture>
+      </div>
+      <div class="col-md-6">
+        <h2 class="delta">Using <a href="http://cdn.mobify.com/mobifyjs/examples/capturing-picturepolyfill/index.html" title="Mobify.js Picture Polyfill Example">Picture Resizer</a> on This image</h2>
+        <img class="img-responsive" src="img/sample-thumb.jpeg">
+      </div>
+    </div>
+
+    <div class="row flowtype-components">
+      <!-- FitText Example -->
+      <div class="col-md-12">
+        <h2 class="mega mega-type">Title with FitText.js</h2>
+        <p><a href="http://fittextjs.com" title="Fittext - a plugin for inflating web type"><strong>FitText.js</strong></a> applied on above title to look a like on every devices.</p>
+      </div>
+      <!-- Lazy Loading Example -->
+      <div class="col-md-6">
+        <h2 class="delta mega-type">Lazy Loading Example</h2>
+        <img class="img-responsive" src="../img/ajax.gif" alt="" data-echo="../img/mobile-dev-snap.jpg">
+      </div>
+      <!-- Lazy Loading And PictureFill example -->
+      <div class="col-md-6">
+      <h2 class="delta mega-type">
+        Lazy load with picture fill
+      </h2>
+
+        <picture>
+            <source src="../img/mobile-dev-snap-large.jpg" class="img-responsive">
+            <source src="../img/mobile-dev-snap-mobile.jpg" media="(min-width: 450px)" class="img-responsive">
+            <source src="../img/mobile-dev-snap-tab.jpg" media="(min-width: 600px)" class="img-responsive">
+            <source src="../img/mobile-dev-snap-mobile-notebook.jpg" media="(min-width: 1000px)" class="img-responsive">
+            <source src="../img/mobile-dev-snap-large.jpg" media="(min-width: 1200px)" class="img-responsive">
+            <img class="img-responsive" src="../img/ajax.gif" alt="" data-echo="../img/mobile-dev-snap-notebook.jpg">
+        </picture>
+      </div>
+    </div>
+  </article>
+</section>
+
+
+    </div>
+    <div class="push"></div>
+    <!-- Main Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <h3 class="title-footer">Sticky Footer!</h3>
+        <p>You are looking at it right now! This is a live example of sticky footer on Bootstrap</p>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <h3 class="title-footer">How was it?</h3>
+        <p>How was your browsing journey so far?</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Calling Plugins js file used in this project -->
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/prettify/prettify.js"></script>
+<!-- Calling file that holds all the custom js functions used on this project -->
+<script src="js/app.js"></script>
+
+
+  </body>
+</html>

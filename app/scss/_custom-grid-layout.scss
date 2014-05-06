@@ -1,0 +1,19 @@
+// ## Applying Bourbon Grid Layout
+
+$fg-column: 60px;             // Column Width
+$fg-gutter: 25px;             // Gutter Width
+$fg-max-columns: 12;          // Total Columns For Main Container
+
+.reference{
+  .icons{
+    width: flex-grid(12);        // returns (315px / 1020px) = 30.882353%;
+    div.ref {
+      width: flex-grid(2, 12);   // returns (145px / 315px) = 46.031746%;
+      float: left;
+      margin: flex-gutter();   // returns (25px / 315px) = 7.936508%;
+      padding:5px;
+      background-color: $gray-light;
+      font-size: em(22);
+    }
+  }
+}

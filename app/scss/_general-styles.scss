@@ -2,7 +2,7 @@
 // applied on Front-End Workflow Demo Template.
 html,body{
   height:100%;
-  $body-copy-color: #434;
+  background-color: $ff-body-background;
 }
 
 // **Sticky footer**
@@ -12,14 +12,11 @@ html,body{
   height: 100%;
   margin: 0 auto -90px;
 }
-
 .push,footer{
   height: 90px;
 }
 
 .row{
-  margin-top: em(20);
-  margin-bottom: em(20);
-}
-.mega-type{
+  margin-top: em(40);
+  margin-bottom: em(40);
 }

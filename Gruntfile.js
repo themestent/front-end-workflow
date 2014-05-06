@@ -106,7 +106,22 @@ module.exports = function(grunt) {
     // Before generating any new files, remove any previously-created files. Task name `clean`
     clean: {
       tests: {
-        src:["css/csscomb/*.css","css/production-css/*.css"]
+        src:["app/dev/css/**/*.css","app/dev/js/**/*.js","app/dev/img/**/*.{png,jpg,gif}"]
+      },
+      css:{
+        src:["app/dev/css/"]
+      },
+      js:{
+        src:["app/dev/js/"]
+      },
+      img:{
+        src:["app/dev/img/"]
+      },
+      fonts:{
+        src:["app/dev/fonts/"]
+      },
+      svgs:{
+        src:["app/dev/svgs/"]
       }
     },
     // #### Minify Images
@@ -128,7 +143,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'app/css/',
           src: ['*.css', '!*.min.css'],
-          dest: 'app/css/css-min',
+          dest: 'app/dev/css/',
           ext: '.css'
         }
     },
@@ -136,17 +151,70 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-        {expand: true, cwd: 'app/css/css-min/', src: ['**'], dest: 'css/production-css/'}
+        {
+          expand:true,
+          cwd:'app/',
+          src:['**/*.js','**/*.css','**/*.{jpg,png,gif,jpeg}','**/*.svg','**/*.{eot,ttf,woff}'],
+          dest:'app/dev/',
+          extDot:'first'
+        }
+        ]
+      },
+      css: {
+        files: [
+          {
+            expand:true,
+            cwd:'app/css/',
+            src:['**/*.css'],
+            dest:'app/dev/css/',
+            extDot:'first'
+          }
+        ]
+      },
+      js: {
+        files: [
+          {
+            expand:true,
+            cwd:'app/js/',
+            src:['**/*.js'],
+            dest:'app/dev/js/',
+            extDot:'first'
+          }
         ]
       },
       img: {
-        files: [{
-          expand: true,
-          src: ['**/*', '!app/img/**/*.*'],
-          cwd: 'app/img/src/',
-          dest: 'app/img/dist/'
-        }]
-      }
+        files: [
+          {
+            expand:true,
+            cwd:'app/img/',
+            src:['**/*.{png,jpg,gif,jpeg}'],
+            dest:'app/dev/img/',
+            extDot:'first'
+          }
+        ]
+      },
+      fonts: {
+        files: [
+          {
+            expand:true,
+            cwd:'app/fonts/',
+            src:['**/*.{eot,ttf,woff}'],
+            dest:'app/dev/fonts/',
+            extDot:'first'
+          }
+        ]
+      },
+      svgs: {
+        files: [
+          {
+            expand:true,
+            cwd:'app/svgs/',
+            src:['**/*.svg'],
+            dest:'app/dev/svgs/',
+            extDot:'first'
+          }
+        ]
+      },
     },
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
@@ -170,6 +238,8 @@ module.exports = function(grunt) {
       },
       dev:{
         dest:'app/dev',
+        include:['.htaccess'],
+        keep_files:['app/dev/css/']
       }
     },
     // #### Grunt Watch File
@@ -177,26 +247,26 @@ module.exports = function(grunt) {
       // **Watch Sass** file changes. On any file change it will run `compass` task.
       sass: {
         files: ['app/scss/**/*.scss'],
-        tasks: ['compass:dev']
+        tasks: ['compass:dev','clean:css','copy:css']
       },
       // **Watch .js** to see if our JavaScript files change, or new packages are installed and then `concat`
       js: {
         files: ['app/js/app.js', 'app/js/plugins.js','app/js/**/*.js'],
-        tasks:['newer:concat:bootstrap','newer:concat:plugins']
+        tasks:['newer:concat:bootstrap','newer:concat:plugins','clean:js','copy:js']
       },
       // **Watch app/img/src** changes for responsive image converter
       img:{
       files:['app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'],
-      tasks:['concat:copy:img']
+      tasks:['newer:imagemin','clean:img','copy:img']
       },
       // **Watch Jekyll Templates** for changes and build `dev` files
       jekyll:{
         files:['app/templates/**/*.html'],
-        tasks:['jekyll:dev']
+        tasks:['jekyll','copy:css','copy:img','copy:js','copy:fonts','copy:svgs']
       },
       // **Reload** the browser on any change
       livereload: {
-        files: ['*.html','app/*.html','app/js/*.js','app/dev/**/*.html'],
+        files: ['*.html','app/dev/*.html','app/js/*.js','app/dev/**/*.html','app/dev/css/**/*.css'],
         options: {
           livereload: true
         }
@@ -205,7 +275,7 @@ module.exports = function(grunt) {
     // **Concurrent Output** to improve the build time.
     concurrent: {
       target: {
-          tasks: ['newer:compass:dev','newer:cssc','watch','jekyll:dev'],
+          tasks: ['newer:compass:dev','newer:cssc','jekyll:dev'],
           options: {
               logConcurrentOutput: true
           }
@@ -218,7 +288,7 @@ module.exports = function(grunt) {
   // `grunt lint` command will run CssLint
   grunt.registerTask('lint',['csslint']);
   // `grunt minify` command will minify css files with css combine
-  grunt.registerTask('minify',['clean','csscomb','cssmin']);
+  grunt.registerTask('minify',['cssmin']);
   // `grunt procss` command will create production ready css
   grunt.registerTask('procss',['clean','copy']);
   // `grunt proimg` minifies all the images inside img folder
@@ -226,5 +296,5 @@ module.exports = function(grunt) {
   // `grunt doc` command will generate documentation site in **doc** directory.
   grunt.registerTask('doc','Generating documentation...',['groc']);
   // `grunt` command will start initial build and start watching the project for changes and react
-  grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['concurrent:target']);
+  grunt.registerTask('default','Concatenating Bootstrap .js files, starting Compass compiler and watching the project for new changes...',['concurrent:target','copy','watch']);
 }

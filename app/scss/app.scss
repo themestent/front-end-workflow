@@ -11,22 +11,23 @@
 @import "compass/css3";
 @import "compass/typography";
 
+// Import Bootstrap Mixins;
+@import "bootstrap-sass/mixins";
 // Import Bourbon
 @import "bourbon/bourbon";
-
 // For better & device friendly *typography* including *Typeplate* `scss` files
 @import "typeplate/typeplate.scss";
 @import "typeplate/vars-typeplate.scss";
-
-// Including Colors Scss
-@import "colors/variables";
-@import "colors/skins";
-@import "colors/links";
-
+// Importing Color Theme Variables
+@import "flat-color-theme";
+@import "flat-buttons";
 // Including General Styles
 @import "general-styles";
+@import "general-typography";
+@import "main-header";
+@import "page-header";
 @import "grid-components";
+@import "custom-grid-layout";
 @import "blog-components";
-
 // Footer
 @import "footer";

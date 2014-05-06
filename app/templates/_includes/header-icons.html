@@ -1,0 +1,44 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>
+    {% if page.title == "Front-End Workflow" %}
+      {{ page.title }}
+    {% else %}
+      {{ page.title }} &middot; Front-End Workflow
+    {% endif %}
+  </title>
+  <meta name="author" content="Shajed Evan, Founder of ThemesTent">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="../css/themestent.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/pictonic/pictonic.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <!<![endif]-->
+  <!--[if lt IE 8]>
+      <script src="js/pictonic.min.js"></script><![endif]-->
+  <script>!function(a,b,c,d,e){function g(a,c,d,e){var f=b.getElementsByTagName("script")[0];a.src=e,a.id=c,a.setAttribute("class",d),f.parentNode.insertBefore(a,f)}a.Mobify={points:[+new Date]};var f=/((; )|#|&|^)mobify=(\d)/.exec(location.hash+"; "+b.cookie);if(f&&f[3]){if(!+f[3])return}else if(!c())return;b.write('<plaintext style="display:none">'),setTimeout(function(){var c=a.Mobify=a.Mobify||{};c.capturing=!0;var f=b.createElement("script"),h="mobify",i=function(){var c=new Date;c.setTime(c.getTime()+3e5),b.cookie="mobify=0; expires="+c.toGMTString()+"; path=/",a.location=a.location.href};f.onload=function(){if(e)if("string"==typeof e){var c=b.createElement("script");c.onerror=i,g(c,"main-executable",h,mainUrl)}else a.Mobify.mainExecutable=e.toString(),e()},f.onerror=i,g(f,"mobify-js",h,d)})}(window,document,function(){a=/webkit|(firefox)[\/\s](\d+)|(opera)[\s\S]*version[\/\s](\d+)|(trident)[\/\s](\d+)/i.exec(navigator.userAgent);return!a||a[1]&&4>+a[2]||a[3]&&11>+a[4]||a[5]&&6>+a[6]?!1:!0},
+
+  // path to mobify.js
+  "../js/mobify.min.js",
+
+  // calls to APIs go here (or path to a main.js)
+  function() {
+    var capturing = window.Mobify && window.Mobify.capturing || false;
+
+    if (capturing) {
+      Mobify.Capture.init(function(capture){
+        var capturedDoc = capture.capturedDoc;
+
+        var images = capturedDoc.querySelectorAll("img, picture");
+        Mobify.ResizeImages.resize(images);
+
+        // Render source DOM to document
+        capture.renderCapturedDoc();
+      });
+    }
+  });</script>

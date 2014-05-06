@@ -1,0 +1,134 @@
+// == Colors
+//
+//##
+
+// Color swatches
+$turquoise:                 #1abc9c;
+$green-sea:                 #16a085;
+
+$emerald:                   #2ecc71;
+$nephritis:                 #27ae60;
+
+$peter-river:               #3498db;
+$belize-hole:               #2980b9;
+
+$amethyst:                  #9b59b6;
+$wisteria:                  #8e44ad;
+
+$wet-asphalt:               #34495e;
+$midnight-blue:             #2c3e50;
+
+$sun-flower:                #f1c40f;
+$orange:                    #f39c12;
+
+$carrot:                    #e67e22;
+$pumpkin:                   #d35400;
+
+$alizarin:                  #e74c3c;
+$pomegranate:               #c0392b;
+
+$clouds:                    #ecf0f1;
+$silver:                    #bdc3c7;
+
+$concrete:                  #95a5a6;
+$asbestos:                  #7f8c8d;
+
+
+
+// Grays
+$gray:                      $concrete;
+$gray-light:                $silver;
+$inverse:                   white;
+
+// Frontflow Color Theme Variables
+
+$ff-flat-navy: #3c5868;
+$ff-dark-navy: #2e3e4d;
+$ff-flat-green: #a3c737;
+$ff-flat-red: #f56363;
+$ff-flat-black: #444;
+$ff-flat-blue: #36bac2;
+$ff-flat-sky: #73c2df;
+
+$ff-body-copy: $ff-flat-navy;
+$ff-page-header: #f7f7f7;
+$ff-page-header-background: $ff-flat-blue;
+$ff-body-background: white;
+$ff-header:$ff-flat-green;
+$ff-link-color: $ff-flat-red;
+$ff-nav-background:$orange;
+
+
+// Brand colors
+$brand-primary:             $wet-asphalt;
+$brand-secondary:           $turquoise;
+$brand-success:             $emerald;
+$brand-warning:             $sun-flower;
+$brand-danger:              $alizarin;
+$brand-info:                $peter-river;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+$body-bg:                   #fff;
+$text-color:                $brand-primary;
+
+//** Global textual link color.
+$link-color:                $ff-link-color;
+$link-hover-color:          darken($ff-link-color,15%);
+
+
+// Border-radius
+$border-radius-base:        4px;
+$border-radius-large:       6px;
+$border-radius-small:       3px;
+
+
+// ## Buttons
+// For each of Flat UI's buttons, define text, background, font size and height.
+
+$component-font-size-base: $font-base;
+
+$btn-font-size-base:         $component-font-size-base;
+$btn-font-size-xs:           ceil($component-font-size-base * 0.80);   // ~12px
+$btn-font-size-sm:           floor($component-font-size-base * 0.867); // ~13px
+$btn-font-size-lg:           ceil($component-font-size-base * 1.133);  // ~17px
+$btn-font-size-hg:           floor($component-font-size-base * 1.467); // ~22px
+
+$btn-line-height-base:       1.4;   // ~21px
+$btn-line-height-hg:         1.227; // ~27px
+$btn-line-height-lg:         1.471; // ~25px
+$btn-line-height-sm:         1.385; // ~16px
+$btn-line-height-xs:         1.083; // ~13px
+
+$btn-social-font-size-base:   floor($component-font-size-base * 0.867); // ~13px
+$btn-social-line-height-base: 1.077;  // ~14px
+
+$btn-font-weight:            normal;
+
+$btn-default-color:          $inverse;
+$btn-default-bg:             $gray-light;
+$btn-hover-bg:               mix($gray-light, white, 80%);
+$btn-active-bg:              mix($gray-light, black, 85%);
+
+$btn-primary-hover-bg:       mix($brand-secondary, white, 80%);
+$btn-primary-active-bg:      mix($brand-secondary, black, 85%);
+
+$btn-info-hover-bg:          mix($brand-info, white, 80%);
+$btn-info-active-bg:         mix($brand-info, black, 85%);
+
+$btn-success-hover-bg:       mix($brand-success, white, 80%);
+$btn-success-active-bg:      mix($brand-success, black, 85%);
+
+$btn-danger-hover-bg:        mix($brand-danger, white, 80%);
+$btn-danger-active-bg:       mix($brand-danger, black, 85%);
+
+$btn-warning-hover-bg:       darken(white, 37.5%);
+$btn-warning-active-bg:      mix($brand-warning, black, 85%);
+
+$btn-inverse-hover-bg:       darken(white, 37.5%);
+$btn-inverse-active-bg:      mix($brand-primary, black, 85%);
+
+$btn-link-disabled-color:    $gray-light;

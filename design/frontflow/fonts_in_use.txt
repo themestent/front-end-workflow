@@ -1,0 +1,29 @@
+Fonts actively used in this project
+-----------------------------------
+
+
+Font name       :   PT Serif
+Font provider   :   google
+
+******************************************************************************
+
+Font name       :   Oswald
+Font provider   :   google
+
+******************************************************************************
+
+Font name       :   PT Serif Caption
+Font provider   :   google
+
+******************************************************************************
+
+Font name       :   Arvo
+Font provider   :   google
+
+******************************************************************************
+
+
+
+
+
+Created by Typecast on 2014/04/29.

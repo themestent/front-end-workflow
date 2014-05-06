@@ -1,0 +1,342 @@
+body {
+   font-size: 1em;
+   line-height: 1.5em;
+   font-family: "PT Serif";
+   color: $ff-body-copy;
+   padding: 0 0 50px;
+   font-weight: 400;
+   font-style: normal;
+}
+
+p {
+   font-size: 1.25em;
+   line-height: 1.6em;
+   margin: 0 0 1.6em 0;
+   color: $ff-body-copy;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Oswald";
+  color: $ff-header;
+}
+
+h1 {
+   font-size: 2.5em;
+   line-height: 1.095em;
+   font-weight: 700;
+   font-style: normal;
+}
+
+h2 {
+   font-size: 2em;
+   line-height: 1.188em;
+   margin: 2em 0 0.5em 0;
+   font-weight: 400;
+   font-style: normal;
+}
+
+h3 {
+   font-family: Oswald;
+   font-size: 1.625em;
+   line-height: 1.231em;
+   margin: 2.462em 0 0.615em 0;
+   font-weight: 400;
+   font-style: normal;
+}
+
+ul {
+   font-size: 1.25em;
+   line-height: 1.6;
+   margin: 0 0 1.6em 3.2em;
+   list-style: disc outside;
+}
+
+ul.nav{
+  font-size: 1em;
+}
+
+ul.level2 {
+   font-size: 1em;
+   margin-left: 1.75em;
+   list-style-type: circle;
+}
+
+ol {
+   font-size: 1.25em;
+   line-height: 1.6em;
+   margin: 0 0 1.6em 3.2em;
+   list-style: decimal outside;
+}
+
+blockquote {
+   margin: 3em 0 3em 4em;
+}
+
+p.quote {
+   font-family: "PT Serif Caption";
+   line-height: 1.7;
+   font-weight: 400;
+   font-style: italic;
+}
+
+blockquote.pquote {
+   text-align: center;
+   margin: 3em -100px;
+}
+
+p.pquote {
+   font-size: 1.625em;
+   line-height: 1.667em;
+   font-family: "PT Serif Caption";
+   font-weight: 400;
+   font-style: italic;
+}
+
+a {
+   font-family: "PT Serif";
+   font-weight: 400;
+   font-style: normal;
+   color: $link-color;
+   &:hover{
+    color:$link-hover-color;
+   }
+}
+
+
+em {
+   font-style: italic;
+   font-family: "PT Serif";
+   font-weight: 400;
+}
+
+strong {
+   font-family: "PT Serif";
+   font-weight: 700;
+   font-style: normal;
+}
+
+small {
+   font-size: 75%;
+}
+
+sub {
+   font-size: 75%;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+}
+
+sup {
+   font-size: 75%;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+   top: -0.5em;
+}
+
+a.a-sup {
+   border: none;
+}
+
+p.header {
+   font-family: "PT Serif";
+   font-size: 0.875em;
+   line-height: 1em;
+   margin: 0;
+   font-weight: 700;
+   font-style: normal;
+}
+
+span.author {
+   text-transform: uppercase;
+}
+
+h2.header {
+   font-size: 1.1em;
+   line-height: 1.6em;
+   border-top: 1px solid $ff-flat-black;
+   padding-top: 0.8em;
+   margin: 0;
+   font-family: Oswald;
+   font-weight: 400;
+   font-style: normal;
+   color: rgba(60, 88, 104, 1);
+}
+
+p.first-paragraph {
+   font-size: 1.625em;
+   line-height: 1.462em;
+   margin: 2.462em 0 1.846em 0;
+   font-family: "PT Serif";
+   font-weight: 400;
+   font-style: normal;
+}
+
+span.first-letter {
+   float: left;
+   font-size: 4.385em;
+   line-height: 1em;
+   margin: 0 0.228em 0 0;
+}
+
+ol.footnote-list {
+   font-size: 1.125em;
+   line-height: 1.778em;
+   margin: 0 0 1.778em 0;
+}
+
+p.comment {
+   font-size: 1.125em;
+   line-height: 1.778em;
+   margin: 0 0 1.778em 0;
+}
+
+p.comment-options {
+   font-family: "PT Serif";
+   font-size: 1.25em;
+   line-height: 1.6em;
+   margin: 0 0 2.4em 0;
+   font-weight: 400;
+   font-style: normal;
+}
+
+ul.comment-list {
+   list-style: none;
+   font-size: 1em;
+   line-height: 1em;
+   margin: 0 0 8em 0;
+}
+
+
+span.hr {
+   display: block;
+   width: 14%;
+   margin: 4em auto;
+   border: 0;
+   border-top: 1px solid #444;
+   text-indent: -9999em;
+   height: 1px;
+}
+
+div.figure {
+   margin: 3em -100px;
+   text-align: center;
+}
+
+p.caption {
+   font-family: "PT Serif Caption";
+   text-align: center;
+   font-size: 0.875em;
+   line-height: 1em;
+   margin-top: 1.143em;
+   color: $ff-flat-blue;
+   margin-bottom: 0;
+   font-weight: 400;
+   font-style: normal;
+}
+
+span.heading-small {
+   font-weight: normal;
+   font-size: 0.538em;
+   margin-left: 0.5em;
+}
+
+li.a-comment {
+   border-top: 1px solid #ccc;
+   padding: 2em 0 0 0;
+   margin: 3em 0 0 0;
+}
+
+h3.comment-header {
+   margin-top: 0;
+   font-family: "PT Serif Caption";
+   font-weight: 400;
+   font-style: normal;
+   color: $ff-dark-navy;
+}
+
+
+.nav{
+  color: #fefefe;
+  font-family: "Arvo";
+  font-weight: 400;
+  font-style: normal;
+}
+
+span {
+   font-family: "PT Serif";
+   font-weight: 700;
+   font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+  article.main {
+   width: 80%;
+   padding: 0px;
+  }
+
+  ol.footnote-list {
+  margin: 0px 0px 32.00400161743164px 1.78em;
+  }
+
+  body {
+  font-size: 90%;
+  }
+
+  h1 {
+  font-size: 2.37em;
+  margin: 30.479999542236328px 0px;
+  }
+
+  blockquote.pquote {
+  margin: 48px 0px;
+  }
+
+  section.main {
+  width: 100%;
+  }
+
+  div.figure {
+  margin: 48px 0px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  body {
+     font-size: 80%;
+  }
+
+  ul {
+     margin: 0px 0px 25.600000381469727px 1.5em;
+  }
+
+  ul.level2 {
+     margin: 0px 0px 25.600000381469727px 1.5em;
+  }
+
+  li.nav {
+     font-size: 11px;
+  }
+
+  p.first-paragraph {
+     font-size: 1.42em;
+  }
+
+  span.first-letter {
+     font-size: 4.34em;
+  }
+
+  blockquote {
+     margin: 38.400001525878906px 0px 38.400001525878906px 1.5em;
+  }
+
+  h2 {
+     font-size: 1.7em;
+  }
+
+  h3.comment-header {
+     font-size: 1.42em;
+  }
+
+}
