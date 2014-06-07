@@ -61,8 +61,5 @@
     "grunt-karma": "*",
     "grunt-open": "*",
     "matchdep": "*"
-  },
-  "engines":{
-    "node":">=0.10.0"
   }
 }

@@ -9,8 +9,8 @@ body {
 }
 
 p {
-   font-size: 1.25em;
-   line-height: 1.6em;
+   font-size: 1em;
+   line-height: 1.8em;
    margin: 0 0 1.6em 0;
    color: $ff-body-copy;
 }
@@ -154,8 +154,6 @@ span.author {
 h2.header {
    font-size: 1.1em;
    line-height: 1.6em;
-   border-top: 1px solid $ff-flat-black;
-   padding-top: 0.8em;
    margin: 0;
    font-family: Oswald;
    font-weight: 400;

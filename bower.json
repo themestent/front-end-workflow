@@ -16,7 +16,7 @@
     "jquery": "*",
     "bootstrap-sass": "*",
     "requirejs": "*",
-    "typeplate": "*",
+    "typeplate-starter-kit": "*",
     "bourbon":"*",
     "html5shiv":"*",
     "respond":"*",
@@ -37,7 +37,7 @@
     "bourbon": {
       "scss": "app/assets/stylesheets/"
     },
-    "typeplate":{
+    "typeplate-starter-kit":{
       "scss":"scss/*.scss"
     },
     "colors":{
