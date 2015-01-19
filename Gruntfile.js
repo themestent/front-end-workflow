@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
   // This file first matches the dependencies of all required **grunt-cli** from **package.json** file.
   "use strict";
-    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
   // ## Initialing Grunt Configuration
   // `grunt.initConfig()` Initializes all the tasks
   grunt.initConfig({
@@ -214,7 +214,7 @@ module.exports = function(grunt) {
             extDot:'first'
           }
         ]
-      },
+      }
     },
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!

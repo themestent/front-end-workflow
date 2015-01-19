@@ -29,10 +29,11 @@
   },
 
   "exportsOverride": {
-    "bootstrap-sass": {
-      "js": "js/*.js",
-      "scss": "lib/*.scss",
-      "img": ["img/*.png","img/*.jpg"]
+    "bootstrap-*": {
+      "js": "**/*.js",
+      "scss":"assets/stylesheets",
+      "img": "**.*",
+      "fonts":"**.*"
     },
     "bourbon": {
       "scss": "app/assets/stylesheets/"

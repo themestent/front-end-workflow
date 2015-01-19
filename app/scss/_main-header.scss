@@ -7,15 +7,18 @@
     font-weight: 400;
     font-style: normal;
     margin:0;
-    .navbar-brand{
-      @include hide-text();
-      @include size(246px 37px);
-      background-image: url(../img/frontflow-logo.png);
-      background-repeat: no-repeat;
-      background-size: 246px 37px;
-    }
     ul > li > a{
       color: $ff-flat-navy;
     }
   }
 }
+
+.navbar-brand{
+  @include size(246px 37px);
+  background-image: url(../img/frontflow-logo.png);
+  background-repeat: no-repeat;
+  background-size: 246px 37px;
+  display: block;
+}
+
+

@@ -12,7 +12,7 @@ environment = :stand_alone
 
 relative_assets = true
 # Remove __Line Comments__
-line_comments = false
+line_comments = true
 color_output = false
 # Defining __Preferred Syntax__ `scss`
 preferred_syntax = :scss

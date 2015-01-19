@@ -89,7 +89,7 @@ $border-radius-small:       3px;
 // ## Buttons
 // For each of Flat UI's buttons, define text, background, font size and height.
 
-$component-font-size-base: $font-base;
+$component-font-size-base: $typl8-font-base;
 
 $btn-font-size-base:         $component-font-size-base;
 $btn-font-size-xs:           ceil($component-font-size-base * 0.80);   // ~12px

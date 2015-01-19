@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 * Front-End Workflow
 *
@@ -5,204 +6,1100 @@
 *
 * Front-End by Shajed Evan - @evanshajed
 */
-/*! 
-TYPEPLATE
+/*!
+Typeplate : Starter Kit
 URL ........... http://typeplate.com
-VERSION ....... 1.1.3
-Github ........ https://github.com/typeplate/bower
-AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
-LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
+Version ....... 2.0.0
+Github ........ https://github.com/typeplate/starter-kit
+Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+License ....... Creative Commmons Attribution 3.0
+License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
 */
-@charset "UTF-8";@font-face{font-family:Ampersand;src:local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");unicode-range:U+0026;}
-body{word-wrap:break-word;}
-pre code{word-wrap:normal;}
-html{font:normal 112.5%/1.65 serif;}
-body{color:#444;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;-o-hyphens:auto;hyphens:auto;}
-small{font-size:65%;}
-h1,h2,h3,h4,h5,h6{line-height:1;margin-top:0;text-rendering:optimizeLegibility;}
-.tera{font-size:117px;font-size:6.5rem;margin-bottom:.25385px;margin-bottom:0.25385rem;}
-.giga{font-size:90px;font-size:5rem;margin-bottom:.33px;margin-bottom:0.33rem;}
-.mega{font-size:72px;font-size:4rem;margin-bottom:.4125px;margin-bottom:0.4125rem;}
-.alpha,h1{font-size:60px;font-size:3.33333rem;margin-bottom:.495px;margin-bottom:0.495rem;}
-.beta,h2{font-size:48px;font-size:2.66667rem;margin-bottom:.61875px;margin-bottom:0.61875rem;}
-.gamma,h3{font-size:36px;font-size:2rem;margin-bottom:.825px;margin-bottom:0.825rem;}
-.delta,h4{font-size:24px;font-size:1.33333rem;margin-bottom:1.2375px;margin-bottom:1.2375rem;}
-.epsilon,h5{font-size:21px;font-size:1.16667rem;margin-bottom:1.41429px;margin-bottom:1.41429rem;}
-.zeta,h6{font-size:18px;font-size:1rem;margin-bottom:1.65px;margin-bottom:1.65rem;}
-p{margin:auto auto 1.5em;}
-p+p{margin-top:-1.5em;text-indent:1.5em;}
-abbr,acronym,blockquote,code,dir,kbd,listing,plaintext,q,samp,tt,var,xmp{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;-o-hyphens:none;hyphens:none;}
-pre code{white-space:-moz-pre-wrap;white-space:pre-wrap;}
-pre{white-space:pre;}
-code{font-family:monospace;white-space:pre;}
-abbr{color:gray;font-variant:small-caps;font-weight:600;text-transform:lowercase;}
-abbr[title]:hover{cursor:help;}
-h1,h2,h3,h4,h5,h6{color:#222;}
-p+.drop-cap{margin-top:0;text-indent:0;}
-.drop-cap:first-letter{background:transparent;color:inherit;float:left;font-family:inherit;font-size:4em;line-height:1;margin:inherit;padding:inherit;text-indent:0;}
-.lining dd,.lining dt{display:inline;margin:0;}
-.lining dd+dt:before,.lining dt+dt:before{content:"\A";white-space:pre;}
-.lining dd+dd:before{content:", ";}
-.lining dd:before{content:": ";margin-left:-0.2rem;}
-.dictionary-style dt{counter-reset:definitions;display:inline;}
-.dictionary-style dt+dt:before{content:", ";margin-left:-0.2rem;}
-.dictionary-style dd{counter-increment:definitions;display:block;}
-.dictionary-style dd:before{content:counter(definitions,decimal) ". ";}
-.pull-quote{padding:1em;position:relative;}
-.pull-quote:after,.pull-quote:before{color:#dc976e;font-size:4em;height:1em;opacity:0.5;position:absolute;}
-.pull-quote:before{content:'“';left:0;top:0;}
-.pull-quote:after{bottom:0;content:'”';right:0;}
-.btn{border:0;border-radius:4px;font-size:18;-webkit-font-smoothing:subpixel-antialiased;font-weight:normal;line-height:1.4;padding:10px 15px;-webkit-transition:border 0.25s linear,color 0.25s linear,background-color 0.25s linear;-moz-transition:border 0.25s linear,color 0.25s linear,background-color 0.25s linear;transition:border 0.25s linear,color 0.25s linear,background-color 0.25s linear;}
-.btn:focus,.btn:hover{color:white;outline:0;}
-.btn.active,.btn:active{box-shadow:0;outline:0;}
-.btn.disabled,.btn[disabled],fieldset[disabled] .btn{background-color:#bdc3c7;color:white;filter:alpha(opacity=70);opacity:0.7;}
-.btn>[class^="fui-"]{line-height:1;margin:0 1px;position:relative;top:1px;}
-.btn>[class^="fui-"].btn-xs{font-size:11px;top:0;}
-.btn>[class^="fui-"].btn-hg{top:2px;}
-.btn-default{background-color:#bdc3c7;border-color:#cacfd2;color:white;}
-.btn-default.active,.btn-default:active,.btn-default:focus,.btn-default:hover{background-color:#a7afb4;border-color:#a9b1b6;color:white;}
-.open .btn-default.dropdown-toggle{background-color:#a7afb4;border-color:#a9b1b6;color:white;}
-.btn-default.active,.btn-default:active{background-image:none;}
-.open .btn-default.dropdown-toggle{background-image:none;}
-.btn-default.disabled,.btn-default.disabled.active,.btn-default.disabled:active,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled],.btn-default[disabled].active,.btn-default[disabled]:active,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default.active,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#bdc3c7;border-color:#cacfd2;}
-.btn-primary{background-color:#1abc9c;border-color:#47c9af;color:white;}
-.btn-primary.active,.btn-primary:active,.btn-primary:focus,.btn-primary:hover{background-color:#15987e;border-color:#30a38c;color:white;}
-.open .btn-primary.dropdown-toggle{background-color:#15987e;border-color:#30a38c;color:white;}
-.btn-primary.active,.btn-primary:active{background-image:none;}
-.open .btn-primary.dropdown-toggle{background-image:none;}
-.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{background-color:#1abc9c;border-color:#47c9af;}
-.btn-info{background-color:#3498db;border-color:#5cace2;color:white;}
-.btn-info.active,.btn-info:active,.btn-info:focus,.btn-info:hover{background-color:#2383c4;border-color:#2892d9;color:white;}
-.open .btn-info.dropdown-toggle{background-color:#2383c4;border-color:#2892d9;color:white;}
-.btn-info.active,.btn-info:active{background-image:none;}
-.open .btn-info.dropdown-toggle{background-image:none;}
-.btn-info.disabled,.btn-info.disabled.active,.btn-info.disabled:active,.btn-info.disabled:focus,.btn-info.disabled:hover,.btn-info[disabled],.btn-info[disabled].active,.btn-info[disabled]:active,.btn-info[disabled]:focus,.btn-info[disabled]:hover,fieldset[disabled] .btn-info,fieldset[disabled] .btn-info.active,fieldset[disabled] .btn-info:active,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:hover{background-color:#3498db;border-color:#5cace2;}
-.btn-danger{background-color:#e74c3c;border-color:#eb6f62;color:white;}
-.btn-danger.active,.btn-danger:active,.btn-danger:focus,.btn-danger:hover{background-color:#df2e1b;border-color:#e43d2c;color:white;}
-.open .btn-danger.dropdown-toggle{background-color:#df2e1b;border-color:#e43d2c;color:white;}
-.btn-danger.active,.btn-danger:active{background-image:none;}
-.open .btn-danger.dropdown-toggle{background-image:none;}
-.btn-danger.disabled,.btn-danger.disabled.active,.btn-danger.disabled:active,.btn-danger.disabled:focus,.btn-danger.disabled:hover,.btn-danger[disabled],.btn-danger[disabled].active,.btn-danger[disabled]:active,.btn-danger[disabled]:focus,.btn-danger[disabled]:hover,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger.active,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:hover{background-color:#e74c3c;border-color:#eb6f62;}
-.btn-success{background-color:#2ecc71;border-color:#57d68d;color:white;}
-.btn-success.active,.btn-success:active,.btn-success:focus,.btn-success:hover{background-color:#26ab5f;border-color:#2fc16d;color:white;}
-.open .btn-success.dropdown-toggle{background-color:#26ab5f;border-color:#2fc16d;color:white;}
-.btn-success.active,.btn-success:active{background-image:none;}
-.open .btn-success.dropdown-toggle{background-image:none;}
-.btn-success.disabled,.btn-success.disabled.active,.btn-success.disabled:active,.btn-success.disabled:focus,.btn-success.disabled:hover,.btn-success[disabled],.btn-success[disabled].active,.btn-success[disabled]:active,.btn-success[disabled]:focus,.btn-success[disabled]:hover,fieldset[disabled] .btn-success,fieldset[disabled] .btn-success.active,fieldset[disabled] .btn-success:active,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:hover{background-color:#2ecc71;border-color:#57d68d;}
-.btn-warning{background-color:#f1c40f;border-color:#9f9f9f;color:white;}
-.btn-warning.active,.btn-warning:active,.btn-warning:focus,.btn-warning:hover{background-color:#cba50c;border-color:#818181;color:white;}
-.open .btn-warning.dropdown-toggle{background-color:#cba50c;border-color:#818181;color:white;}
-.btn-warning.active,.btn-warning:active{background-image:none;}
-.open .btn-warning.dropdown-toggle{background-image:none;}
-.btn-warning.disabled,.btn-warning.disabled.active,.btn-warning.disabled:active,.btn-warning.disabled:focus,.btn-warning.disabled:hover,.btn-warning[disabled],.btn-warning[disabled].active,.btn-warning[disabled]:active,.btn-warning[disabled]:focus,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning.active,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:hover{background-color:#f1c40f;border-color:#9f9f9f;}
-.btn-inverse{background-color:#34495e;border-color:#9f9f9f;color:white;}
-.btn-inverse.active,.btn-inverse:active,.btn-inverse:focus,.btn-inverse:hover{background-color:#253544;border-color:#818181;color:white;}
-.open .btn-inverse.dropdown-toggle{background-color:#253544;border-color:#818181;color:white;}
-.btn-inverse.active,.btn-inverse:active{background-image:none;}
-.open .btn-inverse.dropdown-toggle{background-image:none;}
-.btn-inverse.disabled,.btn-inverse.disabled.active,.btn-inverse.disabled:active,.btn-inverse.disabled:focus,.btn-inverse.disabled:hover,.btn-inverse[disabled],.btn-inverse[disabled].active,.btn-inverse[disabled]:active,.btn-inverse[disabled]:focus,.btn-inverse[disabled]:hover,fieldset[disabled] .btn-inverse,fieldset[disabled] .btn-inverse.active,fieldset[disabled] .btn-inverse:active,fieldset[disabled] .btn-inverse:focus,fieldset[disabled] .btn-inverse:hover{background-color:#34495e;border-color:#9f9f9f;}
-.btn-embossed{box-shadow:inset 0 -2px 0 #262626;}
-.btn-embossed.active,.btn-embossed:active{box-shadow:inset 0 2px 0 #262626;}
-.btn-wide{min-width:140px;padding-left:30px;padding-right:30px;}
-.btn-link{color:#f56363;}
-.btn-link:focus,.btn-link:hover{background-color:transparent;color:#f01b1b;text-decoration:underline;}
-.btn-link[disabled]:focus,.btn-link[disabled]:hover,fieldset[disabled] .btn-link:focus,fieldset[disabled] .btn-link:hover{color:#bdc3c7;text-decoration:none;}
-.btn-hg{border-radius:6px;font-size:26;line-height:1.227;padding:13px 20px;}
-.btn-lg{border-radius:6px;font-size:21;line-height:1.471;padding:10px 19px;}
-.btn-sm{border-radius:4px;font-size:15;line-height:1.385;padding:9px 13px;}
-.btn-xs{border-radius:3px;font-size:15;line-height:1.083;padding:6px 9px;}
-.btn-tip{font-size:92%;font-weight:300;padding-left:10px;}
-.btn-block{white-space:normal;}
-body,html{background-color:white;height:100%;}
-.wrap{height:auto!important;height:100%;margin:0 auto -90px;min-height:100%;}
-.push,footer{height:90px;}
-.row{margin-bottom:2.5em;margin-top:2.5em;}
-.page-header h1.title-main{color:#f7f7f7;}
-body{color:#3c5868;font-family:PT Serif;font-size:1em;font-style:normal;font-weight:400;line-height:1.5em;padding:0 0 50px;}
-p{color:#3c5868;font-size:1em;line-height:1.8em;margin:0 0 1.6em 0;}
-h1,h2,h3,h4,h5,h6{color:#a3c737;font-family:Oswald;}
-h1{font-size:2.5em;font-style:normal;font-weight:700;line-height:1.095em;}
-h2{font-size:2em;font-style:normal;font-weight:400;line-height:1.188em;margin:2em 0 .5em 0;}
-h3{font-family:Oswald;font-size:1.625em;font-style:normal;font-weight:400;line-height:1.231em;margin:2.462em 0 .615em 0;}
-ul{font-size:1.25em;line-height:1.6;list-style:disc outside;margin:0 0 1.6em 3.2em;}
-ul.nav{font-size:1em;}
-ul.level2{font-size:1em;list-style-type:circle;margin-left:1.75em;}
-ol{font-size:1.25em;line-height:1.6em;list-style:decimal outside;margin:0 0 1.6em 3.2em;}
-blockquote{margin:3em 0 3em 4em;}
-p.quote{font-family:PT Serif Caption;font-style:italic;font-weight:400;line-height:1.7;}
-blockquote.pquote{margin:3em -100px;text-align:center;}
-p.pquote{font-family:PT Serif Caption;font-size:1.625em;font-style:italic;font-weight:400;line-height:1.667em;}
-a{color:#f56363;font-family:PT Serif;font-style:normal;font-weight:400;}
-a:hover{color:#f01b1b;}
-em{font-family:PT Serif;font-style:italic;font-weight:400;}
-strong{font-family:PT Serif;font-style:normal;font-weight:700;}
-small{font-size:75%;}
-sub{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
-sup{font-size:75%;line-height:0;position:relative;top:-0.5em;vertical-align:baseline;}
-a.a-sup{border:0;}
-p.header{font-family:PT Serif;font-size:.875em;font-style:normal;font-weight:700;line-height:1em;margin:0;}
-span.author{text-transform:uppercase;}
-h2.header{color:#3c5868;font-family:Oswald;font-size:1.1em;font-style:normal;font-weight:400;line-height:1.6em;margin:0;}
-p.first-paragraph{font-family:PT Serif;font-size:1.625em;font-style:normal;font-weight:400;line-height:1.462em;margin:2.462em 0 1.846em 0;}
-span.first-letter{float:left;font-size:4.385em;line-height:1em;margin:0 .228em 0 0;}
-ol.footnote-list{font-size:1.125em;line-height:1.778em;margin:0 0 1.778em 0;}
-p.comment{font-size:1.125em;line-height:1.778em;margin:0 0 1.778em 0;}
-p.comment-options{font-family:PT Serif;font-size:1.25em;font-style:normal;font-weight:400;line-height:1.6em;margin:0 0 2.4em 0;}
-ul.comment-list{font-size:1em;line-height:1em;list-style:none;margin:0 0 8em 0;}
-span.hr{border:0;border-top:1px solid #444;display:block;height:1px;margin:4em auto;text-indent:-9999em;width:14%;}
-div.figure{margin:3em -100px;text-align:center;}
-p.caption{color:#36bac2;font-family:PT Serif Caption;font-size:.875em;font-style:normal;font-weight:400;line-height:1em;margin-bottom:0;margin-top:1.143em;text-align:center;}
-span.heading-small{font-size:.538em;font-weight:normal;margin-left:.5em;}
-li.a-comment{border-top:1px solid #ccc;margin:3em 0 0 0;padding:2em 0 0 0;}
-h3.comment-header{color:#2e3e4d;font-family:PT Serif Caption;font-style:normal;font-weight:400;margin-top:0;}
-.nav{color:#fefefe;font-family:Arvo;font-style:normal;font-weight:400;}
-span{font-family:PT Serif;font-style:normal;font-weight:700;}
-@media screen and (max-width: 768px){article.main{padding:0;width:80%;}
-ol.footnote-list{margin:0 0 32.00400161743164px 1.78em;}
-body{font-size:90%;}
-h1{font-size:2.37em;margin:30.479999542236328px 0;}
-blockquote.pquote{margin:48px 0;}
-section.main{width:100%;}
-div.figure{margin:48px 0;}
-}
-@media screen and (max-width: 480px){body{font-size:80%;}
-ul{margin:0 0 25.600000381469727px 1.5em;}
-ul.level2{margin:0 0 25.600000381469727px 1.5em;}
-li.nav{font-size:11px;}
-p.first-paragraph{font-size:1.42em;}
-span.first-letter{font-size:4.34em;}
-blockquote{margin:38.400001525878906px 0 38.400001525878906px 1.5em;}
-h2{font-size:1.7em;}
-h3.comment-header{font-size:1.42em;}
-}
-.header-main{background-color:#f39c12;}
-.header-main nav.navbar{border:0;font-family:Arvo;font-style:normal;font-weight:400;margin:0;text-decoration:none;}
-.header-main nav.navbar .navbar-brand{background-image:url(../img/frontflow-logo.png);background-repeat:no-repeat;background-size:246px 37px;color:transparent;font:0/0 a;height:37px;text-shadow:none;width:246px;}
-.header-main nav.navbar ul>li>a{color:#3c5868;}
-header.page-header{background-color:#36bac2;margin:0;padding:4em 0;text-align:center;}
-header.page-header .header{margin-bottom:3em;}
-header.page-header p{display:block;margin:0 auto;text-align:center;width:80%;}
-.grid-components .container{padding-left:15px;padding-right:15px;}
-.grid-components h4{margin-top:25px;}
-.grid-components .row{margin-bottom:20px;}
-.grid-components .row .row{margin-bottom:10px;margin-top:30px;}
-.grid-components [class*="col-"]{background-color:#eee;background-color:rgba(86,61,124,0.15);border:1px solid #ddd;border:1px solid rgba(86,61,124,0.2);padding-bottom:15px;padding-top:15px;}
-.grid-components hr{margin-bottom:40px;margin-top:40px;}
-.reference .icons{width:100%;}
-.reference .icons div.ref{background-color:#bdc3c7;float:left;font-size:1.375em;margin:2.51256%;padding:5px;width:14.57286%;}
-.blog-container .blog-header{padding-bottom:20px;padding-top:20px;}
-.blog-container .blog-title{font-size:60px;font-weight:normal;margin-bottom:0;margin-top:30px;}
-.blog-container .blog-description{color:#999;font-size:20px;}
-.blog-container .blog-main{font-size:18px;line-height:1.5;}
-.blog-container .sidebar-module{margin:0 -15px 15px;padding:15px;}
-.blog-container .sidebar-module-inset{background-color:#f5f5f5;border-radius:4px;padding:15px;}
-.blog-container .sidebar-module-inset ol:last-child,.blog-container .sidebar-module-inset p:last-child,.blog-container .sidebar-module-inset ul:last-child{margin-bottom:0;}
-.blog-container .pager{margin-bottom:60px;text-align:left;}
-.blog-container .pager>li>a{border-radius:30px;padding:10px 20px;text-align:center;width:140px;}
-.blog-container .blog-post{margin-bottom:60px;}
-.blog-container .blog-post-title{font-size:40px;margin-bottom:5px;}
-.blog-container .blog-post-meta{color:#999;margin-bottom:20px;}
-.blog-container .blog-footer{background-color:#f9f9f9;border-top:1px solid #e5e5e5;color:#999;padding:40px 0;text-align:center;}
-.blog-container .blog-footer p:last-child{margin-bottom:0;}
-.footer{min-height:60px;}
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026; }
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C; }
+/* line 36, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-tera, .typl8-giga, .typl8-mega, h1, .typl8-alpha, h2, .typl8-beta, h3, .typl8-gamma, h4, .typl8-delta, h5, .typl8-epsilon, .typl8-zeta, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  color: #222; }
+
+/* line 19, ../scss/typeplate-starter-kit/_typeplate-extends.scss */
+blockquote + figcaption cite {
+  display: block;
+  font-size: inherit;
+  text-align: right; }
+
+/* line 33, ../scss/typeplate-starter-kit/_typeplate-extends.scss */
+body {
+  word-wrap: break-word; }
+
+/* line 37, ../scss/typeplate-starter-kit/_typeplate-extends.scss */
+pre code {
+  word-wrap: normal; }
+
+/* line 4, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+html {
+  font: normal 112.5%/1.65 serif; }
+
+/* line 12, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  color: #444; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-tera {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 4.56923px;
+  margin-bottom: 0.25385rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 5.94px;
+  margin-bottom: 0.33rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-mega, h1 {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 7.425px;
+  margin-bottom: 0.4125rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-alpha, h2 {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  margin-bottom: 8.91px;
+  margin-bottom: 0.495rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-beta, h3 {
+  font-size: 48px;
+  font-size: 2.66667rem;
+  margin-bottom: 11.1375px;
+  margin-bottom: 0.61875rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-gamma, h4 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 14.85px;
+  margin-bottom: 0.825rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-delta, h5 {
+  font-size: 24px;
+  font-size: 1.33333rem;
+  margin-bottom: 22.275px;
+  margin-bottom: 1.2375rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-epsilon {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  margin-bottom: 25.45714px;
+  margin-bottom: 1.41429rem; }
+
+/* line 45, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 29.7px;
+  margin-bottom: 1.65rem; }
+
+/* line 30, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+p {
+  margin: auto auto 1.5em; }
+  /* line 33, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+  p + p {
+    text-indent: 1.5em;
+    margin-top: -1.5em; }
+
+/* line 53, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+small {
+  font-size: 65%; }
+
+/* line 63, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* line 79, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+pre {
+  white-space: pre; }
+  /* line 82, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+  pre code {
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap; }
+
+/* line 88, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+code {
+  white-space: pre;
+  font-family: monospace; }
+
+/* line 97, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray; }
+  /* line 99, ../scss/typeplate-starter-kit/_typeplate-styles.scss */
+  abbr[title]:hover {
+    cursor: help; }
+
+/* line 200, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-drop-cap:first-letter {
+  float: left;
+  margin: 10px 10px 0 0;
+  padding: 0 20px;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit; }
+
+/* line 20, ../scss/typeplate-starter-kit/_typeplate-helpers.scss */
+p + .typl8-drop-cap {
+  text-indent: 0;
+  margin-top: 0; }
+
+/**
+ * Lining Definition Style Markup
+ *
+  <dl class="typl8-lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 235, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-lining dt,
+.typl8-lining dd {
+  display: inline;
+  margin: 0; }
+/* line 244, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-lining dt + dt:before,
+.typl8-lining dd + dt:before {
+  content: "\A";
+  white-space: pre; }
+/* line 253, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-lining dd + dd:before {
+  content: ", "; }
+/* line 257, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem; }
+
+/**
+ * Dictionary Definition Style Markup
+ *
+  <dl class="typl8-dictionary-style">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 265, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-dictionary-style dt {
+  display: inline;
+  counter-reset: definitions; }
+  /* line 269, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+  .typl8-dictionary-style dt + dt:before {
+    content: ", ";
+    margin-left: -0.2rem; }
+/* line 276, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+.typl8-dictionary-style dd {
+  display: block;
+  counter-increment: definitions; }
+  /* line 279, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+  .typl8-dictionary-style dd:before {
+    content: counter(definitions,decimal) ". "; }
+
+/**
+ * Blockquote Markup
+ *
+    <figure>
+      <blockquote cite="">
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <cite>
+          <small><a href=""></a></small>
+        </cite>
+      </figcaption>
+    </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+  <aside class="typl8-pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 100, ../scss/typeplate-starter-kit/_typeplate-helpers.scss */
+.typl8-pull-quote {
+  position: relative;
+  padding: 1em; }
+  /* line 159, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+  .typl8-pull-quote:before, .typl8-pull-quote:after {
+    height: 1em;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #dc976e; }
+  /* line 168, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+  .typl8-pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  /* line 174, ../scss/typeplate-starter-kit/_typeplate-mixins.scss */
+  .typl8-pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+
+/**
+ * Figures Markup
+ *
+  <figure>
+    <figcaption>
+      <strong>Fig. X.X | </strong><cite title=""></cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 7, ../scss/_flat-buttons.scss */
+.btn {
+  border: none;
+  font-size: 18;
+  font-weight: normal;
+  line-height: 1.4;
+  border-radius: 4px;
+  padding: 10px 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+  -moz-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear; }
+  /* line 17, ../scss/_flat-buttons.scss */
+  .btn:hover, .btn:focus {
+    outline: none;
+    color: white; }
+  /* line 23, ../scss/_flat-buttons.scss */
+  .btn:active, .btn.active {
+    outline: none;
+    -webkit-box-shadow: 0;
+    box-shadow: 0; }
+  /* line 29, ../scss/_flat-buttons.scss */
+  .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    background-color: #bdc3c7;
+    color: white;
+    opacity: 0.7;
+    filter: alpha(opacity=70); }
+  /* line 39, ../scss/_flat-buttons.scss */
+  .btn > [class^="fui-"] {
+    margin: 0 1px;
+    position: relative;
+    line-height: 1;
+    top: 1px; }
+    /* line 45, ../scss/_flat-buttons.scss */
+    .btn > [class^="fui-"].btn-xs {
+      font-size: 11px;
+      top: 0; }
+    /* line 49, ../scss/_flat-buttons.scss */
+    .btn > [class^="fui-"].btn-hg {
+      top: 2px; }
+
+/* line 57, ../scss/_flat-buttons.scss */
+.btn-default {
+  color: white;
+  background-color: #bdc3c7;
+  border-color: #cacfd2; }
+  /* line 11, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+    color: white;
+    background-color: #a1aab0;
+    border-color: #a9b1b6; }
+  /* line 21, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+    background-image: none; }
+  /* line 29, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+    background-color: #bdc3c7;
+    border-color: #cacfd2; }
+  /* line 40, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-default .badge {
+    color: #bdc3c7;
+    background-color: white; }
+
+/* line 60, ../scss/_flat-buttons.scss */
+.btn-primary {
+  color: white;
+  background-color: #1abc9c;
+  border-color: #47c9af; }
+  /* line 11, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+    color: white;
+    background-color: #148f77;
+    border-color: #30a38c; }
+  /* line 21, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+    background-image: none; }
+  /* line 29, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+    background-color: #1abc9c;
+    border-color: #47c9af; }
+  /* line 40, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-primary .badge {
+    color: #1abc9c;
+    background-color: white; }
+
+/* line 63, ../scss/_flat-buttons.scss */
+.btn-info {
+  color: white;
+  background-color: #3498db;
+  border-color: #5cace2; }
+  /* line 11, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+    color: white;
+    background-color: #217dbb;
+    border-color: #2892d9; }
+  /* line 21, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+    background-image: none; }
+  /* line 29, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
+    background-color: #3498db;
+    border-color: #5cace2; }
+  /* line 40, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-info .badge {
+    color: #3498db;
+    background-color: white; }
+
+/* line 66, ../scss/_flat-buttons.scss */
+.btn-danger {
+  color: white;
+  background-color: #e74c3c;
+  border-color: #eb6f62; }
+  /* line 11, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+    color: white;
+    background-color: #d62c1a;
+    border-color: #e43d2c; }
+  /* line 21, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
+    background-image: none; }
+  /* line 29, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
+    background-color: #e74c3c;
+    border-color: #eb6f62; }
+  /* line 40, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-danger .badge {
+    color: #e74c3c;
+    background-color: white; }
+
+/* line 69, ../scss/_flat-buttons.scss */
+.btn-success {
+  color: white;
+  background-color: #2ecc71;
+  border-color: #57d68d; }
+  /* line 11, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
+    color: white;
+    background-color: #25a25a;
+    border-color: #2fc16d; }
+  /* line 21, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
+    background-image: none; }
+  /* line 29, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
+    background-color: #2ecc71;
+    border-color: #57d68d; }
+  /* line 40, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-success .badge {
+    color: #2ecc71;
+    background-color: white; }
+
+/* line 72, ../scss/_flat-buttons.scss */
+.btn-warning {
+  color: white;
+  background-color: #f1c40f;
+  border-color: #9f9f9f; }
+  /* line 11, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-warning:hover, .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
+    color: white;
+    background-color: #c29d0b;
+    border-color: #818181; }
+  /* line 21, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
+    background-image: none; }
+  /* line 29, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
+    background-color: #f1c40f;
+    border-color: #9f9f9f; }
+  /* line 40, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-warning .badge {
+    color: #f1c40f;
+    background-color: white; }
+
+/* line 75, ../scss/_flat-buttons.scss */
+.btn-inverse {
+  color: white;
+  background-color: #34495e;
+  border-color: #9f9f9f; }
+  /* line 11, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-inverse:hover, .btn-inverse:focus, .btn-inverse.focus, .btn-inverse:active, .btn-inverse.active, .open > .btn-inverse.dropdown-toggle {
+    color: white;
+    background-color: #222f3d;
+    border-color: #818181; }
+  /* line 21, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-inverse:active, .btn-inverse.active, .open > .btn-inverse.dropdown-toggle {
+    background-image: none; }
+  /* line 29, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-inverse.disabled, .btn-inverse.disabled:hover, .btn-inverse.disabled:focus, .btn-inverse.disabled.focus, .btn-inverse.disabled:active, .btn-inverse.disabled.active, .btn-inverse[disabled], .btn-inverse[disabled]:hover, .btn-inverse[disabled]:focus, .btn-inverse[disabled].focus, .btn-inverse[disabled]:active, .btn-inverse[disabled].active, fieldset[disabled] .btn-inverse, fieldset[disabled] .btn-inverse:hover, fieldset[disabled] .btn-inverse:focus, fieldset[disabled] .btn-inverse.focus, fieldset[disabled] .btn-inverse:active, fieldset[disabled] .btn-inverse.active {
+    background-color: #34495e;
+    border-color: #9f9f9f; }
+  /* line 40, ../scss/bootstrap-sass/bootstrap/mixins/_buttons.scss */
+  .btn-inverse .badge {
+    color: #34495e;
+    background-color: white; }
+
+/* line 78, ../scss/_flat-buttons.scss */
+.btn-embossed {
+  -webkit-box-shadow: inset 0 -2px 0 #262626;
+  box-shadow: inset 0 -2px 0 #262626; }
+  /* line 81, ../scss/_flat-buttons.scss */
+  .btn-embossed.active, .btn-embossed:active {
+    -webkit-box-shadow: inset 0 2px 0 #262626;
+    box-shadow: inset 0 2px 0 #262626; }
+
+/* line 86, ../scss/_flat-buttons.scss */
+.btn-wide {
+  min-width: 140px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+/* line 97, ../scss/_flat-buttons.scss */
+.btn-link {
+  color: #f56363; }
+  /* line 100, ../scss/_flat-buttons.scss */
+  .btn-link:hover, .btn-link:focus {
+    color: #f01b1b;
+    text-decoration: underline;
+    background-color: transparent; }
+  /* line 108, ../scss/_flat-buttons.scss */
+  .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
+    color: #bdc3c7;
+    text-decoration: none; }
+
+/* line 120, ../scss/_flat-buttons.scss */
+.btn-hg {
+  padding: 13px 20px;
+  font-size: 26;
+  line-height: 1.227;
+  border-radius: 6px; }
+
+/* line 123, ../scss/_flat-buttons.scss */
+.btn-lg {
+  padding: 10px 19px;
+  font-size: 21;
+  line-height: 1.471;
+  border-radius: 6px; }
+
+/* line 126, ../scss/_flat-buttons.scss */
+.btn-sm {
+  padding: 9px 13px;
+  font-size: 15;
+  line-height: 1.385;
+  border-radius: 4px; }
+
+/* line 129, ../scss/_flat-buttons.scss */
+.btn-xs {
+  padding: 6px 9px;
+  font-size: 15;
+  line-height: 1.083;
+  border-radius: 3px; }
+
+/* line 135, ../scss/_flat-buttons.scss */
+.btn-tip {
+  font-weight: 300;
+  padding-left: 10px;
+  font-size: 92%; }
+
+/* line 144, ../scss/_flat-buttons.scss */
+.btn-block {
+  white-space: normal; }
+
+/* line 3, ../scss/_general-styles.scss */
+html, body {
+  height: 100%;
+  background-color: white; }
+
+/* line 9, ../scss/_general-styles.scss */
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -90px; }
+
+/* line 15, ../scss/_general-styles.scss */
+.push, footer {
+  height: 90px; }
+
+/* line 19, ../scss/_general-styles.scss */
+.row {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em; }
+
+/* line 25, ../scss/_general-styles.scss */
+.page-header h1.title-main {
+  color: #f7f7f7; }
+
+/* line 1, ../scss/_general-typography.scss */
+body {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: "PT Serif";
+  color: #3c5868;
+  padding: 0 0 50px;
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 11, ../scss/_general-typography.scss */
+p {
+  font-size: 1em;
+  line-height: 1.8em;
+  margin: 0 0 1.6em 0;
+  color: #3c5868; }
+
+/* line 18, ../scss/_general-typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald";
+  color: #a3c737; }
+
+/* line 23, ../scss/_general-typography.scss */
+h1 {
+  font-size: 2.5em;
+  line-height: 1.095em;
+  font-weight: 700;
+  font-style: normal; }
+
+/* line 30, ../scss/_general-typography.scss */
+h2 {
+  font-size: 2em;
+  line-height: 1.188em;
+  margin: 2em 0 0.5em 0;
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 38, ../scss/_general-typography.scss */
+h3 {
+  font-family: Oswald;
+  font-size: 1.625em;
+  line-height: 1.231em;
+  margin: 2.462em 0 0.615em 0;
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 47, ../scss/_general-typography.scss */
+ul {
+  font-size: 1.25em;
+  line-height: 1.6;
+  margin: 0 0 1.6em 3.2em;
+  list-style: disc outside; }
+
+/* line 54, ../scss/_general-typography.scss */
+ul.nav {
+  font-size: 1em; }
+
+/* line 58, ../scss/_general-typography.scss */
+ul.level2 {
+  font-size: 1em;
+  margin-left: 1.75em;
+  list-style-type: circle; }
+
+/* line 64, ../scss/_general-typography.scss */
+ol {
+  font-size: 1.25em;
+  line-height: 1.6em;
+  margin: 0 0 1.6em 3.2em;
+  list-style: decimal outside; }
+
+/* line 71, ../scss/_general-typography.scss */
+blockquote {
+  margin: 3em 0 3em 4em; }
+
+/* line 75, ../scss/_general-typography.scss */
+p.quote {
+  font-family: "PT Serif Caption";
+  line-height: 1.7;
+  font-weight: 400;
+  font-style: italic; }
+
+/* line 82, ../scss/_general-typography.scss */
+blockquote.pquote {
+  text-align: center;
+  margin: 3em -100px; }
+
+/* line 87, ../scss/_general-typography.scss */
+p.pquote {
+  font-size: 1.625em;
+  line-height: 1.667em;
+  font-family: "PT Serif Caption";
+  font-weight: 400;
+  font-style: italic; }
+
+/* line 95, ../scss/_general-typography.scss */
+a {
+  font-family: "PT Serif";
+  font-weight: 400;
+  font-style: normal;
+  color: #f56363; }
+  /* line 100, ../scss/_general-typography.scss */
+  a:hover {
+    color: #f01b1b; }
+
+/* line 106, ../scss/_general-typography.scss */
+em {
+  font-style: italic;
+  font-family: "PT Serif";
+  font-weight: 400; }
+
+/* line 112, ../scss/_general-typography.scss */
+strong {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-style: normal; }
+
+/* line 118, ../scss/_general-typography.scss */
+small {
+  font-size: 75%; }
+
+/* line 122, ../scss/_general-typography.scss */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 129, ../scss/_general-typography.scss */
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em; }
+
+/* line 137, ../scss/_general-typography.scss */
+a.a-sup {
+  border: none; }
+
+/* line 141, ../scss/_general-typography.scss */
+p.header {
+  font-family: "PT Serif";
+  font-size: 0.875em;
+  line-height: 1em;
+  margin: 0;
+  font-weight: 700;
+  font-style: normal; }
+
+/* line 150, ../scss/_general-typography.scss */
+span.author {
+  text-transform: uppercase; }
+
+/* line 154, ../scss/_general-typography.scss */
+h2.header {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin: 0;
+  font-family: Oswald;
+  font-weight: 400;
+  font-style: normal;
+  color: #3c5868; }
+
+/* line 164, ../scss/_general-typography.scss */
+p.first-paragraph {
+  font-size: 1.625em;
+  line-height: 1.462em;
+  margin: 2.462em 0 1.846em 0;
+  font-family: "PT Serif";
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 173, ../scss/_general-typography.scss */
+span.first-letter {
+  float: left;
+  font-size: 4.385em;
+  line-height: 1em;
+  margin: 0 0.228em 0 0; }
+
+/* line 180, ../scss/_general-typography.scss */
+ol.footnote-list {
+  font-size: 1.125em;
+  line-height: 1.778em;
+  margin: 0 0 1.778em 0; }
+
+/* line 186, ../scss/_general-typography.scss */
+p.comment {
+  font-size: 1.125em;
+  line-height: 1.778em;
+  margin: 0 0 1.778em 0; }
+
+/* line 192, ../scss/_general-typography.scss */
+p.comment-options {
+  font-family: "PT Serif";
+  font-size: 1.25em;
+  line-height: 1.6em;
+  margin: 0 0 2.4em 0;
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 201, ../scss/_general-typography.scss */
+ul.comment-list {
+  list-style: none;
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0 0 8em 0; }
+
+/* line 209, ../scss/_general-typography.scss */
+span.hr {
+  display: block;
+  width: 14%;
+  margin: 4em auto;
+  border: 0;
+  border-top: 1px solid #444;
+  text-indent: -9999em;
+  height: 1px; }
+
+/* line 219, ../scss/_general-typography.scss */
+div.figure {
+  margin: 3em -100px;
+  text-align: center; }
+
+/* line 224, ../scss/_general-typography.scss */
+p.caption {
+  font-family: "PT Serif Caption";
+  text-align: center;
+  font-size: 0.875em;
+  line-height: 1em;
+  margin-top: 1.143em;
+  color: #36bac2;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 236, ../scss/_general-typography.scss */
+span.heading-small {
+  font-weight: normal;
+  font-size: 0.538em;
+  margin-left: 0.5em; }
+
+/* line 242, ../scss/_general-typography.scss */
+li.a-comment {
+  border-top: 1px solid #ccc;
+  padding: 2em 0 0 0;
+  margin: 3em 0 0 0; }
+
+/* line 248, ../scss/_general-typography.scss */
+h3.comment-header {
+  margin-top: 0;
+  font-family: "PT Serif Caption";
+  font-weight: 400;
+  font-style: normal;
+  color: #2e3e4d; }
+
+/* line 257, ../scss/_general-typography.scss */
+.nav {
+  color: #fefefe;
+  font-family: "Arvo";
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 264, ../scss/_general-typography.scss */
+span {
+  font-family: "PT Serif";
+  font-weight: 700;
+  font-style: normal; }
+
+@media screen and (max-width: 768px) {
+  /* line 271, ../scss/_general-typography.scss */
+  article.main {
+    width: 80%;
+    padding: 0px; }
+
+  /* line 276, ../scss/_general-typography.scss */
+  ol.footnote-list {
+    margin: 0px 0px 32.00400161743164px 1.78em; }
+
+  /* line 280, ../scss/_general-typography.scss */
+  body {
+    font-size: 90%; }
+
+  /* line 284, ../scss/_general-typography.scss */
+  h1 {
+    font-size: 2.37em;
+    margin: 30.479999542236328px 0px; }
+
+  /* line 289, ../scss/_general-typography.scss */
+  blockquote.pquote {
+    margin: 48px 0px; }
+
+  /* line 293, ../scss/_general-typography.scss */
+  section.main {
+    width: 100%; }
+
+  /* line 297, ../scss/_general-typography.scss */
+  div.figure {
+    margin: 48px 0px; } }
+@media screen and (max-width: 480px) {
+  /* line 304, ../scss/_general-typography.scss */
+  body {
+    font-size: 80%; }
+
+  /* line 308, ../scss/_general-typography.scss */
+  ul {
+    margin: 0px 0px 25.600000381469727px 1.5em; }
+
+  /* line 312, ../scss/_general-typography.scss */
+  ul.level2 {
+    margin: 0px 0px 25.600000381469727px 1.5em; }
+
+  /* line 316, ../scss/_general-typography.scss */
+  li.nav {
+    font-size: 11px; }
+
+  /* line 320, ../scss/_general-typography.scss */
+  p.first-paragraph {
+    font-size: 1.42em; }
+
+  /* line 324, ../scss/_general-typography.scss */
+  span.first-letter {
+    font-size: 4.34em; }
+
+  /* line 328, ../scss/_general-typography.scss */
+  blockquote {
+    margin: 38.400001525878906px 0px 38.400001525878906px 1.5em; }
+
+  /* line 332, ../scss/_general-typography.scss */
+  h2 {
+    font-size: 1.7em; }
+
+  /* line 336, ../scss/_general-typography.scss */
+  h3.comment-header {
+    font-size: 1.42em; } }
+/* line 1, ../scss/_main-header.scss */
+.header-main {
+  background-color: #f39c12; }
+  /* line 3, ../scss/_main-header.scss */
+  .header-main nav.navbar {
+    text-decoration: none;
+    border: none;
+    font-family: "Arvo";
+    font-weight: 400;
+    font-style: normal;
+    margin: 0; }
+    /* line 10, ../scss/_main-header.scss */
+    .header-main nav.navbar ul > li > a {
+      color: #3c5868; }
+
+/* line 16, ../scss/_main-header.scss */
+.navbar-brand {
+  height: 37px;
+  width: 246px;
+  background-image: url(../img/frontflow-logo.png);
+  background-repeat: no-repeat;
+  background-size: 246px 37px;
+  display: block; }
+
+/* line 1, ../scss/_page-header.scss */
+header.page-header {
+  text-align: center;
+  padding: 4em 0;
+  background-color: #36bac2;
+  margin: 0; }
+  /* line 7, ../scss/_page-header.scss */
+  header.page-header .header {
+    margin-bottom: 3em; }
+  /* line 10, ../scss/_page-header.scss */
+  header.page-header p {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto; }
+
+/* line 4, ../scss/_grid-components.scss */
+.grid-components .container {
+  padding-right: 15px;
+  padding-left: 15px; }
+/* line 9, ../scss/_grid-components.scss */
+.grid-components h4 {
+  margin-top: 25px; }
+/* line 12, ../scss/_grid-components.scss */
+.grid-components .row {
+  margin-bottom: 20px; }
+/* line 15, ../scss/_grid-components.scss */
+.grid-components .row .row {
+  margin-top: 30px;
+  margin-bottom: 10px; }
+/* line 19, ../scss/_grid-components.scss */
+.grid-components [class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86, 61, 124, 0.2); }
+/* line 28, ../scss/_grid-components.scss */
+.grid-components hr {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+/* line 8, ../scss/_custom-grid-layout.scss */
+.reference .icons {
+  width: 100%; }
+  /* line 10, ../scss/_custom-grid-layout.scss */
+  .reference .icons div.ref {
+    width: 14.57286%;
+    float: left;
+    margin: 2.51256%;
+    padding: 5px;
+    background-color: #bdc3c7;
+    font-size: 1.375em; }
+
+/* line 2, ../scss/_blog-components.scss */
+.blog-container {
+  /*
+   * Blog name and description
+   */
+  /*
+   * Main column and sidebar layout
+   */
+  /* Sidebar modules for boxing content */
+  /* Pagination */
+  /*
+   * Blog posts
+   */
+  /*
+   * Footer
+   */ }
+  /* line 8, ../scss/_blog-components.scss */
+  .blog-container .blog-header {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  /* line 12, ../scss/_blog-components.scss */
+  .blog-container .blog-title {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 60px;
+    font-weight: normal; }
+  /* line 18, ../scss/_blog-components.scss */
+  .blog-container .blog-description {
+    font-size: 20px;
+    color: #999; }
+  /* line 28, ../scss/_blog-components.scss */
+  .blog-container .blog-main {
+    font-size: 18px;
+    line-height: 1.5; }
+  /* line 34, ../scss/_blog-components.scss */
+  .blog-container .sidebar-module {
+    padding: 15px;
+    margin: 0 -15px 15px; }
+  /* line 38, ../scss/_blog-components.scss */
+  .blog-container .sidebar-module-inset {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px; }
+  /* line 43, ../scss/_blog-components.scss */
+  .blog-container .sidebar-module-inset p:last-child,
+  .blog-container .sidebar-module-inset ul:last-child,
+  .blog-container .sidebar-module-inset ol:last-child {
+    margin-bottom: 0; }
+  /* line 52, ../scss/_blog-components.scss */
+  .blog-container .pager {
+    margin-bottom: 60px;
+    text-align: left; }
+  /* line 56, ../scss/_blog-components.scss */
+  .blog-container .pager > li > a {
+    width: 140px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 30px; }
+  /* line 68, ../scss/_blog-components.scss */
+  .blog-container .blog-post {
+    margin-bottom: 60px; }
+  /* line 71, ../scss/_blog-components.scss */
+  .blog-container .blog-post-title {
+    margin-bottom: 5px;
+    font-size: 40px; }
+  /* line 75, ../scss/_blog-components.scss */
+  .blog-container .blog-post-meta {
+    margin-bottom: 20px;
+    color: #999; }
+  /* line 85, ../scss/_blog-components.scss */
+  .blog-container .blog-footer {
+    padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5; }
+  /* line 92, ../scss/_blog-components.scss */
+  .blog-container .blog-footer p:last-child {
+    margin-bottom: 0; }
+
+/* line 2, ../scss/_footer.scss */
+.footer {
+  min-height: 60px; }

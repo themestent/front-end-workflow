@@ -12,12 +12,13 @@
 @import "compass/typography";
 
 // Import Bootstrap Mixins;
-@import "bootstrap-sass/mixins";
+@import "bootstrap-sass/bootstrap/variables";
+
+@import "bootstrap-sass/bootstrap/mixins";
 // Import Bourbon
 @import "bourbon/bourbon";
 // For better & device friendly *typography* including *Typeplate* `scss` files
-@import "typeplate/typeplate.scss";
-@import "typeplate/vars-typeplate.scss";
+@import "typeplate-starter-kit/typeplate";
 // Importing Color Theme Variables
 @import "flat-color-theme";
 @import "flat-buttons";
