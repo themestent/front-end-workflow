@@ -1,0 +1,13 @@
+.brand-desktop{
+  margin-top:10px;
+  .brand{
+    background: image-url("logo.png") no-repeat;
+
+    background-size: cover;
+    background-position: center;
+    display: block;
+    @include hide-text();
+    width:217px;
+    height: 118px;
+  }
+}

@@ -1,0 +1,52 @@
+body {
+
+  font-family: "PT Serif";
+  color: $ff-body-copy;
+
+}
+p {
+  color: $ff-body-copy;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Oswald";
+  color: $ff-flat-black;
+  a{
+    color:$ff-flat-black;
+    &:hover{
+      color: $link-color;
+
+    }
+  }
+}
+
+.title-highlighted{
+  background-color: $link-color;
+
+  font-size: em(20);
+  padding:10px 15px;
+  a{
+    color:white;
+
+  }
+}
+
+a {
+//  font-family: "PT Serif";
+  color:$link-color;
+  &:hover{
+    color:$ff-flat-black;
+    @include transition(all 0.2s ease);
+
+  }
+
+}
+
+
+
+em {
+  font-style: italic;
+  font-family: "PT Serif";
+}
+
+
+

@@ -1,0 +1,20 @@
+.media{
+  .media-heading{
+    font-size: typl8-measure-margin(20,30,em);
+
+  }
+}
+
+.media-lists-two{
+  &:nth-child(2n+1){
+    clear: left;
+  }
+
+}
+
+.media-lists-three{
+  &:nth-child(3n+1){
+    clear: left;
+  }
+
+}

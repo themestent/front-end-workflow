@@ -1,0 +1,14 @@
+.navbar{
+  margin-top:20px;
+
+}
+
+#navbar-collapse-1.affix{
+  position: fixed;
+  top:0;
+  width:940px;
+  background-color: $clouds;
+  background-color: rgba(white,0.96);
+  @include box-shadow(0px 1px 7px 0px #999);
+  z-index: 9999999;
+}

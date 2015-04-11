@@ -1,0 +1,74 @@
+{
+  "name": "front-end-workflow",
+  "version": "1.0.0",
+  "description":"A boilerplate for Front-end Workflow by automating several front-end related tasks",
+  "keywords":["front-end","workflow","generator","build"],
+  "homepage":"https://github.com/themestent/front-end-workflow",
+  "bugs":"https://github.com/themestent/front-end-workflow/issues",
+  "author": {
+    "name":"Shajed Evan",
+    "url":"https://github.com/evanshajed",
+    "email":"evanshajed@gmail.com"
+  },
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/themestent/front-end-workflow.git"
+  },
+  "bugs":{
+    "url":""
+  },
+  "licenses":[
+    {
+      "type":"CC",
+      "url":"http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "dependencies": {
+    "jade":"*",
+    "groc":"*"
+  },
+  "devDependencies": {
+    "bower":"*",
+    "grunt": "*",
+    "tmp":"*",
+    "grunt-jekyll":"*",
+    "grunt-gulp":"*",
+    "imagemagick": "*",
+    "grunt-contrib-sass":"*",
+    "grunt-cssc":"*",
+    "grunt-csscss":"*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-csscomb": "*",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-cssshrink":"*",
+    "grunt-htmlhint":"*",
+    "grunt-contrib-watch": "*",
+    "connect-livereload":"*",
+    "grunt-concurrent":"*",
+    "grunt-newer":"*",
+    "grunt-browser-sync":"*",
+    "grunt-contrib-copy": "*",
+    "grunt-bower-task":"*",
+    "grunt-contrib-livereload": "*",
+    "grunt-contrib-jst": "~0.5.0",
+    "grunt-contrib-uglify": "~0.3.0",
+    "grunt-pagespeed":"*",
+    "grunt-stylestats":"*",
+    "jpegtran-bin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-svgmin":"*",
+    "grunt-groc": "*",
+    "grunt-regarde": "*",
+    "grunt-rev": "*",
+    "grunt-karma": "*",
+    "grunt-open": "*",
+    "matchdep": "*",
+    "node-sass":"*",
+    "sassdoc":"*",
+    "grunt-sassdoc":"*"
+  }
+}

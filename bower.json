@@ -1,0 +1,76 @@
+{
+  "name": "front-end-workflow",
+  "description":"A boilerplate for Front-end Workflow by automating several front-end related tasks",
+  "version": "1.0",
+  "homepage": "https://github.com/themestent/front-end-workflow",
+  "main": [
+    "app/css/app.css"
+  ],
+  "ignore": [
+      ".jshintrc",
+      "**/*.txt",
+      ".sass-cache",
+      "codekit-config.json"
+    ],
+  "dependencies": {
+    "jquery": "2.0.0",
+    "bootstrap-sass": "*",
+    "requirejs": "*",
+    "typeplate-starter-kit": "*",
+    "bourbon":"*",
+    "html5shiv":"*",
+    "respond":"https://github.com/scottjehl/Respond.git",
+    "FitText":"https://github.com/davatron5000/FitText.js.git",
+    "FitVids":"*",
+    "echo":"https://github.com/toddmotto/echo.git",
+    "neat":"https://github.com/thoughtbot/neat.git",
+    "OwlCarousel2":"https://github.com/smashingboxes/OwlCarousel2.git"
+  },
+
+  "exportsOverride": {
+    "bootstrap-*": {
+      "js/vendors": "assets/javascripts",
+      "scss/vendors":"assets/stylesheets",
+      "img": "assets/images",
+      "fonts/bootstrap/":"assets/fonts/bootstrap"
+    },
+    "jquery":{
+      "js/vendors":"*.js"
+
+    },
+    "bourbon": {
+      "scss/library": "app/assets/stylesheets/"
+    },
+    "typeplate-starter-kit":{
+      "scss/library":"scss/*.scss"
+    },
+    "FitText": {
+      "js/plugins": "jquery.fittext.js"
+    },
+    "FitVids": {
+      "js/plugins": "jquery.fitvids.js"
+    },
+    "requirejs": {
+      "js/vendors": "require.js"
+    },
+
+    "html5shiv":{
+      "js/vendors":"dist/html5shiv.js"
+    },
+    "respond":{
+      "js/vendors":"src/respond.js"
+    },
+    "echo":{
+      "js/plugins":"dist/echo.min.js"
+    },
+    "neat":{
+      "scss/library":"app/assets/stylesheets/"
+    },
+
+    "OwlCarousel2":{
+      "scss/vendors":"src/scss/",
+      "js/vendors":"src/js",
+      "img/vendors":"src/img"
+    }
+  }
+}

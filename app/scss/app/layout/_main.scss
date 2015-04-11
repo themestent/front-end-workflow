@@ -1,0 +1,29 @@
+// Main Section Style elements
+//
+// .page-header   - Main Page Header containing site Headline, Sub Title and teaser paragraph
+// .title   - Site Title
+// .title-leadtext  - Sub title or Lead Text
+// .teaser   - Teaser paragraph styles
+
+.section-main{
+  .page-header{
+    background-color: $ff-flat-black;
+    margin:0;
+    padding: 40px 20px;
+
+
+    .title{
+      text-align: center;
+      color:$orange
+    }
+    .title-leadtext{
+      text-align: center;
+      color:$clouds
+    }
+    .teaser-text{
+      text-align: center;
+      color:$silver
+    }
+  }
+}
+

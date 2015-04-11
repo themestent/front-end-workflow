@@ -1,0 +1,26 @@
+// # General Styles
+// applied on Front-End Workflow Demo Template.
+html,body{
+  height:100%;
+  background-color: $clouds;
+}
+.container{
+
+}
+// **Sticky footer**
+.wrap{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -90px;
+}
+.push,footer{
+  height: 90px;
+}
+
+.container{
+  @include border-radius(4px);
+  @media (min-width: $screen-lg-min){
+    width:970px;
+  }
+}

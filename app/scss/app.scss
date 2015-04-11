@@ -1,0 +1,47 @@
+/*!
+* Front-End Workflow
+*
+* Copyright 2014 Themestent, Bangladesh
+*
+* Front-End by Shajed Evan - @evanshajed
+*/
+// # Main Scss file holding all the custom styles of the applications components.
+
+@import "compass";
+
+// Resetting CSS using default compass `global-reset` support
+@include global-reset;
+
+// Including Bootstrap Mixins()
+@import "vendors/bootstrap-sass/bootstrap/variables";
+@import "vendors/bootstrap-sass/bootstrap/mixins";
+
+// Import Bourbon
+@import "library/bourbon/bourbon";
+
+// For better & device friendly *typography* including *Typeplate* `scss` files
+@import "library/typeplate-starter-kit/typeplate";
+
+// Importing Color Theme Variables
+@import "app/helpers/flat-color-theme";
+@import "app/helpers/flat-buttons";
+
+
+// Including Base Styles
+@import "app/base/common-styles";
+@import "app/base/typography";
+
+// Including Layout Styles
+@import "app/layout/layout";
+
+//Including Widgets
+@import "app/widgets/widget-logo";
+@import "app/widgets/widget-ad";
+@import "app/widgets/widget-teaser";
+@import "app/widgets/widget-media";
+
+//Include Components
+@import "app/components/menu";
+
+//Including Pages Style
+@import "app/pages/pages";

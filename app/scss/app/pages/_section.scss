@@ -1,0 +1,18 @@
+.title-section{
+  font-size: em(30);
+  margin-bottom: 0;
+  &:before{
+    content:"";
+    width:5px;
+    height:15px;
+    background-color: $link-color;
+    @include inline-block();
+    margin-right:6px;
+  }
+
+}
+
+.section-page{
+  background-color: #fefefe;
+  padding:15px;
+}

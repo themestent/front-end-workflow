@@ -1,0 +1,30 @@
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+/* line 5, ../../../scss/vendors/OwlCarousel2/owl.animate.scss */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+/* line 11, ../../../scss/vendors/OwlCarousel2/owl.animate.scss */
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+/* line 14, ../../../scss/vendors/OwlCarousel2/owl.animate.scss */
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+/* line 17, ../../../scss/vendors/OwlCarousel2/owl.animate.scss */
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }

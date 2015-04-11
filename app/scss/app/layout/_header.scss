@@ -1,0 +1,15 @@
+// Main Header section of the site
+.header-main{
+  display: block;
+  background-color: $midnight-blue;
+}
+// Navigation Bar of the site
+//
+// .navbar-brand - Holding site logo image with Retina Display support
+.navbar-header{
+  .navbar-brand{
+    @include retina-image("../img/front-end-workflow", 132px 59px);
+    background-repeat: no-repeat;
+    @include size(312px 59px);
+  }
+}

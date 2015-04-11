@@ -1,0 +1,112 @@
+.widget-ad{
+  img{
+    width:100%;
+
+  }
+  iframe{
+    div{
+      width:284px;
+
+    }
+
+  }
+
+  .forum-list{
+    img{
+      width:100%;
+
+    }
+
+  }
+
+  .publication{
+    width: 33.33%;
+    float: left;
+    padding:5px;
+
+  }
+  .rssHeadline{
+    .header{
+      background: url(http://www.hegnar.no/gfx/lederkunnskap_logo.png) no-repeat;
+      background-size: contain;
+      width:284px;
+      height:22px;
+
+    }
+    div.content{
+      background-color: #eef1f3;
+      ul{
+        margin:0 0 10px 0;
+        list-style: none;
+        padding: 10px 15px;
+        li{
+          border-bottom: 1px solid $concrete;
+          padding-bottom: 10px;
+          &:last-child{
+            border-bottom: 0;
+
+          }
+          a{
+            color: $midnight-blue;
+
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+}
+
+.widget-ad.header-chart{
+  margin-top: 10px;
+  .x144x144{
+    margin-top: 10px;
+    .column-1,.column-2{
+      @include inline-block();
+
+
+    }
+    .column-2{
+      float: right;
+      form{
+        input[type='text']{
+          width:80px;
+        }
+        input[type=submit]{
+          background-color: white;
+          @include border-radius(4px);
+          border:1px solid #ccc;
+          font-size: 12px;
+        }
+
+      }
+    }
+  }
+
+}
+
+.widget-ad.header-table-chart{
+  margin-top:18px;
+  ul{
+    margin:0;
+
+  }
+
+}
+.widget-ad .time-chart{
+  margin-left: -24px;
+  margin-top: 10px;
+  .column-2{
+    a{
+      text-align: center;
+      font-size: rem(10px);
+      display: block;
+    }
+
+
+  }
+}
+

@@ -1,0 +1,84 @@
+.teaser-single-item {
+  @include border-radius(4px);
+  padding: 10px 10px 10px;
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #ecf8ff; // Old browsers
+  @include linear-gradient(#F3F9FA, #ECF8FF);
+  border: 1px solid #cfeafa;
+
+}
+
+.widget-teaser-item {
+
+}
+
+.teaser {
+  .teaser-head {
+    position: relative;
+    display: block;
+    .title-meta-section {
+      float: left;
+
+    }
+    .teaser-time {
+      @include inline-block();
+      position: absolute;
+      right: 0;
+    }
+
+  }
+  .title-meta-section {
+    font-size: rem(14);
+    margin-bottom: em(10);
+    a {
+      color: $ff-flat-black;
+      &:hover {
+        color: black;
+      }
+      &:before {
+        content: "";
+        width: 5px;
+        height: 12px;
+        background-color: $link-color;
+        @include inline-block();
+        margin-right: 6px;
+
+      }
+    }
+  }
+
+  .title {
+    font-size: rem(30);
+
+  }
+  .title-mid {
+    font-size: rem(24);
+
+  }
+
+  .title-small {
+    font-size: rem(20);
+    line-height: 1.2;
+  }
+
+  .teaser-time {
+    font-style: italic;
+    margin-bottom: 10px;
+    display: block;
+    color: $asbestos;
+  }
+
+  .teaser-leadtext {
+    font-size: rem(14);
+
+  }
+
+}
+
+.teaser-section {
+  margin: em(20) 0;
+  display: block;
+  overflow: hidden;
+
+}
+

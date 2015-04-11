@@ -1,0 +1,27 @@
+.footer{
+  background-color: #fefefe;
+  padding: 10px;
+  display: block;
+  height:auto;
+}
+
+.footer-brand{
+  a{
+    @include hide-text();
+    background: url("../img/footer_hegnar_logo.png");
+    background-size: contain;
+    @include inline-block;
+    width:166px;
+    height:70px;
+
+  }
+
+}
+
+.title-contact{
+  font-size:em(20);
+
+}
+.contact-info{
+  font-size: em(16);
+}
