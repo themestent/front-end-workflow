@@ -70,5 +70,6 @@
     "node-sass":"*",
     "sassdoc":"*",
     "grunt-sassdoc":"*"
-  }
+  },
+  "engine": "node > 0.10.x"
 }

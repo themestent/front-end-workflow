@@ -36,7 +36,9 @@ Resources used in this project gives Front-End developers a common platform to k
 	* **[FitText](http://simplefocus.com/flowtype/ "A jQuery plugin for inflating web type")**: A jQuery plugin for inflating web type.
 	* **[FitVids](http://fitvidsjs.com/ "jQuery plugin for fluid width video embeds.")**: A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
 	* **[Echo](https://github.com/toddmotto/echo "Lazy-loading images with data-* attributes")**: Echo is a standalone JavaScript lazy-loading image tool. Echo is fast, less than 1KB and uses HTML5 data-* attributes.
-  * Add adding ....
+	* **[Neat](http://neat.bourbon.io "A lightweight semantic grid framework for Sass and Bourbon.")**: Neat is a semantic grid framework built on top of Sass and Bourbon. It is simple enough to get you up and running in minutes, and powerful enough to handle any responsive layout you can dream of.
+	* **[OwlCarousel2](https://github.com/OwlFonk/OwlCarousel2 "Touch enabled jQuery plugin that lets you createbeautiful responsive carousel slider.")**: Touch enabled jQuery plugin that lets you create a beautiful *responsive carousel slider*.
+  * Add finding  ....
 
 	You can add your dependency packages required for your project in `bower.json`file. To control downloaded resources copied into it's right directory according their	 file type `"exportsOverride": {}` has been used. Get some more ideas about different options at **[grunt-bower-task](https://github.com/yatskevich/grunt-bower-task)**.
 

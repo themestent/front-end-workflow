@@ -474,26 +474,13 @@ module.exports = function (grunt) {
         ]
       }
     },
-
-    // #### sc5-styleguide generator
-    gulp: {
-      'styleguide-generate': function() {
-        var outputPath = 'output';
-        return gulp.src([''])
-          .pipe(styleguide.generate({
-            title: 'My Styleguide',
-            server: true,
-            rootPath: outputPath
-          }))
-          .pipe(gulp.dest(outputPath));
-      },
-      'styleguide-applystyles': function() {
-        gulp.src('main.scss')
-          .pipe(styleguide.applyStyles())
-          .pipe(gulp.dest('output'));
+    // #### Sass Doc Generator
+    // Generates documentation from `scss` files
+    sassdoc: {
+      default: {
+        src: 'app/scss/'
       }
     },
-
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
     groc: {
@@ -626,8 +613,8 @@ module.exports = function (grunt) {
   // `grunt doc` command will generate documentation site in **doc** directory.
   grunt.registerTask('doc','Generating documentation...',['groc']);
 
-  // `grunt styleGuide` command to generate Style Guide of the CSS design elements
-  grunt.registerTask('styleGuide', ['gulp:styleguide-generate', 'gulp:styleguide-applystyles']);
+  // `grunt sassDoc` will create style documentation from scss
+  grunt.registerTask('sassDoc','Building style doc',['sassdoc']);
 
   // `grunt buildDev` command will build css, img, fonts, html from related tasks and keep them inside associated folders. It is Developer ready
   grunt.registerTask('buildDev','Building components for Dev',['concurrent:conBuildDev']);
