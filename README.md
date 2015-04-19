@@ -53,7 +53,7 @@ Resources used in this project gives Front-End developers a common platform to k
 	* Uglify
 	* CssLint
 	* **ImageMin** (Minify Images using [**grunt-contrib-imagemin**](https://npmjs.org/package/grunt-contrib-imagemin))
-	* LiveReload and Watch for changes and reload browser automatically.
+	* LiveReload Watch for changes and reload browser automatically.
 
 ## [How to use](id:howto)?
 Make sure you have [**Node.js**](http://nodejs.org/download/) installed.

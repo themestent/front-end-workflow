@@ -13,7 +13,7 @@
       "codekit-config.json"
     ],
   "dependencies": {
-    "jquery": "2.0.0",
+    "jquery": "2.1.3",
     "bootstrap-sass": "*",
     "requirejs": "*",
     "typeplate-starter-kit": "*",

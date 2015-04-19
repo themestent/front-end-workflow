@@ -7,8 +7,6 @@ module.exports = function (grunt) {
   var CODEBASE_STATIC_PATH = "webapp/";
   var CODEBASE_SKIN_PATH = CODEBASE_STATIC_PATH;
 
-  var gulp = require('gulp'),
-    styleguide = require('sc5-styleguide');
 
   // ## Initialing Grunt Configuration
   // `grunt.initConfig()` Initializes all the tasks

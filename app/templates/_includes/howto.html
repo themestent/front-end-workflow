@@ -1,0 +1,33 @@
+<h2 id="howto"><a href="#howto">How to use?</a></h2>
+<p>Make sure you have <a href="http://nodejs.org/download/"><strong>Node.js</strong></a> installed.</p>
+<p>Open your terminal and clone <a href="https://github.com/themestent/front-end-workflow.git"><strong>Front-End-Workflow</strong></a> repository.</p>
+
+<p><code>git clone https://github.com/themestent/front-end-workflow.git</code></p>
+
+<p>You can also use GUI tools for <a href="https://mac.github.com"><strong>Mac</strong></a> or <a href="https://windows.github.com"><strong>Windows</strong></a>. You will need to use terminal anyway! Better get used to it!!</p>
+
+<p>When you are done with the cloning get into the directory:
+  <code>cd front-end-workflow</code>
+  Now type <code>ls</code> just to have an overview on what you will be working with?</p>
+
+<p>You will see two directories called <code>app</code> and <code>doc</code>. We will work on this directory for our front-end development process. <code>doc</code> has been automatically generated which you will be doing so very soon! But First let's try the following line on our terminal:
+  <code>npm install</code></p>
+
+<p>This command will start downloading all the depended libraries and packages defined into <code>package.json</code> file into a newly created <em><code>node_modules</code></em> directory. Downloaded packages are only available and works for the current project only.</p>
+
+<p>When <code>npm install</code> finished downloading all it's packages you can run following line <code>npm ls</code> to see all the available packages downloaded inside <code>node_modules</code>. That tree view looks amazing right? It holds all types of dependencies we have mentioned on <code>package.json</code> file. Each of those packages has it's own role and certain tasks to process.</p>
+
+<h3 id="download-front-end-resources">Download Front-End Resources</h3>
+<p>Ok now we have all required node modules installed locally for this project and we are ready to download some resources, files that we actually will require for Front-End Development project. In this workflow I will be using <a href="http://getbootstrap.com/css/#sass"><strong>Twitter Bootstrap scss</strong></a> files, <a href="http://bourbon.io" title="Sass Mixins Library"><strong>Bourbon</strong></a> - Sass Mixins Library, Some <em>JavaScript plugins</em> like <strong><em>FitText</em></strong>, <strong><em>FitVids</em></strong>, <strong><em>Echo</em></strong> etc. I want those to download and place those automatically into right directory according file type.</p>
+
+<p>We can do this by typing following line on terminal:</p>
+<p><code>grunt download</code></p>
+<p>If you don't get any unwanted alien like error you will see line like these:
+<pre><code><p>Running "bower:install" (bower) task</p><p>Installed bower packages
+    Copied packages to /Users/evanshajed/Working Projects/front-end-workflow/app
+    Cleaned bower dir /Users/evanshajed/Working Projects/front-end-workflow/components</p>
+<p>Done, without errors.</p></code></pre>
+
+<p>Get inside <code>app</code> directory and you will see all the files are downloaded and placed to their right destination according to their file type. Then finally you will need to start grunt task to watch and build whenever any changes occurs in files or directories mentioned in <strong>Gruntfile.js</strong>. To start this task type this line:</p>
+<p><code>grunt</code></p>
+<p>You will then see several process starts running and waiting for changes. Start your usual development process inside <code>app</code> directory. Just to get used to this workflow start with <strong><code>index.html</code></strong> file. Include some image inside <strong><code>img</code></strong> or make some changes inside <strong><code>scss</code></strong> files. <strong>Grunt</strong> will generate, concatenate <code>.js</code> files, build <code>scss</code> to <code>css</code> files and reload the browser for you.</p>
