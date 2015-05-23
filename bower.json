@@ -1,7 +1,7 @@
 {
   "name": "front-end-workflow",
   "description":"A boilerplate for Front-end Workflow by automating several front-end related tasks",
-  "version": "1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/themestent/front-end-workflow",
   "main": [
     "app/css/app.css"

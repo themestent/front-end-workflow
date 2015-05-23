@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*!
 * Front-End Workflow
 *
@@ -6,50 +5,6 @@
 *
 * Front-End by Shajed Evan - @evanshajed
 */
-/* line 5, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
-	margin:0; padding:0; border:0; font:inherit; font-size:100%; vertical-align:baseline;
-}
-
-/* line 22, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-html{
-	line-height:1;
-}
-
-/* line 24, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-ol,ul{
-	list-style:none;
-}
-
-/* line 26, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-table{
-	border-collapse:collapse; border-spacing:0;
-}
-
-/* line 28, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-caption,th,td{
-	text-align:left; font-weight:normal; vertical-align:middle;
-}
-
-/* line 30, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-q,blockquote{
-	quotes:none;
-}
-/* line 103, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-q:before,q:after,blockquote:before,blockquote:after{
-	content:''; content:none;
-}
-
-/* line 32, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-a img{
-	border:none;
-}
-
-/* line 116, ../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
-article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{
-	display:block;
-}
-
 /*!
 Typeplate : Starter Kit
 URL ........... http://typeplate.com
@@ -59,674 +14,145 @@ Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
 License ....... Creative Commmons Attribution 3.0
 License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
 */
-@font-face{
-	font-family:'Ampersand'; src:local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua'); unicode-range:U+0026;
-}
-@font-face{
-	font-family:'Ampersand'; src:local('Georgia'); unicode-range:U+270C;
-}
-/* line 36, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-tera,.typl8-giga,.typl8-mega,h1,.typl8-alpha,h2,.typl8-beta,h3,.typl8-gamma,h4,.typl8-delta,h5,.typl8-epsilon,.typl8-zeta,h6{
-	text-rendering:optimizeLegibility; line-height:1; margin-top:0; color:#222;
-}
-
-/* line 19, ../scss/library/typeplate-starter-kit/_typeplate-extends.scss */
-blockquote+figcaption cite{
-	display:block; font-size:inherit; text-align:right;
-}
-
-/* line 33, ../scss/library/typeplate-starter-kit/_typeplate-extends.scss */
-body{
-	word-wrap:break-word;
-}
-
-/* line 37, ../scss/library/typeplate-starter-kit/_typeplate-extends.scss */
-pre code{
-	word-wrap:normal;
-}
-
-/* line 4, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-html{
-	font:normal 112.5%/1.65 serif;
-}
-
-/* line 12, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-body{
-	-webkit-hyphens:auto; -moz-hyphens:auto; -ms-hyphens:auto; hyphens:auto; color:#444;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-tera{
-	font-size:117px; font-size:6.5rem; margin-bottom:70.90909px; margin-bottom:3.93939rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-giga{
-	font-size:90px; font-size:5rem; margin-bottom:54.54545px; margin-bottom:3.0303rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-mega,h1{
-	font-size:72px; font-size:4rem; margin-bottom:43.63636px; margin-bottom:2.42424rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-alpha,h2{
-	font-size:60px; font-size:3.33333rem; margin-bottom:36.36364px; margin-bottom:2.0202rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-beta,h3{
-	font-size:48px; font-size:2.66667rem; margin-bottom:29.09091px; margin-bottom:1.61616rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-gamma,h4{
-	font-size:36px; font-size:2rem; margin-bottom:21.81818px; margin-bottom:1.21212rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-delta,h5{
-	font-size:24px; font-size:1.33333rem; margin-bottom:14.54545px; margin-bottom:0.80808rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-epsilon{
-	font-size:21px; font-size:1.16667rem; margin-bottom:12.72727px; margin-bottom:0.70707rem;
-}
-
-/* line 45, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-zeta,h6{
-	font-size:18px; font-size:1rem; margin-bottom:10.90909px; margin-bottom:0.60606rem;
-}
-
-/* line 30, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-p{
-	margin:auto auto 1.5em;
-}
-/* line 33, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-p+p{
-	text-indent:1.5em; margin-top:-1.5em;
-}
-
-/* line 53, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-small{
-	font-size:65%;
-}
-
-/* line 63, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-input,abbr,acronym,blockquote,code,kbd,q,samp,var{
-	-webkit-hyphens:none; -moz-hyphens:none; -ms-hyphens:none; hyphens:none;
-}
-
-/* line 79, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-pre{
-	white-space:pre;
-}
-/* line 82, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-pre code{
-	white-space:-moz-pre-wrap; white-space:pre-wrap;
-}
-
-/* line 88, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-code{
-	white-space:pre; font-family:monospace;
-}
-
-/* line 97, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-abbr{
-	-webkit-font-variant:small-caps; -moz-font-variant:small-caps; -ms-font-variant:small-caps; font-variant:small-caps; font-weight:600; text-transform:lowercase; color:gray;
-}
-/* line 99, ../scss/library/typeplate-starter-kit/_typeplate-styles.scss */
-abbr[title]:hover{
-	cursor:help;
-}
-
-/* line 200, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-drop-cap:first-letter{
-	float:left; margin:10px 10px 0 0; padding:0 20px; font-size:4em; font-family:inherit; line-height:1; text-indent:0; background:transparent; color:inherit;
-}
-
-/* line 20, ../scss/library/typeplate-starter-kit/_typeplate-helpers.scss */
-p+.typl8-drop-cap{
-	text-indent:0; margin-top:0;
-}
-
-/**
- * Lining Definition Style Markup
- *
-  <dl class="typl8-lining">
-    <dt><b></b></dt>
-    <dd></dd>
-  </dl>
- *
- * Extend this object into your markup.
- *
- */
-/* line 235, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-lining dt,.typl8-lining dd{
-	display:inline; margin:0;
-}
-/* line 244, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-lining dt+dt:before,.typl8-lining dd+dt:before{
-	content:'\A'; white-space:pre;
-}
-/* line 253, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-lining dd+dd:before{
-	content:', ';
-}
-/* line 257, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-lining dd:before{
-	content:': '; margin-left:-0.2rem;
-}
-
-/**
- * Dictionary Definition Style Markup
- *
-  <dl class="typl8-dictionary-style">
-    <dt><b></b></dt>
-    <dd></dd>
-  </dl>
- *
- * Extend this object into your markup.
- *
- */
-/* line 265, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-dictionary-style dt{
-	display:inline; counter-reset:definitions;
-}
-/* line 269, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-dictionary-style dt+dt:before{
-	content:', '; margin-left:-0.2rem;
-}
-/* line 276, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-dictionary-style dd{
-	display:block; counter-increment:definitions;
-}
-/* line 279, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-dictionary-style dd:before{
-	content:counter(definitions,decimal) '. ';
-}
-
-/**
- * Blockquote Markup
- *
-    <figure>
-      <blockquote cite="">
-        <p></p>
-      </blockquote>
-      <figcaption>
-        <cite>
-          <small><a href=""></a></small>
-        </cite>
-      </figcaption>
-    </figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Pull Quotes Markup
- *
-  <aside class="typl8-pull-quote">
-    <blockquote>
-      <p></p>
-    </blockquote>
-  </aside>
- *
- * Extend this object into your custom stylesheet.
- *
- */
-/* line 100, ../scss/library/typeplate-starter-kit/_typeplate-helpers.scss */
-.typl8-pull-quote{
-	position:relative; padding:1em;
-}
-/* line 159, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-pull-quote:before,.typl8-pull-quote:after{
-	height:1em; opacity:0.5; position:absolute; font-size:4em; color:#DC976E;
-}
-/* line 168, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-pull-quote:before{
-	content:'“'; top:0; left:0;
-}
-/* line 174, ../scss/library/typeplate-starter-kit/_typeplate-mixins.scss */
-.typl8-pull-quote:after{
-	content:'”'; bottom:0; right:0;
-}
-
-/**
- * Figures Markup
- *
-  <figure>
-    <figcaption>
-      <strong>Fig. X.X | </strong><cite title=""></cite>
-    </figcaption>
-  </figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Footnote Markup : Replace 'X' with your unique number for each footnote
- *
-  <article>
-    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
-    <footer>
-      <ol class="foot-notes">
-        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
-      </ol>
-    </footer>
-  </article>
- *
- * Extend this object into your markup.
- *
- */
-/* line 7, ../scss/app/helpers/_flat-buttons.scss */
-.btn{
-	border:none; font-size:18; font-weight:normal; line-height:1.4; border-radius:4px; padding:10px 15px; -webkit-font-smoothing:subpixel-antialiased; -webkit-transition:border 0.25s linear, color 0.25s linear, background-color 0.25s linear; -moz-transition:border 0.25s linear, color 0.25s linear, background-color 0.25s linear; transition:border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
-}
-/* line 17, ../scss/app/helpers/_flat-buttons.scss */
-.btn:hover,.btn:focus{
-	outline:none; color:white;
-}
-/* line 23, ../scss/app/helpers/_flat-buttons.scss */
-.btn:active,.btn.active{
-	outline:none; -webkit-box-shadow:0; box-shadow:0;
-}
-/* line 29, ../scss/app/helpers/_flat-buttons.scss */
-.btn.disabled,.btn[disabled],fieldset[disabled] .btn{
-	background-color:#BDC3C7; color:white; opacity:0.7; filter:alpha(opacity=70);
-}
-/* line 39, ../scss/app/helpers/_flat-buttons.scss */
-.btn>[class^='fui-']{
-	margin:0 1px; position:relative; line-height:1; top:1px;
-}
-/* line 45, ../scss/app/helpers/_flat-buttons.scss */
-.btn>[class^='fui-'].btn-xs{
-	font-size:11px; top:0;
-}
-/* line 49, ../scss/app/helpers/_flat-buttons.scss */
-.btn>[class^='fui-'].btn-hg{
-	top:2px;
-}
-
-/* line 57, ../scss/app/helpers/_flat-buttons.scss */
-.btn-default{
-	color:white; background-color:#BDC3C7; border-color:#CACFD2;
-}
-/* line 11, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-default:hover,.btn-default:focus,.btn-default.focus,.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{
-	color:white; background-color:#A1AAB0; border-color:#A9B1B6;
-}
-/* line 21, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{
-	background-image:none;
-}
-/* line 29, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-default.disabled,.btn-default.disabled:hover,.btn-default.disabled:focus,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled.active,.btn-default[disabled],.btn-default[disabled]:hover,.btn-default[disabled]:focus,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled].active,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default:hover,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default.active{
-	background-color:#BDC3C7; border-color:#CACFD2;
-}
-/* line 40, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-default .badge{
-	color:#BDC3C7; background-color:white;
-}
-
-/* line 60, ../scss/app/helpers/_flat-buttons.scss */
-.btn-primary{
-	color:white; background-color:#1ABC9C; border-color:#47C9AF;
-}
-/* line 11, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-primary:hover,.btn-primary:focus,.btn-primary.focus,.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{
-	color:white; background-color:#148F77; border-color:#30A38C;
-}
-/* line 21, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{
-	background-image:none;
-}
-/* line 29, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-primary.disabled,.btn-primary.disabled:hover,.btn-primary.disabled:focus,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled.active,.btn-primary[disabled],.btn-primary[disabled]:hover,.btn-primary[disabled]:focus,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled].active,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary:hover,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary.active{
-	background-color:#1ABC9C; border-color:#47C9AF;
-}
-/* line 40, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-primary .badge{
-	color:#1ABC9C; background-color:white;
-}
-
-/* line 63, ../scss/app/helpers/_flat-buttons.scss */
-.btn-info{
-	color:white; background-color:#3498DB; border-color:#5CACE2;
-}
-/* line 11, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-info:hover,.btn-info:focus,.btn-info.focus,.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{
-	color:white; background-color:#217DBB; border-color:#2892D9;
-}
-/* line 21, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{
-	background-image:none;
-}
-/* line 29, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-info.disabled,.btn-info.disabled:hover,.btn-info.disabled:focus,.btn-info.disabled.focus,.btn-info.disabled:active,.btn-info.disabled.active,.btn-info[disabled],.btn-info[disabled]:hover,.btn-info[disabled]:focus,.btn-info[disabled].focus,.btn-info[disabled]:active,.btn-info[disabled].active,fieldset[disabled] .btn-info,fieldset[disabled] .btn-info:hover,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info.focus,fieldset[disabled] .btn-info:active,fieldset[disabled] .btn-info.active{
-	background-color:#3498DB; border-color:#5CACE2;
-}
-/* line 40, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-info .badge{
-	color:#3498DB; background-color:white;
-}
-
-/* line 66, ../scss/app/helpers/_flat-buttons.scss */
-.btn-danger{
-	color:white; background-color:#E74C3C; border-color:#EB6F62;
-}
-/* line 11, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-danger:hover,.btn-danger:focus,.btn-danger.focus,.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{
-	color:white; background-color:#D62C1A; border-color:#E43D2C;
-}
-/* line 21, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{
-	background-image:none;
-}
-/* line 29, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-danger.disabled,.btn-danger.disabled:hover,.btn-danger.disabled:focus,.btn-danger.disabled.focus,.btn-danger.disabled:active,.btn-danger.disabled.active,.btn-danger[disabled],.btn-danger[disabled]:hover,.btn-danger[disabled]:focus,.btn-danger[disabled].focus,.btn-danger[disabled]:active,.btn-danger[disabled].active,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger:hover,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger.focus,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger.active{
-	background-color:#E74C3C; border-color:#EB6F62;
-}
-/* line 40, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-danger .badge{
-	color:#E74C3C; background-color:white;
-}
-
-/* line 69, ../scss/app/helpers/_flat-buttons.scss */
-.btn-success{
-	color:white; background-color:#2ECC71; border-color:#57D68D;
-}
-/* line 11, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-success:hover,.btn-success:focus,.btn-success.focus,.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{
-	color:white; background-color:#25A25A; border-color:#2FC16D;
-}
-/* line 21, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{
-	background-image:none;
-}
-/* line 29, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-success.disabled,.btn-success.disabled:hover,.btn-success.disabled:focus,.btn-success.disabled.focus,.btn-success.disabled:active,.btn-success.disabled.active,.btn-success[disabled],.btn-success[disabled]:hover,.btn-success[disabled]:focus,.btn-success[disabled].focus,.btn-success[disabled]:active,.btn-success[disabled].active,fieldset[disabled] .btn-success,fieldset[disabled] .btn-success:hover,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success.focus,fieldset[disabled] .btn-success:active,fieldset[disabled] .btn-success.active{
-	background-color:#2ECC71; border-color:#57D68D;
-}
-/* line 40, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-success .badge{
-	color:#2ECC71; background-color:white;
-}
-
-/* line 72, ../scss/app/helpers/_flat-buttons.scss */
-.btn-warning{
-	color:white; background-color:#F1C40F; border-color:#9F9F9F;
-}
-/* line 11, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-warning:hover,.btn-warning:focus,.btn-warning.focus,.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{
-	color:white; background-color:#C29D0B; border-color:#818181;
-}
-/* line 21, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{
-	background-image:none;
-}
-/* line 29, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-warning.disabled,.btn-warning.disabled:hover,.btn-warning.disabled:focus,.btn-warning.disabled.focus,.btn-warning.disabled:active,.btn-warning.disabled.active,.btn-warning[disabled],.btn-warning[disabled]:hover,.btn-warning[disabled]:focus,.btn-warning[disabled].focus,.btn-warning[disabled]:active,.btn-warning[disabled].active,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning:hover,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning.focus,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning.active{
-	background-color:#F1C40F; border-color:#9F9F9F;
-}
-/* line 40, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-warning .badge{
-	color:#F1C40F; background-color:white;
-}
-
-/* line 75, ../scss/app/helpers/_flat-buttons.scss */
-.btn-inverse{
-	color:white; background-color:#34495E; border-color:#9F9F9F;
-}
-/* line 11, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-inverse:hover,.btn-inverse:focus,.btn-inverse.focus,.btn-inverse:active,.btn-inverse.active,.open>.btn-inverse.dropdown-toggle{
-	color:white; background-color:#222F3D; border-color:#818181;
-}
-/* line 21, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-inverse:active,.btn-inverse.active,.open>.btn-inverse.dropdown-toggle{
-	background-image:none;
-}
-/* line 29, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-inverse.disabled,.btn-inverse.disabled:hover,.btn-inverse.disabled:focus,.btn-inverse.disabled.focus,.btn-inverse.disabled:active,.btn-inverse.disabled.active,.btn-inverse[disabled],.btn-inverse[disabled]:hover,.btn-inverse[disabled]:focus,.btn-inverse[disabled].focus,.btn-inverse[disabled]:active,.btn-inverse[disabled].active,fieldset[disabled] .btn-inverse,fieldset[disabled] .btn-inverse:hover,fieldset[disabled] .btn-inverse:focus,fieldset[disabled] .btn-inverse.focus,fieldset[disabled] .btn-inverse:active,fieldset[disabled] .btn-inverse.active{
-	background-color:#34495E; border-color:#9F9F9F;
-}
-/* line 40, ../scss/vendors/bootstrap-sass/bootstrap/mixins/_buttons.scss */
-.btn-inverse .badge{
-	color:#34495E; background-color:white;
-}
-
-/* line 78, ../scss/app/helpers/_flat-buttons.scss */
-.btn-embossed{
-	-webkit-box-shadow:inset 0 -2px 0 #262626; box-shadow:inset 0 -2px 0 #262626;
-}
-/* line 81, ../scss/app/helpers/_flat-buttons.scss */
-.btn-embossed.active,.btn-embossed:active{
-	-webkit-box-shadow:inset 0 2px 0 #262626; box-shadow:inset 0 2px 0 #262626;
-}
-
-/* line 86, ../scss/app/helpers/_flat-buttons.scss */
-.btn-wide{
-	min-width:140px; padding-left:30px; padding-right:30px;
-}
-
-/* line 97, ../scss/app/helpers/_flat-buttons.scss */
-.btn-link{
-	color:#F56363;
-}
-/* line 100, ../scss/app/helpers/_flat-buttons.scss */
-.btn-link:hover,.btn-link:focus{
-	color:#F01B1B; text-decoration:underline; background-color:transparent;
-}
-/* line 108, ../scss/app/helpers/_flat-buttons.scss */
-.btn-link[disabled]:hover,.btn-link[disabled]:focus,fieldset[disabled] .btn-link:hover,fieldset[disabled] .btn-link:focus{
-	color:#BDC3C7; text-decoration:none;
-}
-
-/* line 120, ../scss/app/helpers/_flat-buttons.scss */
-.btn-hg{
-	padding:13px 20px; font-size:26; line-height:1.227; border-radius:6px;
-}
-
-/* line 123, ../scss/app/helpers/_flat-buttons.scss */
-.btn-lg{
-	padding:10px 19px; font-size:21; line-height:1.471; border-radius:6px;
-}
-
-/* line 126, ../scss/app/helpers/_flat-buttons.scss */
-.btn-sm{
-	padding:9px 13px; font-size:15; line-height:1.385; border-radius:4px;
-}
-
-/* line 129, ../scss/app/helpers/_flat-buttons.scss */
-.btn-xs{
-	padding:6px 9px; font-size:15; line-height:1.083; border-radius:3px;
-}
-
-/* line 135, ../scss/app/helpers/_flat-buttons.scss */
-.btn-tip{
-	font-weight:300; padding-left:10px; font-size:92%;
-}
-
-/* line 144, ../scss/app/helpers/_flat-buttons.scss */
-.btn-block{
-	white-space:normal;
-}
-
-/* line 3, ../scss/app/base/_common-styles.scss */
-html,body{
-	height:100%; background-color:#ECF0F1;
-}
-
-/* line 11, ../scss/app/base/_common-styles.scss */
-.wrap{
-	min-height:100%; height:auto !important; height:100%; margin:0 auto -90px;
-}
-
-/* line 17, ../scss/app/base/_common-styles.scss */
-.push,footer{
-	height:90px;
-}
-
-/* line 21, ../scss/app/base/_common-styles.scss */
-.container{
-	-moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
-}
-@media (min-width: 1200px){
-	/* line 21, ../scss/app/base/_common-styles.scss */
-	.container{
-		width:970px;
-	}
-}
-
-/* line 1, ../scss/app/base/_typography.scss */
-body{
-	font-family:'PT Serif'; color:#3C5868;
-}
-
-/* line 7, ../scss/app/base/_typography.scss */
-p{
-	color:#3C5868;
-}
-
-/* line 10, ../scss/app/base/_typography.scss */
-h1,h2,h3,h4,h5,h6{
-	font-family:'Oswald'; color:#444;
-}
-/* line 13, ../scss/app/base/_typography.scss */
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
-	color:#444;
-}
-/* line 15, ../scss/app/base/_typography.scss */
-h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{
-	color:#F56363;
-}
-
-/* line 22, ../scss/app/base/_typography.scss */
-.title-highlighted{
-	background-color:#F56363; font-size:1.25em; padding:10px 15px;
-}
-/* line 27, ../scss/app/base/_typography.scss */
-.title-highlighted a{
-	color:white;
-}
-
-/* line 33, ../scss/app/base/_typography.scss */
-a{
-	color:#F56363;
-}
-/* line 36, ../scss/app/base/_typography.scss */
-a:hover{
-	color:#444; -webkit-transition:all 0.2s ease; -moz-transition:all 0.2s ease; transition:all 0.2s ease;
-}
-
-/* line 46, ../scss/app/base/_typography.scss */
-em{
-	font-style:italic; font-family:'PT Serif';
-}
-
-/* line 2, ../scss/app/layout/_header.scss */
-.header-main{
-	display:block; background-color:#2C3E50;
-}
-
-/* line 10, ../scss/app/layout/_header.scss */
-.navbar-header .navbar-brand{
-	background-image:url('../img/front-end-workflow.png'); background-repeat:no-repeat; height:59px; width:312px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx){
-	/* line 10, ../scss/app/layout/_header.scss */
-	.navbar-header .navbar-brand{
-		background-image:url('../img/front-end-workflow_2x.png'); background-size:132px 59px;
-	}
-}
-
-/* line 1, ../scss/app/layout/_outer.scss */
-.outer{
-	margin-bottom:1.25em;
-}
-/* line 3, ../scss/app/layout/_outer.scss */
-.outer .container{
-	background-color:transparent;
-}
-
-/* line 9, ../scss/app/layout/_main.scss */
-.section-main .page-header{
-	background-color:#444; margin:0; padding:40px 20px;
-}
-/* line 15, ../scss/app/layout/_main.scss */
-.section-main .page-header .title{
-	text-align:center; color:#F39C12;
-}
-/* line 19, ../scss/app/layout/_main.scss */
-.section-main .page-header .title-leadtext{
-	text-align:center; color:#ECF0F1;
-}
-/* line 23, ../scss/app/layout/_main.scss */
-.section-main .page-header .teaser-text{
-	text-align:center; color:#BDC3C7;
-}
-
-/* line 1, ../scss/app/layout/_aside.scss */
-.aside{
-	background-color:#FBFBFB;
-}
-/* line 3, ../scss/app/layout/_aside.scss */
-.aside .tab-content{
-	margin-top:1em;
-}
-
-/* line 1, ../scss/app/layout/_footer.scss */
-.footer{
-	background-color:#FEFEFE; padding:10px; display:block; height:auto;
-}
-
-/* line 9, ../scss/app/layout/_footer.scss */
-.footer-brand a{
-	overflow:hidden; text-indent:101%; white-space:nowrap; background:url('../img/footer_hegnar_logo.png'); background-size:contain; display:inline-block; width:166px; height:70px;
-}
-
-/* line 21, ../scss/app/layout/_footer.scss */
-.title-contact{
-	font-size:1.25em;
-}
-
-/* line 25, ../scss/app/layout/_footer.scss */
-.contact-info{
-	font-size:1em;
-}
-
-/* line 1, ../scss/app/widgets/_widget-articles.scss */
-.widget{
-	margin-bottom:2em;
-}
-
-/* line 7, ../scss/app/widgets/_widget-articles.scss */
-.article-section pre{
-	padding:1em; margin:1em 0;
-}
-
-/* line 1, ../scss/app/components/_menu.scss */
-.navbar{
-	margin-top:20px;
-}
-
-/* line 6, ../scss/app/components/_menu.scss */
-#navbar-collapse-1.affix{
-	position:fixed; top:0; width:940px; background-color:#ECF0F1; background-color:rgba(255, 255, 255, 0.96); -webkit-box-shadow:0 1px 7px 0 #999; box-shadow:0 1px 7px 0 #999; z-index:9999999;
-}
-
-/* line 1, ../scss/app/pages/_section.scss */
-.title-section{
-	font-size:1.875em; margin-bottom:0;
-}
-/* line 4, ../scss/app/pages/_section.scss */
-.title-section:before{
-	content:''; width:5px; height:15px; background-color:#F56363; display:inline-block; margin-right:6px;
-}
-
-/* line 15, ../scss/app/pages/_section.scss */
-.section-page{
-	background-color:#FEFEFE; padding:15px;
-}
+@charset 'UTF-8';a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;font-size:100%;margin:0;padding:0;vertical-align:baseline;}
+html{line-height:1;}
+ol,ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,td,th{font-weight:normal;text-align:left;vertical-align:middle;}
+blockquote,q{quotes:none;}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none;}
+a img{border:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block;}
+@font-face{font-family:'Ampersand';src:local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');unicode-range:U+0026;}
+@font-face{font-family:'Ampersand';src:local('Georgia');unicode-range:U+270C;}
+.typl8-alpha,.typl8-beta,.typl8-delta,.typl8-epsilon,.typl8-gamma,.typl8-giga,.typl8-mega,.typl8-tera,.typl8-zeta,h1,h2,h3,h4,h5,h6{color:#222;line-height:1;margin-top:0;text-rendering:optimizeLegibility;}
+blockquote+figcaption cite{display:block;font-size:inherit;text-align:right;}
+body{word-wrap:break-word;}
+pre code{word-wrap:normal;}
+html{font:normal 112.5%/1.65 serif;}
+body{color:#444;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto;}
+.typl8-tera{font-size:117px;font-size:6.5rem;margin-bottom:70.90909px;margin-bottom:3.93939rem;}
+.typl8-giga{font-size:90px;font-size:5rem;margin-bottom:54.54545px;margin-bottom:3.0303rem;}
+.typl8-mega,h1{font-size:72px;font-size:4rem;margin-bottom:43.63636px;margin-bottom:2.42424rem;}
+.typl8-alpha,h2{font-size:60px;font-size:3.33333rem;margin-bottom:36.36364px;margin-bottom:2.0202rem;}
+.typl8-beta,h3{font-size:48px;font-size:2.66667rem;margin-bottom:29.09091px;margin-bottom:1.61616rem;}
+.typl8-gamma,h4{font-size:36px;font-size:2rem;margin-bottom:21.81818px;margin-bottom:1.21212rem;}
+.typl8-delta,h5{font-size:24px;font-size:1.33333rem;margin-bottom:14.54545px;margin-bottom:0.80808rem;}
+.typl8-epsilon{font-size:21px;font-size:1.16667rem;margin-bottom:12.72727px;margin-bottom:0.70707rem;}
+.typl8-zeta,h6{font-size:18px;font-size:1rem;margin-bottom:10.90909px;margin-bottom:0.60606rem;}
+p{margin:auto auto 1.5em;}
+p+p{margin-top:-1.5em;text-indent:1.5em;}
+small{font-size:65%;}
+abbr,acronym,blockquote,code,input,kbd,q,samp,var{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;}
+pre{white-space:pre;}
+pre code{white-space:-moz-pre-wrap;white-space:pre-wrap;}
+code{font-family:monospace;white-space:pre;}
+abbr{color:gray;-webkit-font-variant:small-caps;-moz-font-variant:small-caps;-ms-font-variant:small-caps;font-variant:small-caps;font-weight:600;text-transform:lowercase;}
+abbr[title]:hover{cursor:help;}
+.typl8-drop-cap:first-letter{background:transparent;color:inherit;float:left;font-family:inherit;font-size:4em;line-height:1;margin:10px 10px 0 0;padding:0 20px;text-indent:0;}
+p+.typl8-drop-cap{margin-top:0;text-indent:0;}
+.typl8-lining dd,.typl8-lining dt{display:inline;margin:0;}
+.typl8-lining dd+dt:before,.typl8-lining dt+dt:before{content:'\A';white-space:pre;}
+.typl8-lining dd+dd:before{content:', ';}
+.typl8-lining dd:before{content:': ';margin-left:-0.2rem;}
+.typl8-dictionary-style dt{counter-reset:definitions;display:inline;}
+.typl8-dictionary-style dt+dt:before{content:', ';margin-left:-0.2rem;}
+.typl8-dictionary-style dd{counter-increment:definitions;display:block;}
+.typl8-dictionary-style dd:before{content:counter(definitions,decimal) '. ';}
+.typl8-pull-quote{padding:1em;position:relative;}
+.typl8-pull-quote:after,.typl8-pull-quote:before{color:#dc976e;font-size:4em;height:1em;opacity:0.5;position:absolute;}
+.typl8-pull-quote:before{content:'“';left:0;top:0;}
+.typl8-pull-quote:after{bottom:0;content:'”';right:0;}
+.btn{border:0;border-radius:4px;font-size:18;-webkit-font-smoothing:subpixel-antialiased;font-weight:normal;line-height:1.4;padding:10px 15px;-webkit-transition:border 0.25s linear,color 0.25s linear,background-color 0.25s linear;-moz-transition:border 0.25s linear,color 0.25s linear,background-color 0.25s linear;transition:border 0.25s linear,color 0.25s linear,background-color 0.25s linear;}
+.btn:focus,.btn:hover{color:white;outline:0;}
+.btn.active,.btn:active{-webkit-box-shadow:0;box-shadow:0;outline:0;}
+.btn.disabled,.btn[disabled],fieldset[disabled] .btn{background-color:#bdc3c7;color:white;filter:alpha(opacity=70);opacity:0.7;}
+.btn>[class^='fui-']{line-height:1;margin:0 1px;position:relative;top:1px;}
+.btn>[class^='fui-'].btn-xs{font-size:11px;top:0;}
+.btn>[class^='fui-'].btn-hg{top:2px;}
+.btn-default{background-color:#bdc3c7;border-color:#cacfd2;color:white;}
+.btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.btn-default.dropdown-toggle{background-color:#a1aab0;border-color:#a9b1b6;color:white;}
+.btn-default.active,.btn-default:active,.open>.btn-default.dropdown-toggle{background-image:none;}
+.btn-default.disabled,.btn-default.disabled.active,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled],.btn-default[disabled].active,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default.active,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#bdc3c7;border-color:#cacfd2;}
+.btn-default .badge{background-color:white;color:#bdc3c7;}
+.btn-primary{background-color:#1abc9c;border-color:#47c9af;color:white;}
+.btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.btn-primary.dropdown-toggle{background-color:#148f77;border-color:#30a38c;color:white;}
+.btn-primary.active,.btn-primary:active,.open>.btn-primary.dropdown-toggle{background-image:none;}
+.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{background-color:#1abc9c;border-color:#47c9af;}
+.btn-primary .badge{background-color:white;color:#1abc9c;}
+.btn-info{background-color:#3498db;border-color:#5cace2;color:white;}
+.btn-info.active,.btn-info.focus,.btn-info:active,.btn-info:focus,.btn-info:hover,.open>.btn-info.dropdown-toggle{background-color:#217dbb;border-color:#2892d9;color:white;}
+.btn-info.active,.btn-info:active,.open>.btn-info.dropdown-toggle{background-image:none;}
+.btn-info.disabled,.btn-info.disabled.active,.btn-info.disabled.focus,.btn-info.disabled:active,.btn-info.disabled:focus,.btn-info.disabled:hover,.btn-info[disabled],.btn-info[disabled].active,.btn-info[disabled].focus,.btn-info[disabled]:active,.btn-info[disabled]:focus,.btn-info[disabled]:hover,fieldset[disabled] .btn-info,fieldset[disabled] .btn-info.active,fieldset[disabled] .btn-info.focus,fieldset[disabled] .btn-info:active,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:hover{background-color:#3498db;border-color:#5cace2;}
+.btn-info .badge{background-color:white;color:#3498db;}
+.btn-danger{background-color:#e74c3c;border-color:#eb6f62;color:white;}
+.btn-danger.active,.btn-danger.focus,.btn-danger:active,.btn-danger:focus,.btn-danger:hover,.open>.btn-danger.dropdown-toggle{background-color:#d62c1a;border-color:#e43d2c;color:white;}
+.btn-danger.active,.btn-danger:active,.open>.btn-danger.dropdown-toggle{background-image:none;}
+.btn-danger.disabled,.btn-danger.disabled.active,.btn-danger.disabled.focus,.btn-danger.disabled:active,.btn-danger.disabled:focus,.btn-danger.disabled:hover,.btn-danger[disabled],.btn-danger[disabled].active,.btn-danger[disabled].focus,.btn-danger[disabled]:active,.btn-danger[disabled]:focus,.btn-danger[disabled]:hover,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger.active,fieldset[disabled] .btn-danger.focus,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:hover{background-color:#e74c3c;border-color:#eb6f62;}
+.btn-danger .badge{background-color:white;color:#e74c3c;}
+.btn-success{background-color:#2ecc71;border-color:#57d68d;color:white;}
+.btn-success.active,.btn-success.focus,.btn-success:active,.btn-success:focus,.btn-success:hover,.open>.btn-success.dropdown-toggle{background-color:#25a25a;border-color:#2fc16d;color:white;}
+.btn-success.active,.btn-success:active,.open>.btn-success.dropdown-toggle{background-image:none;}
+.btn-success.disabled,.btn-success.disabled.active,.btn-success.disabled.focus,.btn-success.disabled:active,.btn-success.disabled:focus,.btn-success.disabled:hover,.btn-success[disabled],.btn-success[disabled].active,.btn-success[disabled].focus,.btn-success[disabled]:active,.btn-success[disabled]:focus,.btn-success[disabled]:hover,fieldset[disabled] .btn-success,fieldset[disabled] .btn-success.active,fieldset[disabled] .btn-success.focus,fieldset[disabled] .btn-success:active,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:hover{background-color:#2ecc71;border-color:#57d68d;}
+.btn-success .badge{background-color:white;color:#2ecc71;}
+.btn-warning{background-color:#f1c40f;border-color:#9f9f9f;color:white;}
+.btn-warning.active,.btn-warning.focus,.btn-warning:active,.btn-warning:focus,.btn-warning:hover,.open>.btn-warning.dropdown-toggle{background-color:#c29d0b;border-color:#818181;color:white;}
+.btn-warning.active,.btn-warning:active,.open>.btn-warning.dropdown-toggle{background-image:none;}
+.btn-warning.disabled,.btn-warning.disabled.active,.btn-warning.disabled.focus,.btn-warning.disabled:active,.btn-warning.disabled:focus,.btn-warning.disabled:hover,.btn-warning[disabled],.btn-warning[disabled].active,.btn-warning[disabled].focus,.btn-warning[disabled]:active,.btn-warning[disabled]:focus,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning.active,fieldset[disabled] .btn-warning.focus,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:hover{background-color:#f1c40f;border-color:#9f9f9f;}
+.btn-warning .badge{background-color:white;color:#f1c40f;}
+.btn-inverse{background-color:#34495e;border-color:#9f9f9f;color:white;}
+.btn-inverse.active,.btn-inverse.focus,.btn-inverse:active,.btn-inverse:focus,.btn-inverse:hover,.open>.btn-inverse.dropdown-toggle{background-color:#222f3d;border-color:#818181;color:white;}
+.btn-inverse.active,.btn-inverse:active,.open>.btn-inverse.dropdown-toggle{background-image:none;}
+.btn-inverse.disabled,.btn-inverse.disabled.active,.btn-inverse.disabled.focus,.btn-inverse.disabled:active,.btn-inverse.disabled:focus,.btn-inverse.disabled:hover,.btn-inverse[disabled],.btn-inverse[disabled].active,.btn-inverse[disabled].focus,.btn-inverse[disabled]:active,.btn-inverse[disabled]:focus,.btn-inverse[disabled]:hover,fieldset[disabled] .btn-inverse,fieldset[disabled] .btn-inverse.active,fieldset[disabled] .btn-inverse.focus,fieldset[disabled] .btn-inverse:active,fieldset[disabled] .btn-inverse:focus,fieldset[disabled] .btn-inverse:hover{background-color:#34495e;border-color:#9f9f9f;}
+.btn-inverse .badge{background-color:white;color:#34495e;}
+.btn-embossed{-webkit-box-shadow:inset 0 -2px 0 #262626;box-shadow:inset 0 -2px 0 #262626;}
+.btn-embossed.active,.btn-embossed:active{-webkit-box-shadow:inset 0 2px 0 #262626;box-shadow:inset 0 2px 0 #262626;}
+.btn-wide{min-width:140px;padding-left:30px;padding-right:30px;}
+.btn-link{color:#f56363;}
+.btn-link:focus,.btn-link:hover{background-color:transparent;color:#f01b1b;text-decoration:underline;}
+.btn-link[disabled]:focus,.btn-link[disabled]:hover,fieldset[disabled] .btn-link:focus,fieldset[disabled] .btn-link:hover{color:#bdc3c7;text-decoration:none;}
+.btn-hg{border-radius:6px;font-size:26;line-height:1.227;padding:13px 20px;}
+.btn-lg{border-radius:6px;font-size:21;line-height:1.471;padding:10px 19px;}
+.btn-sm{border-radius:4px;font-size:15;line-height:1.385;padding:9px 13px;}
+.btn-xs{border-radius:3px;font-size:15;line-height:1.083;padding:6px 9px;}
+.btn-tip{font-size:92%;font-weight:300;padding-left:10px;}
+.btn-block{white-space:normal;}
+body,html{background-color:#ecf0f1;height:100%;}
+.wrap{height:auto!important;height:100%;margin:0 auto -90px;min-height:100%;}
+.push,footer{height:90px;}
+.container{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
+@media (min-width: 1200px){.container{width:970px;}
+}
+body{color:#3c5868;font-family:PT Serif;}
+p{color:#3c5868;}
+h1,h2,h3,h4,h5,h6{color:#444;font-family:Oswald;}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#444;}
+h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{color:#f56363;}
+.title-highlighted{background-color:#f56363;font-size:1.25em;padding:10px 15px;}
+.title-highlighted a{color:white;}
+a{color:#f56363;}
+a:hover{color:#444;-webkit-transition:all 0.2s ease;-moz-transition:all 0.2s ease;transition:all 0.2s ease;}
+em{font-family:PT Serif;font-style:italic;}
+.header-main{background-color:#2c3e50;display:block;}
+.navbar-header .navbar-brand{background-image:url(../img/front-end-workflow.png);background-repeat:no-repeat;height:59px;width:312px;}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx){.navbar-header .navbar-brand{background-image:url(../img/front-end-workflow_2x.png);background-size:132px 59px;}
+}
+.outer{margin-bottom:1.25em;}
+.outer .container{background-color:transparent;}
+.section-main .page-header{background-color:#444;margin:0;padding:40px 20px;}
+.section-main .page-header .title{color:#f39c12;text-align:center;}
+.section-main .page-header .title-leadtext{color:#ecf0f1;text-align:center;}
+.section-main .page-header .teaser-text{color:#bdc3c7;text-align:center;}
+.aside{background-color:#fbfbfb;}
+.aside .tab-content{margin-top:1em;}
+.footer{background-color:#fefefe;display:block;height:auto;padding:10px;}
+.footer-brand a{background:url(../img/footer_hegnar_logo.png);background-size:contain;display:inline-block;height:70px;overflow:hidden;text-indent:101%;white-space:nowrap;width:166px;}
+.title-contact{font-size:1.25em;}
+.contact-info{font-size:1em;}
+.widget{margin-bottom:2em;}
+.article-section pre{margin:1em 0;padding:1em;}
+.navbar{margin-top:20px;}
+#navbar-collapse-1.affix{background-color:#ecf0f1;background-color:rgba(255,255,255,0.96);-webkit-box-shadow:0 1px 7px 0 #999;box-shadow:0 1px 7px 0 #999;position:fixed;top:0;width:940px;z-index:9999999;}
+.title-section{font-size:1.875em;margin-bottom:0;}
+.title-section:before{background-color:#f56363;content:'';display:inline-block;height:15px;margin-right:6px;width:5px;}
+.section-page{background-color:#fefefe;padding:15px;}

@@ -46,6 +46,7 @@
     "grunt-contrib-cssmin": "~0.12.2",
     "grunt-cssshrink":"*",
     "grunt-htmlhint":"*",
+    "grunt-contrib-htmlmin":"*",
     "grunt-contrib-watch": "*",
     "connect-livereload":"*",
     "grunt-concurrent":"*",
