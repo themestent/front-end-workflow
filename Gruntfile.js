@@ -1,4 +1,5 @@
 // # Grunt Tasks
+var module;
 module.exports = function (grunt) {
   // This file first matches the dependencies of all required **grunt-cli** from **package.json** file.
   'use strict';
@@ -130,7 +131,7 @@ module.exports = function (grunt) {
         src:["app/dev/js/"]
       },
       img:{
-        src:["app/dev/img/"]
+        src:["app/dev/img/**/*"]
       },
       fonts:{
         src:["app/dev/fonts/"]
@@ -479,6 +480,29 @@ module.exports = function (grunt) {
         src: 'app/scss/'
       }
     },
+    // #### HTML Minify
+    // Minify HTML markups. It uses HTMLMinifier. To set different options please visit: https://github.com/kangax/html-minifier#options-quick-reference
+
+    htmlmin:{
+      dist:{
+        options:{
+          removeComments: true,
+          collapseWhitespace: true,
+          removeEmptyAttributes:true,
+          removeCommentsFromCDATA:true
+        },
+        files:[
+          {
+            expand:true,
+            cwd:'app/dev/',
+            src:['**/*.html'],
+            dest:CODEBASE_STATIC_PATH,
+            extDot:'first'
+          }
+        ]
+      }
+    },
+
     // #### Groc for documentation
     // `groc` task is using [**grunt-groc**](https://github.com/jdcataldo/grunt-groc.git) to generate a usable documentation site right from your codes. It is a real time saver!
     groc: {
@@ -503,12 +527,12 @@ module.exports = function (grunt) {
       dev:{
         dest:'app/dev',
         //include:['.htaccess'],
-        keep_files:['app/dev/css/']
+        keep_files:['app/dev/css','app/dev/js','app/dev/img','app/dev/fonts']
       },
       // Jekyll build for production environment
       webApp:{
-        dest:'webapp',
-        keep_files:['webapp/css/','webapp/js','weebapp/img','webapp/fonts']
+        dest:'CODEBASE_STATIC_PATH',
+        keep_files:['CODEBASE_STATIC_PATH/css/','CODEBASE_STATIC_PATH/js','CODEBASE_STATIC_PATH/img','CODEBASE_STATIC_PATH/fonts']
       }
     },
     // #### Grunt Watch File
@@ -560,7 +584,7 @@ module.exports = function (grunt) {
       },
 
       conBuildDev: {
-        tasks: ['compass:dev','cssc','csscomb:dist','concat:plugins','concat:custom','uglify:dist','cssmin:devCssMin','imagemin','clean:img','clean:css','clean:img','copy:css','copy:js','copy:img','copy:fonts'],
+        tasks: ['compass:dev','cssc','csscomb:dist','concat:plugins','concat:custom','uglify:dist','cssmin:devCssMin','imagemin','clean:img','clean:css','copy:css','copy:js','copy:img','copy:fonts'],
         options: {
           logConcurrentOutput: true
         }
@@ -605,6 +629,10 @@ module.exports = function (grunt) {
   // `grunt fontsPro` copies all the fonts from `app/fonts` to publication fonts folder
   grunt.registerTask('fontsPro','copying fonts',['copy:copyCustomFonts','copy:copyBootstrapFonts']);
 
+  // `grunt htmlMin` will minify all the html from dev to production folder
+  grunt.registerTask('htmlMin','Minify HTML','htmlmin');
+
+
   // `grunt fontsDev` copies all the fonts from `app/dev/fonts` to dev fonts folder
   grunt.registerTask('fontsDev','copying fonts',['copy:fonts']);
 
@@ -618,7 +646,7 @@ module.exports = function (grunt) {
   grunt.registerTask('buildDev','Building components for Dev',['concurrent:conBuildDev']);
 
   // `grunt buildPro` command will build css, img, fonts, html from related tasks and keep them inside associated folders. It is Developer ready
-  grunt.registerTask('buildPro','Building components for Production',['compass:dev','concat:plugins','concat:custom','uglify:dist','csscomb:dist','cssmin:proCssMin','cssmin:devCssMin','clean:proBootstrapCss','clean:proOWLCarouselCss','clean:proThemeCss','clean:proCleanAll','copy:copyBootstrapCss','copy:copyOWLCss','imagemin:dynamic','copy:copyImg','copy:copyCustomFonts','copy:copyBootstrapFonts','copy:copyTheme','clean:proAllJS','copy:copyAppJS','copy:copyAllJS','copy:copyHTML','jekyll:webApp']);
+  grunt.registerTask('buildPro','Building components for Production',['compass:dev','concat:plugins','concat:custom','uglify:dist','csscomb:dist','cssmin:proCssMin','cssmin:devCssMin','clean:proBootstrapCss','clean:proOWLCarouselCss','clean:proThemeCss','clean:proCleanAll','copy:copyBootstrapCss','copy:copyOWLCss','imagemin:dynamic','copy:copyImg','copy:copyCustomFonts','copy:copyBootstrapFonts','copy:copyTheme','clean:proAllJS','jekyll:webApp','copy:copyAppJS','copy:copyAllJS','copy:copyHTML','htmlmin']);
 
 
   // `grunt` command will start initial build and start watching the project for changes and react

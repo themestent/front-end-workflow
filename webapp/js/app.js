@@ -4,3 +4,4 @@ jQuery(function($){
   $('#subTitle').fitText(1.2, { minFontSize: '24px', maxFontSize: '48px' });
 
 });
+;
